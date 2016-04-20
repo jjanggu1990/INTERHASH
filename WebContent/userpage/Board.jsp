@@ -7,7 +7,7 @@
 </head>
 <body>
 메인 게시판
-${id}<br>
-${passwd}
+id : ${id}<br>
+password : ${passwd}
 </body>
 </html>
