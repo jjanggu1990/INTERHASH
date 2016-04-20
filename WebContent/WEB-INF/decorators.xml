@@ -3,6 +3,7 @@
 	<decorator name="main" page="/decorator/decorator.jsp">
 		<!-- <pattern>/sitemesh/hello.jsp</pattern> -->
 		<pattern>/userpage/*</pattern>
+		<pattern>*.hash</pattern>
 	</decorator>
 <!-- 
 	<excludes>
