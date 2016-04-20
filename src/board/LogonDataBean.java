@@ -1,24 +1,22 @@
 package board;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 public class LogonDataBean {
-	private String id;
-	private String passwd;
-	private String name;
-	private String jumin1;
-	private String jumin2;
 	private String email;
-	private String blog;
+	private String passwd;
+	private String age;
+	private String nickname;
+	private String hashtag;
 	private Timestamp reg_date;
-	private String zipcode;
-	private String address;
 	
-	public String getId() {
-		return id;
+	
+	public String getEmail() {
+		return email;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getPasswd() {
 		return passwd;
@@ -26,37 +24,24 @@ public class LogonDataBean {
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
 	}
-	public String getName() {
-		return name;
+	public String getAge() {
+		return age;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setAge(String age) {
+		this.age = age;
 	}
-	public String getJumin1() {
-		return jumin1;
+	public String getNickname() {
+		return nickname;
 	}
-	public void setJumin1(String jumin1) {
-		this.jumin1 = jumin1;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
-	public String getJumin2() {
-		return jumin2;
+	public String getHashtag() {
+		return hashtag;
 	}
-	public void setJumin2(String jumin2) {
-		this.jumin2 = jumin2;
+	public void setHashtag(String hashtag) {
+		this.hashtag = hashtag;
 	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getBlog() {
-		return blog;
-	}
-	public void setBlog(String blog) {
-		this.blog = blog;
-	}
-
 	public Timestamp getReg_date() {
 		return reg_date;
 	}
@@ -64,17 +49,6 @@ public class LogonDataBean {
 		this.reg_date = reg_date;
 	}
 
-	public String getZipcode() {
-		return zipcode;
-	}
-	public void setZipcode(String zipcode) {
-		this.zipcode = zipcode;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
+	
 	
 }

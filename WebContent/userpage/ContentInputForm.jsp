@@ -6,5 +6,7 @@
 </head>
 <body>
 게시물 작성
+
+
 </body>
 </html>
