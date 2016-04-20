@@ -2,10 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert title here</title>
-
+<title> NewTab </title>
 </head>
 <body>
-<% response.sendRedirect("Main.hash"); %>
+email : ${email}
 </body>
 </html>
