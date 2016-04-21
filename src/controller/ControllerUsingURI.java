@@ -14,11 +14,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import action.*;
-
+import action.CommandAction;
+  
 public class ControllerUsingURI extends HttpServlet {
    
-    private Map commandMap = new HashMap();//명령어와 명령어 처리 클래스를 쌍으로 저장
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Map commandMap = new HashMap();//명령어와 명령어 처리 클래스를 쌍으로 저장
 
     //명령어와 처리클래스가 매핑되어 있는 properties 파일을 읽어서 Map객체인 commandMap에 저장
     //명령어와 처리클래스가 매핑되어 있는 properties 파일은 Command.properties파일
