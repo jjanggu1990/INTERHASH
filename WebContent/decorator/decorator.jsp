@@ -1,4 +1,4 @@
-<%-- <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator"%>
 <!DOCTYPE html>
 <html>
@@ -11,8 +11,8 @@
 데코레이터 페이지<br>
 <decorator:body/>
 </body>
-</html> --%>
-
+</html>
+<%-- 
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator"%>
 <!DOCTYPE html>
@@ -152,4 +152,4 @@ scrolling="auto" frameborder="0" border="0"  marginwidth="0" marginheight="0" ta
 데코레이터 페이지<br>
 <decorator:body/>
 </body>
-</html>
+</html> --%>

@@ -28,11 +28,21 @@
 			alert("비밀번호를 입력하세요.");
 			return false;
 		}
-		if(userinput.passwd.value!=userinput.passwd1.value){
+		
+		alert(userinput.getElementById('pass').value);
+		if(userinput.getElementById('pass').value != userinput.getElementById('pass1').value){
 			alert("비밀번호를 동일하게 입력하세요");
 			return false;
 		}
 		return true;
+	};
+	
+	function checkPass(){
+		//alert(document.getElementById('e').value);
+		if(document.getElementById('pass').value != document.getElementById('pass1').value){
+			alert("비밀번호를 동일하게 입력하세요");
+			return false;
+		} 
 	};
 /* 		$(function(){
 			$("#allcheck").click(function(){
@@ -52,10 +62,10 @@
 회원가입 폼
 
 <form method="post" action="SignupPro.hash" name="userinput" onSubmit="return checkIt()">
-	email <input type="text" name="email" /><input type="button" value="인증하기" /><br>
+	email <input type="text" name="email" id="e" /><input type="button" value="인증하기" /><br>
 	email 인증번호 <input type="text" name="emailnumber"/><input type="button" value="확인"/><br>
-	password : <input type="password" name="passwd" /><br>
-	password check : <input type="password" name="passwd1" /><br>
+	password : <input type="password" id="pass" name="passwd" /><br>
+	password check : <input type="password" id = "pass1" name="passwd1" onchange="checkPass()" /><br>
 	닉네임 : <input type="text" name="nickname" /><input type="button" value="중복검사"/><br>
 	favorite : 관심있는 태그를 골라주세요!<br>
 		<div style="overflow:scroll; width:700px; height:600px;">
