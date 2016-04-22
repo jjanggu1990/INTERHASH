@@ -17,5 +17,8 @@
 	</environments>
 	<mappers>
 		<mapper resource="mybatis/logonMapper.xml" />
+		<mapper resource="mybatis/loginMapper.xml" />
+		<mapper resource="mybatis/commentMapper.xml" />
+		<mapper resource="mybatis/writecontentMapper.xml" />
 	</mappers>
 </configuration>
