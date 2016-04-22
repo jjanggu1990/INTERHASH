@@ -40,9 +40,17 @@
 	function checkPass(){
 		//alert(document.getElementById('e').value);
 		if(document.getElementById('pass').value != document.getElementById('pass1').value){
-			alert("비밀번호를 동일하게 입력하세요");
+			
+			document.getElementById('passwdchform').value = "일치하지 않습니다";
+			//alert("비밀번호를 동일하게 입력하세요");
 			return false;
-		} 
+		}
+		if(document.getElementById('pass').value == document.getElementById('pass1').value){
+			
+			document.getElementById('passwdchform').value = "일치합니다";
+			//alert("비밀번호를 동일하게 입력하세요");
+			return false;
+		}
 	};
 /* 		$(function(){
 			$("#allcheck").click(function(){
@@ -64,8 +72,8 @@
 <form method="post" action="SignupPro.hash" name="userinput" onSubmit="return checkIt()">
 	email <input type="text" name="email" id="e" /><input type="button" value="인증하기" /><br>
 	email 인증번호 <input type="text" name="emailnumber"/><input type="button" value="확인"/><br>
-	password : <input type="password" id="pass" name="passwd" /><br>
-	password check : <input type="password" id = "pass1" name="passwd1" onchange="checkPass()" /><br>
+	password : <input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()"/><br>
+	password check : <input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()' /><input type="button" id="passwdchform" value="a"/><br>
 	닉네임 : <input type="text" name="nickname" /><input type="button" value="중복검사"/><br>
 	favorite : 관심있는 태그를 골라주세요!<br>
 		<div style="overflow:scroll; width:700px; height:600px;">
