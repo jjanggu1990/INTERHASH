@@ -72,7 +72,7 @@
 <form method="post" action="SignupPro.hash" name="userinput" onSubmit="return checkIt()">
 	email <input type="text" name="email" id="e" /><input type="button" value="인증하기" /><br>
 	email 인증번호 <input type="text" name="emailnumber"/><input type="button" value="확인"/><br>
-	나이 <input type="text" name="age"/>
+	나이 <input type="text" name="age"/><br>
 	password : <input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()"/><br>
 	password check : <input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()' /><input type="button" id="passwdchform" value="a"/><br>
 	닉네임 : <input type="text" name="nickname" /><input type="button" value="중복검사"/><br>
