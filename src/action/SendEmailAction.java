@@ -50,10 +50,18 @@ public class SendEmailAction implements CommandAction {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress("fksh90@gmail.com"));//
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("jjanggu1990@naver.com"));
-			message.setContent("<a href='http://www.naver.com'>naver</a>","text/html; charset=UTF-8");//글내용을 html타입
+			message.setContent(""
+					+ "<p>naver</p><br> "
+					+ "<table border='1'> "
+					+ "<tr> "
+					+ "<td>Dear</td> "
+					+ "<td>Mail</td></tr> "
+					+ "<tr><td>Crawler No spam</td> "
+					+ "<td>to my email, please!</td></tr></table>"
+					+ "<hr><br><br>"
+					+ "----------------------------------절취선----------------------","text/html; charset=UTF-8;");//글내용을 html타입
 			message.setSubject("Testing Subject");
-			message.setText("<a href='http://www.naver.com'>naver</a> Dear Mail Crawler," + "\n\n No spam to my email, please!");// 내용
-			// charset설정
+			//message.setText("<html><body><a href='http://www.naver.com'>naver</a> Dear Mail Crawler," + "\n\n No spam to my email, please!</body></html>");// 내용
 			System.out.println("send!!!");
 			Transport.send(message);
 			System.out.println("SEND");
