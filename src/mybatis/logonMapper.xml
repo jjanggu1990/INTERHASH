@@ -11,4 +11,8 @@
 	<select id="getInfo" parameterType="String" resultType="hashmap">
 		select * from members where id=#{id}
 	</select>
+	
+	<delete id="withdrawal" parameterType="board.LogonDataBean">
+		delete from usertable where id=#{id} and passwd=#{passwd}
+	</delete>
 </mapper>

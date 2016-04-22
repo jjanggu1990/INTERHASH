@@ -54,6 +54,20 @@ private static LogonDBBean instance = new LogonDBBean();
 		}
 	}
 	
+	public void deleteMember(LogonDataBean member) throws Exception{
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		try{
+			factory = getFactory();
+			session = factory.openSession();
+			session.delete("userinfo.withdrawal", member);
+			session.commit();
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			if(session != null) try{session.close();}catch(Exception ex){}
+		}
+	}
 	
 
 }
