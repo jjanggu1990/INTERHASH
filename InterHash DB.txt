@@ -1,4 +1,3 @@
-
 create table USERTABLE (
 Email varchar2(25) primary key,
 Nickname varchar2(20) not null,
@@ -25,11 +24,11 @@ ConModifiedDate date not null,
 ConIp varchar2(15) not null,
 ConReportCount number(3) not null,
 ConBlind char(1) not null,
-Email varchar2(25) references USER(Email)
+Email varchar2(25) references USERTABLE(Email)
 );
 
 
-create table COMMENT (
+create table COMMENTTABLE (
 ComNum number(3) primary key,
 ComNick varchar2(20) not null,
 ComContent varchar2(1000) not null,
@@ -39,7 +38,7 @@ ComIp varchar2(15) not null,
 ComReportCount number(3) not null,
 ComBlind char(1) not null,
 ConNum number(3) references CONTENTS(ConNum),
-Email varchar2(25) references USER(Email)
+Email varchar2(25) references USERTABLE(Email)
 );
 
 
@@ -50,7 +49,7 @@ ReContent varchar2(1000) not null,
 ReCategory varchar2(100) not null,
 ReDistinction char(1) not null,
 ConNum number(3) references CONTENTS(ConNum),
-Email varchar2(25) references USER(Email)
+Email varchar2(25) references USERTABLE(Email)
 );
 
 
@@ -60,7 +59,7 @@ TagAllCount number(3) not null,
 TagConCount number(3) not null,
 TagInterCount number(3) not null,
 TagClass char(1) not null,
-Email varchar2(25) references USER(Email)
+Email varchar2(25) references USERTABLE(Email)
 );
 
 
@@ -70,12 +69,12 @@ PhotoName varchar2(100) not null,
 Realpath varchar2(500) not null,
 PhotoSize varchar2(100) not null,
 ConNum number(3) references CONTENTS(ConNum),
-Email varchar2(25) references USER(Email)
+Email varchar2(25) references USERTABLE(Email)
 );
 
 create table NOTICE (
 ConNum number(3) references CONTENTS(ConNum),
-Email varchar2(25) references USER(Email),
+Email varchar2(25) references USERTABLE(Email),
 ReNum number(3) references REPORT(ReNum)
 );
 
@@ -100,8 +99,6 @@ DrawalDate date not null
 create table ADMINTABLE (
 AdminNum number(3) primary key,
 ConNum number(3) references CONTENTS(ConNum),
-Email varchar2(25) references USER(Email),
+Email varchar2(25) references USERTABLE(Email),
 ReNum number(3) references REPORT(ReNum)
 );
-
-

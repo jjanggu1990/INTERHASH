@@ -54,6 +54,10 @@
 		}
 	};
 	var checkflag = "false";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 74214641067e64d907917c44323b54d687a9a560
 	function check(field) {
 	if (checkflag == "false") {
 	  for (i = 0; i < field.length; i++) {
@@ -69,6 +73,11 @@
 	};
 	
 	</script>
+<<<<<<< HEAD
+=======
+
+<style>
+>>>>>>> 74214641067e64d907917c44323b54d687a9a560
 
 <style>
 </style>
