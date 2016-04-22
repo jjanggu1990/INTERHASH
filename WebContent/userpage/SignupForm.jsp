@@ -52,15 +52,6 @@
 			return false;
 		}
 	};
-/* 		$(function(){
-			$("#allcheck").click(function(){
-				if($("#allcheck").prop("checked")) {
-					$("input[type=checkbox]").prop("checked",true);
-				} else {
-					$("input[type=checkbox]").prop("checked",false);
-				}
-			})
-		}) */
 	</script>
 <style>
 
@@ -82,174 +73,182 @@
 		
 			<table>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">사랑과 연애</td>
-				<td> <input type="checkbox" id="" value="love">유머</td>
-				<td> <input type="checkbox" id="love" value="love">여행</td>
-				<td> <input type="checkbox" id="love" value="love">영화</td>
-				<td> <input type="checkbox" id="love" value="love">이슈</td>
-				<td> <input type="checkbox" id="love" value="love">다이어트</td>
+				<td> <input type="checkbox" name="favorite" value="tkfkd">사랑</td>
+				<td> <input type="checkbox" name="favorite" value="dbaj">유머</td>
+				<td> <input type="checkbox" name="favorite" value="dugod">여행</td>
+				<td> <input type="checkbox" name="favorite" value="dudghk">영화</td>
+				<td> <input type="checkbox" name="favorite" value="dltb">이슈</td>
+				<td> <input type="checkbox" name="favorite" value="ekdldjxm">다이어트</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">IT</td>
-				<td> <input type="checkbox" id="love" value="love">뉴스</td>
-				<td> <input type="checkbox" id="love" value="love">데일리룩</td>
-				<td> <input type="checkbox" id="love" value="love">가족</td>
-				<td> <input type="checkbox" id="love" value="love">반려동물</td>
-				<td> <input type="checkbox" id="love" value="love">예술</td>
+				<td> <input type="checkbox" name="favorite" value="dnwjd">우정</td>
+				<td> <input type="checkbox" name="favorite" value="clsrn">친구</td>
+				<td> <input type="checkbox" name="favorite" value="dkrtptjfl">악세서리</td>
+				<td> <input type="checkbox" name="favorite" value="todghkfdydvna">생활용품</td>
+				<td> <input type="checkbox" name="favorite" value="dlsxjspt">인터넷</td>
+				<td> <input type="checkbox" name="favorite" value="Qkd">빵</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">여성패션</td>
-				<td> <input type="checkbox" id="love" value="love">남성패션</td>
-				<td> <input type="checkbox" id="love" value="love">운동</td>
-				<td> <input type="checkbox" id="love" value="love">음악</td>
-				<td> <input type="checkbox" id="love" value="love">팬아트</td>
-				<td> <input type="checkbox" id="love" value="love">TV</td>
+				<td> <input type="checkbox" name="favorite" value="it">IT</td>
+				<td> <input type="checkbox" name="favorite" value="sbtm">뉴스</td>
+				<td> <input type="checkbox" name="favorite" value="epdlfflfnr">데일리룩</td>
+				<td> <input type="checkbox" name="favorite" value="rkwhr">가족</td>
+				<td> <input type="checkbox" name="favorite" value="qksfuehdanf">반려동물</td>
+				<td> <input type="checkbox" name="favorite" value="dPtnf">예술</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">결혼생활</td>
-				<td> <input type="checkbox" id="love" value="love">심리학</td>
-				<td> <input type="checkbox" id="love" value="love">요리</td>
-				<td> <input type="checkbox" id="love" value="love">카메라</td>
-				<td> <input type="checkbox" id="love" value="love">맛집 탐방</td>
-				<td> <input type="checkbox" id="love" value="love">야구</td>
+				<td> <input type="checkbox" name="favorite" value="votus">패션</td>
+				<td> <input type="checkbox" name="favorite" value="ehs">돈</td>
+				<td> <input type="checkbox" name="favorite" value="dnsehd">운동</td>
+				<td> <input type="checkbox" name="favorite" value="dmadkr">음악</td>
+				<td> <input type="checkbox" name="favorite" value="zkem">카드</td>
+				<td> <input type="checkbox" name="favorite" value="tv">TV</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">축구</td>
-				<td> <input type="checkbox" id="love" value="love">캠핑</td>
-				<td> <input type="checkbox" id="love" value="love">금융</td>
-				<td> <input type="checkbox" id="love" value="love">책</td>
-				<td> <input type="checkbox" id="love" value="love">영어</td>
-				<td> <input type="checkbox" id="love" value="love">DIY</td>
+				<td> <input type="checkbox" name="favorite" value="rufghs">결혼</td>
+				<td> <input type="checkbox" name="favorite" value="tlaflgkr">심리학</td>
+				<td> <input type="checkbox" name="favorite" value="dyfl">요리</td>
+				<td> <input type="checkbox" name="favorite" value="zkapfk">카메라</td>
+				<td> <input type="checkbox" name="favorite" value="aktwlq">맛집</td>
+				<td> <input type="checkbox" name="favorite" value="dirn">야구</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">남녀차이</td>
-				<td> <input type="checkbox" id="love" value="love">대학생활</td>
-				<td> <input type="checkbox" id="love" value="love">학생</td>
-				<td> <input type="checkbox" id="love" value="love">고등학교</td>
-				<td> <input type="checkbox" id="love" value="love">피부</td>
-				<td> <input type="checkbox" id="love" value="love">메이크업</td>
+				<td> <input type="checkbox" name="favorite" value="cnrrn">축구</td>
+				<td> <input type="checkbox" name="favorite" value="zoavld">캠핑</td>
+				<td> <input type="checkbox" name="favorite" value="rmadbd">금융</td>
+				<td> <input type="checkbox" name="favorite" value="cor">책</td>
+				<td> <input type="checkbox" name="favorite" value="duddj">영어</td>
+				<td> <input type="checkbox" name="favorite" value="diy">DIY</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">자전거</td>
-				<td> <input type="checkbox" id="love" value="love">자동차</td>
-				<td> <input type="checkbox" id="love" value="love">웹툰</td>
-				<td> <input type="checkbox" id="love" value="love">감성</td>
-				<td> <input type="checkbox" id="love" value="love">일상</td>
-				<td> <input type="checkbox" id="love" value="love">셀카</td>
+				<td> <input type="checkbox" name="favorite" value="skasuckdl">남녀차이</td>
+				<td> <input type="checkbox" name="favorite" value="eogkrtodghkf">대학생활</td>
+				<td> <input type="checkbox" name="favorite" value="gkrtod">학생</td>
+				<td> <input type="checkbox" name="favorite" value="rhemdgkrry">고등학교</td>
+				<td> <input type="checkbox" name="favorite" value="vlqn">피부</td>
+				<td> <input type="checkbox" name="favorite" value="apdlzmdjq">메이크업</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">필터</td>
-				<td> <input type="checkbox" id="love" value="love">포토샵</td>
-				<td> <input type="checkbox" id="love" value="love">요가</td>
-				<td> <input type="checkbox" id="love" value="love">가요</td>
-				<td> <input type="checkbox" id="love" value="love">뷰티</td>
-				<td> <input type="checkbox" id="love" value="love">정치</td>
+				<td> <input type="checkbox" name="favorite" value="wkwjsrj">자전거</td>
+				<td> <input type="checkbox" name="favorite" value="wkehdck">자동차</td>
+				<td> <input type="checkbox" name="favorite" value="dnpqxns">웹툰</td>
+				<td> <input type="checkbox" name="favorite" value="rkatjd">감성</td>
+				<td> <input type="checkbox" name="favorite" value="dlftkd">일상</td>
+				<td> <input type="checkbox" name="favorite" value="tpfzk">셀카</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">창작</td>
-				<td> <input type="checkbox" id="love" value="love">댄스</td>
-				<td> <input type="checkbox" id="love" value="love">안무</td>
-				<td> <input type="checkbox" id="love" value="love">키즈</td>
-				<td> <input type="checkbox" id="love" value="love">부모</td>
-				<td> <input type="checkbox" id="love" value="love">카페</td>
+				<td> <input type="checkbox" name="favorite" value="vlfxj">필터</td>
+				<td> <input type="checkbox" name="favorite" value="vhxhtiq">포토샵</td>
+				<td> <input type="checkbox" name="favorite" value="dyrk">요가</td>
+				<td> <input type="checkbox" name="favorite" value="rkdy">가요</td>
+				<td> <input type="checkbox" name="favorite" value="qbxl">뷰티</td>
+				<td> <input type="checkbox" name="favorite" value="wjdcl">정치</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">모바일 앱</td>
-				<td> <input type="checkbox" id="love" value="love">아이폰</td>
-				<td> <input type="checkbox" id="love" value="love">안드로이드</td>
-				<td> <input type="checkbox" id="love" value="love">헤어스타일</td>
-				<td> <input type="checkbox" id="love" value="love">미용</td>
-				<td> <input type="checkbox" id="love" value="love">음식</td>
+				<td> <input type="checkbox" name="favorite" value="ckdwkr">창작</td>
+				<td> <input type="checkbox" name="favorite" value="eostm">댄스</td>
+				<td> <input type="checkbox" name="favorite" value="dksan">안무</td>
+				<td> <input type="checkbox" name="favorite" value="zlwm">키즈</td>
+				<td> <input type="checkbox" name="favorite" value="qnah">부모</td>
+				<td> <input type="checkbox" name="favorite" value="zkvp">카페</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">신발</td>
-				<td> <input type="checkbox" id="love" value="love">웨딩</td>
-				<td> <input type="checkbox" id="love" value="love">술</td>
-				<td> <input type="checkbox" id="love" value="love">시계</td>
-				<td> <input type="checkbox" id="love" value="love">가방</td>
-				<td> <input type="checkbox" id="love" value="love">시</td>
+				<td> <input type="checkbox" name="favorite" value="ahqkdlf">모바일</td>
+				<td> <input type="checkbox" name="favorite" value="dkdlvhs">아이폰</td>
+				<td> <input type="checkbox" name="favorite" value="dksemfhdlem">안드로이드</td>
+				<td> <input type="checkbox" name="favorite" value="gpdjtmxkdlf">헤어스타일</td>
+				<td> <input type="checkbox" name="favorite" value="aldyd">미용</td>
+				<td> <input type="checkbox" name="favorite" value="dmatlr">음식</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">미술</td>
-				<td> <input type="checkbox" id="love" value="love">네일</td>
-				<td> <input type="checkbox" id="love" value="love">타투</td>
-				<td> <input type="checkbox" id="love" value="love">인터넷스타</td>
-				<td> <input type="checkbox" id="love" value="love">축제</td>
-				<td> <input type="checkbox" id="love" value="love">전시회</td>
+				<td> <input type="checkbox" name="favorite" value="tlsqkf">신발</td>
+				<td> <input type="checkbox" name="favorite" value="dnpeld">웨딩</td>
+				<td> <input type="checkbox" name="favorite" value="tnf">술</td>
+				<td> <input type="checkbox" name="favorite" value="tlrP">시계</td>
+				<td> <input type="checkbox" name="favorite" value="rkqkd">가방</td>
+				<td> <input type="checkbox" name="favorite" value="tl">시</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">클럽</td>
-				<td> <input type="checkbox" id="love" value="love">음주가무</td>
-				<td> <input type="checkbox" id="love" value="love">의료</td>
-				<td> <input type="checkbox" id="love" value="love">디자인</td>
-				<td> <input type="checkbox" id="love" value="love">과학</td>
-				<td> <input type="checkbox" id="love" value="love">수학</td>
+				<td> <input type="checkbox" name="favorite" value="altnf">미술</td>
+				<td> <input type="checkbox" name="favorite" value="spdlf">네일</td>
+				<td> <input type="checkbox" name="favorite" value="xkxn">타투</td>
+				<td> <input type="checkbox" name="favorite" value="dlsxjspttmxk">인터넷스타</td>
+				<td> <input type="checkbox" name="favorite" value="cnrwp">축제</td>
+				<td> <input type="checkbox" name="favorite" value="wjstlghl">전시회</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">언어</td>
-				<td> <input type="checkbox" id="love" value="love">이름</td>
-				<td> <input type="checkbox" id="love" value="love">자연</td>
-				<td> <input type="checkbox" id="love" value="love">장난감</td>
-				<td> <input type="checkbox" id="love" value="love">인형</td>
-				<td> <input type="checkbox" id="love" value="love">메이저리그</td>
+				<td> <input type="checkbox" name="favorite" value="zmffjq">클럽</td>
+				<td> <input type="checkbox" name="favorite" value="quddnjs">병원</td>
+				<td> <input type="checkbox" name="favorite" value="dmlfy">건강</td>
+				<td> <input type="checkbox" name="favorite" value="elwkdls">디자인</td>
+				<td> <input type="checkbox" name="favorite" value="rhkgkr">과학</td>
+				<td> <input type="checkbox" name="favorite" value="tngkr">수학</td>
+			</tr>
+			<tr>
+				<td> <input type="checkbox" name="favorite" value="djsdj">언어</td>
+				<td> <input type="checkbox" name="favorite" value="dlfma">이름</td>
+				<td> <input type="checkbox" name="favorite" value="wkdus">자연</td>
+				<td> <input type="checkbox" name="favorite" value="wkdsksrka">장난감</td>
+				<td> <input type="checkbox" name="favorite" value="dlsgud">인형</td>
+				<td> <input type="checkbox" name="favorite" value="rhkwp">과제&숙제</td>
 			</tr>
 			<tr>
 			
-				<td> <input type="checkbox" id="love" value="love">만화</td>
-				<td> <input type="checkbox" id="love" value="love">뮤지컬</td>
-				<td> <input type="checkbox" id="love" value="love">해외</td>
-				<td> <input type="checkbox" id="love" value="love">국내</td>
-				<td> <input type="checkbox" id="love" value="love">브랜드</td>
-				<td> <input type="checkbox" id="love" value="love">명품</td>
+				<td> <input type="checkbox" name="favorite" value="aksghk">만화</td>
+				<td> <input type="checkbox" name="favorite" value="abwlzjf">뮤지컬</td>
+				<td> <input type="checkbox" name="favorite" value="godhl">해외</td>
+				<td> <input type="checkbox" name="favorite" value="rnrso">국내</td>
+				<td> <input type="checkbox" name="favorite" value="qmfosem">브랜드</td>
+				<td> <input type="checkbox" name="favorite" value="audvnd">명품</td>
 			</tr>
 			<tr>
 			
-				<td> <input type="checkbox" id="love" value="love">음료</td>
-				<td> <input type="checkbox" id="love" value="love">스포츠</td>
-				<td> <input type="checkbox" id="love" value="love">게임</td>
-				<td> <input type="checkbox" id="love" value="love">컴퓨터</td>
-				<td> <input type="checkbox" id="love" value="love">겨울스포츠</td>
-				<td> <input type="checkbox" id="love" value="love">여름스포츠</td>
+				<td> <input type="checkbox" name="favorite" value="dmafy">음료</td>
+				<td> <input type="checkbox" name="favorite" value="tmvhcm">스포츠</td>
+				<td> <input type="checkbox" name="favorite" value="rpdla">게임</td>
+				<td> <input type="checkbox" name="favorite" value="zjavbxj">컴퓨터</td>
+				<td> <input type="checkbox" name="favorite" value="qpdlzjfl">베이커리</td>
+				<td> <input type="checkbox" name="favorite" value="rkddml">강의&수업</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">사계절</td>
-				<td> <input type="checkbox" id="love" value="love">봄</td>
-				<td> <input type="checkbox" id="love" value="love">여름</td>
-				<td> <input type="checkbox" id="love" value="love">가을</td>
-				<td> <input type="checkbox" id="love" value="love">겨울</td>
-				<td> <input type="checkbox" id="love" value="love">연예인</td>
+				<td> <input type="checkbox" name="favorite" value="tkrPwjf">사계절</td>
+				<td> <input type="checkbox" name="favorite" value="qha">봄</td>
+				<td> <input type="checkbox" name="favorite" value="dufma">여름</td>
+				<td> <input type="checkbox" name="favorite" value="rkdmf">가을</td>
+				<td> <input type="checkbox" name="favorite" value="rudnf">겨울</td>
+				<td> <input type="checkbox" name="favorite" value="dusdPdls">연예인</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">무술</td>
-				<td> <input type="checkbox" id="love" value="love">피아노</td>
-				<td> <input type="checkbox" id="love" value="love">공포</td>
-				<td> <input type="checkbox" id="love" value="love">좀비</td>
-				<td> <input type="checkbox" id="love" value="love">마라톤</td>
-				<td> <input type="checkbox" id="love" value="love">푸드스타일링</td>
+				<td> <input type="checkbox" name="favorite" value="antnf">무술</td>
+				<td> <input type="checkbox" name="favorite" value="dkrrl">악기</td>
+				<td> <input type="checkbox" name="favorite" value="rhdvh">공포</td>
+				<td> <input type="checkbox" name="favorite" value="claeo">침대</td>
+				<td> <input type="checkbox" name="favorite" value="akfkxhs">마라톤</td>
+				<td> <input type="checkbox" name="favorite" value="wlq">집</td>
 		</tr>
 		<tr>
-				<td> <input type="checkbox" id="love" value="love">모델</td>
-				<td> <input type="checkbox" id="love" value="love">골프</td>
-				<td> <input type="checkbox" id="love" value="love">가수</td>
-				<td> <input type="checkbox" id="love" value="love">배우</td>
-				<td> <input type="checkbox" id="love" value="love">감독</td>
-				<td> <input type="checkbox" id="love" value="love">연극</td>
+				<td> <input type="checkbox" name="favorite" value="ahepf">모델</td>
+				<td> <input type="checkbox" name="favorite" value="rhfvm">골프</td>
+				<td> <input type="checkbox" name="favorite" value="rktn">가수</td>
+				<td> <input type="checkbox" name="favorite" value="qodn">배우</td>
+				<td> <input type="checkbox" name="favorite" value="rkaehr">감독</td>
+				<td> <input type="checkbox" name="favorite" value="dusrmr">연극</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">그릇</td>
-				<td> <input type="checkbox" id="love" value="love">가구</td>
-				<td> <input type="checkbox" id="love" value="love">드라마</td>
-				<td> <input type="checkbox" id="love" value="love">안경</td>
-				<td> <input type="checkbox" id="love" value="love">결혼</td>
-				<td> <input type="checkbox" id="love" value="love">커피</td>
+				<td> <input type="checkbox" name="favorite" value="dlsxpfldj">인테리어</td>
+				<td> <input type="checkbox" name="favorite" value="rkrn">가구</td>
+				<td> <input type="checkbox" name="favorite" value="emfkak">드라마</td>
+				<td> <input type="checkbox" name="favorite" value="dksrud">안경</td>
+				<td> <input type="checkbox" name="favorite" value="tjdgud">성형</td>
+				<td> <input type="checkbox" name="favorite" value="zjvl">커피</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox" id="love" value="love">해산물</td>
-				<td> <input type="checkbox" id="love" value="love">불</td>
-				<td> <input type="checkbox" id="love" value="love">물</td>
-				<td> <input type="checkbox" id="love" value="love">나무</td>
-				<td> <input type="checkbox" id="love" value="love">하늘</td>
-				<td> <input type="checkbox" id="love" value="love">자연</td>
+				<td> <input type="checkbox" name="favorite" value="gotksanf">해산물</td>
+				<td> <input type="checkbox" name="favorite" value="qnf">불</td>
+				<td> <input type="checkbox" name="favorite" value="anf">물</td>
+				<td> <input type="checkbox" name="favorite" value="skan">나무</td>
+				<td> <input type="checkbox" name="favorite" value="gksmf">하늘</td>
+				<td> <input type="checkbox" name="favorite" value="wkdus">자연</td>
 				</tr>
 			</table>
 		</div>
