@@ -1,5 +1,5 @@
 
-create table USER (
+create table USERTABLE (
 Email varchar2(25) primary key,
 Nickname varchar2(20) not null,
 Passwd varchar2(20) not null,
@@ -97,7 +97,7 @@ DrawalDate date not null
 );
 
 
-create teble ADMIN (
+create table ADMINTABLE (
 AdminNum number(3) primary key,
 ConNum number(3) references CONTENTS(ConNum),
 Email varchar2(25) references USER(Email),
