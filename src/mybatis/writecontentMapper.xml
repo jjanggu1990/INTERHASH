@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="userinfo">
+<mapper namespace="writecontent">
 
 	<insert id="signup" parameterType="board.LogonDataBean">
 		insert into usertable
@@ -11,8 +11,4 @@
 	<select id="getInfo" parameterType="String" resultType="hashmap">
 		select * from members where id=#{id}
 	</select>
-	
-	<delete id="withdrawal" parameterType="board.LogonDataBean">
-		delete from usertable where email=#{email} and passwd=#{passwd}
-	</delete>
 </mapper>

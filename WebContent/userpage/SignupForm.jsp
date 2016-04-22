@@ -15,7 +15,6 @@ padding:10px;
 </style>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
-
 	function checkIt(){
 		var userinput = eval("document.userinput");
 		if(!userinput.email.value){
@@ -80,6 +79,7 @@ padding:10px;
 		}
 	};
 	</script>
+<<<<<<< HEAD
 
 <style>
 *{
@@ -89,6 +89,8 @@ color:#7A7A7A;
         background-color: #FFC4FF;
       }
 </style>
+=======
+>>>>>>> 7f9a9d9309ac679c37487be6edfb30641a6760be
 </head>
 <body>
 <div id="header">

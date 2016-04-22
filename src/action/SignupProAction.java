@@ -28,7 +28,7 @@ public class SignupProAction implements CommandAction {
 		member.setEmail(email);
 		member.setPasswd(passwd);
 		member.setNickname(nickname);
-		member.setHash(hash+"#test");
+		member.setHash("#test");
 		member.setAge(age);
 		member.setCreateddate(new Timestamp(System.currentTimeMillis()));
 		member.setModifieddate(new Timestamp(System.currentTimeMillis()));
