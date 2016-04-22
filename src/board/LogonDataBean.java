@@ -1,34 +1,27 @@
 package board;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 
 public class LogonDataBean {
 	private String email;
-	private String passwd;
-	private String age;
 	private String nickname;
-	private String hashtag;
-	private Timestamp reg_date;
+	private String passwd;
+	private String hash;
+	private int age;
+	private Timestamp createddate;
+	private Timestamp modifieddate;
+	private String ip;
+	private int distinction;
+	private int reportcount;
 	
 	
+
+
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getPasswd() {
-		return passwd;
-	}
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
-	}
-	public String getAge() {
-		return age;
-	}
-	public void setAge(String age) {
-		this.age = age;
 	}
 	public String getNickname() {
 		return nickname;
@@ -36,17 +29,53 @@ public class LogonDataBean {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	public String getHashtag() {
-		return hashtag;
+	public String getPasswd() {
+		return passwd;
 	}
-	public void setHashtag(String hashtag) {
-		this.hashtag = hashtag;
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
 	}
-	public Timestamp getReg_date() {
-		return reg_date;
+	public String getHash() {
+		return hash;
 	}
-	public void setReg_date(Timestamp reg_date) {
-		this.reg_date = reg_date;
+	public void setHash(String hash) {
+		this.hash = hash;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public Timestamp getModifieddate() {
+		return modifieddate;
+	}
+	public void setModifieddate(Timestamp modifieddate) {
+		this.modifieddate = modifieddate;
+	}
+	public String getIp() {
+		return ip;
+	}
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+	public int getDistinction() {
+		return distinction;
+	}
+	public void setDistinction(int distinction) {
+		this.distinction = distinction;
+	}
+	public int getReportcount() {
+		return reportcount;
+	}
+	public void setReportcount(int reportcount) {
+		this.reportcount = reportcount;
+	}
+	public Timestamp getCreateddate() {
+		return createddate;
+	}
+	public void setCreateddate(Timestamp createddate) {
+		this.createddate = createddate;
 	}
 
 	
