@@ -15,32 +15,43 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class LogonDBBean {
 	
-	private SqlSession getSession() throws SQLException{
-		String res = "config.xml";
-		InputStream is=null;
-		SqlSessionFactory factory=null;
-		SqlSession session=null;
-		try {
-			is = Resources.getResourceAsStream(res);
-			
-			factory = new SqlSessionFactoryBuilder().build(is);
-			System.out.println("factory ok");
-			session = factory.openSession();
-		}catch(Exception e){
-			throw new SQLException();
-		}
-		return session;
-	}
-	private static LogonDBBean instance = new LogonDBBean();
+private static LogonDBBean instance = new LogonDBBean();
 	
 	public static LogonDBBean getInstance(){
 		return instance;
 	}
 	private LogonDBBean(){}
 	
-	private Connection getConnection() throws Exception{
-		String jdbcDriver = "jdbc:apache:commons:dbcp:/pool";
-		return DriverManager.getConnection(jdbcDriver);
+	private static SqlSessionFactory getFactory() throws Exception{
+		String res = "mybatis/config.xml";
+		InputStream is =null;
+		SqlSessionFactory factory = null;
+		try {
+		  	is = Resources.getResourceAsStream(res);
+			
+			factory = new SqlSessionFactoryBuilder().build(is);
+			System.out.println("factory ok");
+			//SqlSession session = factory.openSession();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		return factory;
+	}
+	
+	public void insertMember(LogonDataBean member) throws Exception{
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		try{
+			factory = getFactory();
+			session = factory.openSession();
+			session.insert("userinfo.signup", member);
+			session.commit();
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			if(session != null) try{session.close();}catch(Exception ex){}
+		}
 	}
 	
 	

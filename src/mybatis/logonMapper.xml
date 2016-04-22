@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="logon">
+<mapper namespace="userinfo">
 
-	<insert id="add" parameterType="board.LogonDataBean">
-		insert into members
-		values(#{id},#{passwd},#{name},#{jumin1},#{jumin2},#{email},#{blog},sysdate,#{zipcode},#{address})
+	<insert id="signup" parameterType="board.LogonDataBean">
+		insert into usertable
+		values(#{email},#{nickname},#{passwd},#{hash},#{age},#{createddate},#{modifieddate},#{ip},#{distinction},#{reportcount})
 	</insert>
 	
 	<select id="getInfo" parameterType="String" resultType="hashmap">
