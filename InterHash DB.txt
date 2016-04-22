@@ -1,0 +1,107 @@
+
+create table USER (
+Email varchar2(25) primary key,
+Nickname varchar2(20) not null,
+Passwd varchar2(20) not null,
+Hash varchar2(1000) not null,
+Age number(2),
+CreatedDate date not null,
+ModifiedDate date not null,
+Ip varchar2(15) not null,
+Distinction number(1) not null,
+ReportCount number(3) not null
+);
+
+
+create table CONTENTS (
+ConNum number(3) primary key,
+ConName varchar2(100) not null,
+Content varchar2(1000) not null,
+ConPhoto varchar2(100),
+ConLike char(1),
+ConHash varchar2(1000) not null,
+ConCreatedDate date not null,
+ConModifiedDate date not null,
+ConIp varchar2(15) not null,
+ConReportCount number(3) not null,
+ConBlind char(1) not null,
+Email varchar2(25) references USER(Email)
+);
+
+
+create table COMMENT (
+ComNum number(3) primary key,
+ComNick varchar2(20) not null,
+ComContent varchar2(1000) not null,
+ComCreatedDate date not null,
+ComModifiedDate date not null,
+ComIp varchar2(15) not null,
+ComReportCount number(3) not null,
+ComBlind char(1) not null,
+ConNum number(3) references CONTENTS(ConNum),
+Email varchar2(25) references USER(Email)
+);
+
+
+
+create table REPORT (
+ReNum number(3) primary key,
+ReContent varchar2(1000) not null,
+ReCategory varchar2(100) not null,
+ReDistinction char(1) not null,
+ConNum number(3) references CONTENTS(ConNum),
+Email varchar2(25) references USER(Email)
+);
+
+
+create table HASHTAG (
+TagName varchar2(1000) primary key,
+TagAllCount number(3) not null,
+TagConCount number(3) not null,
+TagInterCount number(3) not null,
+TagClass char(1) not null,
+Email varchar2(25) references USER(Email)
+);
+
+
+create table PHOTO (
+PhotoNum number(3) primary key,
+PhotoName varchar2(100) not null,
+Realpath varchar2(500) not null,
+PhotoSize varchar2(100) not null,
+ConNum number(3) references CONTENTS(ConNum),
+Email varchar2(25) references USER(Email)
+);
+
+create table NOTICE (
+ConNum number(3) references CONTENTS(ConNum),
+Email varchar2(25) references USER(Email),
+ReNum number(3) references REPORT(ReNum)
+);
+
+create table STATS (
+StatDate number(3) primary key,
+VisitCount number(3) not null,
+ContentCount number(3) not null,
+CommentCount number(3) not null,
+ReportCount number(3) not null,
+LikeCount number(3) not null
+);
+
+
+create table WITHDRAWAL (
+DrewalNum number(3) primary key,
+DrawalEmail varchar2(25) not null,
+DrawalCause varchar2(1000) not null,
+DrawalDate date not null
+);
+
+
+create teble ADMIN (
+AdminNum number(3) primary key,
+ConNum number(3) references CONTENTS(ConNum),
+Email varchar2(25) references USER(Email),
+ReNum number(3) references REPORT(ReNum)
+);
+
+
