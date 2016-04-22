@@ -3,6 +3,8 @@
 <html>
 <head>
 <title>Insert title here</title>
+<style>
+</style>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
 
@@ -41,36 +43,53 @@
 		//alert(document.getElementById('e').value);
 		if(document.getElementById('pass').value != document.getElementById('pass1').value){
 			
-			document.getElementById('passwdchform').value = "일치하지 않습니다";
+			document.getElementById('passwdchform').value = "비밀번호가 일치하지 않습니다";
 			//alert("비밀번호를 동일하게 입력하세요");
 			return false;
 		}
 		if(document.getElementById('pass').value == document.getElementById('pass1').value){
 			
-			document.getElementById('passwdchform').value = "일치합니다";
+			document.getElementById('passwdchform').value = "비밀번호가 일치합니다";
 			//alert("비밀번호를 동일하게 입력하세요");
 			return false;
 		}
 	};
+	var checkflag = "false";
+
+	function check(field) {
+	if (checkflag == "false") {
+	  for (i = 0; i < field.length; i++) {
+	   field[i].checked = true;
+	  }
+	  checkflag = "true";
+	} else {
+	  for (i = 0; i < field.length; i++) {
+	   field[i].checked = false; 
+	  }
+	  checkflag = "false"; 
+		}
+	};
+	
 	</script>
+
 <style>
 
 </style>
 </head>
 <body>
 회원가입 폼
-
+	
 <form method="post" action="SignupPro.hash" name="userinput" onSubmit="return checkIt()">
-	email <input type="text" name="email" id="e" /><input type="button" value="인증하기" /><br>
+	email <input type="text" name="email" id="e" /><input type="button" value="인증하기"/><br>
 	email 인증번호 <input type="text" name="emailnumber"/><input type="button" value="확인"/><br>
 	password : <input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()"/><br>
-	password check : <input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()' /><input type="button" id="passwdchform" value="a"/><br>
+	password check : <input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()'/><br>
+	<input type="button" id="passwdchform" value="비밀번호가 일치하지 않습니다."/><br>
+	
 	닉네임 : <input type="text" name="nickname" /><input type="button" value="중복검사"/><br>
 	favorite : 관심있는 태그를 골라주세요!<br>
-		<div style="overflow:scroll; width:700px; height:600px;">
-		
-		<div><input type="checkbox" id="allcheck"><b>전체선택</b></div>
-		
+	<input type=checkbox value="" onClick="this.value=check(this.form.favorite)"><b>전체선택</b>
+		<div style="overflow:scroll; width:600px; height:300px;">		
 			<table>
 			<tr>
 				<td> <input type="checkbox" name="favorite" value="tkfkd">사랑</td>
