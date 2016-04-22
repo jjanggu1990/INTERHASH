@@ -13,6 +13,6 @@
 	</select>
 	
 	<delete id="withdrawal" parameterType="board.LogonDataBean">
-		delete from usertable where id=#{id} and passwd=#{passwd}
+		delete from usertable where email=#{email} and passwd=#{passwd}
 	</delete>
 </mapper>
