@@ -79,7 +79,6 @@ padding:10px;
 		}
 	};
 	</script>
-<<<<<<< HEAD
 
 <style>
 *{
@@ -89,8 +88,6 @@ color:#7A7A7A;
         background-color: #FFC4FF;
       }
 </style>
-=======
->>>>>>> 7f9a9d9309ac679c37487be6edfb30641a6760be
 </head>
 <body>
 <div id="header">
