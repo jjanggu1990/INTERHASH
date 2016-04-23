@@ -54,6 +54,34 @@ private static LogonDBBean instance = new LogonDBBean();
 		}
 	}
 	
+	public LogonDataBean checkId(LogonDataBean member)throws Exception{
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		int check = -1;
+		try{
+			factory = getFactory();
+			session = factory.openSession();
+			LogonDataBean result = session.selectOne("userinfo.checkId", member);
+			System.out.println(result.getEmail()+", "+result.getNickname());
+			session.commit();
+			if(result.getEmail().equals(member.getEmail())){
+				return result;
+			}else{
+				return null;
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			if(session!=null){
+				try{
+					session.close();
+				}catch(Exception e){
+				}
+			}
+		}
+		return null;
+	}
+	
 	public void deleteMember(LogonDataBean member) throws Exception{
 		SqlSessionFactory factory = null;
 		SqlSession session = null;

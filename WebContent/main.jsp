@@ -6,7 +6,7 @@
 <script>
 function checkIt(){
 		var userinput = eval("document.userinput");
-		if(!userinput.id.value){
+		if(!userinput.email.value){
 			alert("ID 를 입력하세요.");
 			return false;
 		}
@@ -20,8 +20,8 @@ function checkIt(){
 </head>
 <body>
 메인페이지<br>
-<form method="post" action="Board.hash" name="userinput" onSubmit="return checkIt()">
-	ID<input type="text" name="id"/><br>
+<form method="post" action="LoginPro.hash" name="userinput" onSubmit="return checkIt()">
+	ID<input type="text" name="email"/><br>
 	PW<input type="password" name="passwd"/><br>
 	<input type="submit" name="login" value="로그인"/>
 </form>

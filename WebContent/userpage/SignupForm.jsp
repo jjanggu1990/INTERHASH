@@ -123,6 +123,10 @@ color:#7A7A7A;
 <td><input type="button" value="중복검사"/></td>
 </tr>
 <tr>
+<td>나이</td>
+<td><input type="text" name="age" /></td>
+</tr>
+<tr>
 <td>favorite</td>
 <td>관심있는 태그를 골라주세요!</td>
 </tr>

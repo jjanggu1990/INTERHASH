@@ -7,7 +7,9 @@
 </head>
 <body>
 메인 게시판
-id : ${id}<br>
-password : ${passwd}
+id : ${email}<br>
+password : ${passwd}<br>
+session.memID  : ${sessionScope.memId}<br>
+session.nickName : ${sessionScope.nickName}<br>
 </body>
 </html>

@@ -4,26 +4,33 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import board.LogonDBBean;
+import board.LogonDataBean;
 
 public class LoginProAction implements CommandAction {
    
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		request.setCharacterEncoding("UTF-8");
-		String id = request.getParameter("id");
+		String email = request.getParameter("email");
 		String passwd = request.getParameter("passwd");
-		System.out.println("id ::: " +id+ "  passwd ::: " + passwd);
-		LogonDBBean manager = LogonDBBean.getInstance();
-	/*	int check = manager.userCheck(id, passwd);
-		request.setAttribute("check", check);
+		System.out.println("email ::: " +email+ "  passwd ::: " + passwd);
+		request.setAttribute("email", email);
+		request.setAttribute("passwd", passwd);
+		LogonDataBean member = new LogonDataBean();
+		member.setEmail(email);
+		member.setPasswd(passwd);
 		
-		if(check==1){
-			request.getSession().setAttribute("memId", id);
+		LogonDBBean manager = LogonDBBean.getInstance();
+		LogonDataBean check= manager.checkId(member);
+		request.setAttribute("check", check);
+		if(check!=null){
+			request.getSession().setAttribute("memId", email);
+			request.getSession().setAttribute("nickName", check.getNickname());
 		}else{
 			request.getSession().setAttribute("memId", null);
-		}*/
+		}
 		
-		return "/userpage/LoginPro.jsp";
+		return "/userpage/Board.jsp";
 	}
 	  
 }

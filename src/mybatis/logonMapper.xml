@@ -9,7 +9,11 @@
 	</insert>
 	
 	<select id="getInfo" parameterType="String" resultType="hashmap">
-		select * from members where id=#{id}
+		select * from usertable where id=#{id}
+	</select>
+	
+	<select id="checkId" parameterType="board.LogonDataBean" resultType="board.LogonDataBean">
+		select email,nickname from usertable where email=#{email} and passwd=#{passwd}
 	</select>
 	
 	<delete id="withdrawal" parameterType="board.LogonDataBean">
