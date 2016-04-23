@@ -12,6 +12,9 @@ import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import board.LogonDBBean;
+import board.TempPasswd;
+
 public class FindPasswordProAction  implements CommandAction {
 
 	@Override
@@ -39,7 +42,7 @@ public class FindPasswordProAction  implements CommandAction {
 			if(letter=='z'){
 				System.out.println("z 번호 : "+(int)letter);
 			}*/
-			System.out.println(letter);
+			//System.out.println(letter);
 			letter_arr[i]=letter;
 			letter = (char)(++letter);
 		}
@@ -56,7 +59,15 @@ public class FindPasswordProAction  implements CommandAction {
 	private final String password = "q131313!#";
 
 	private void sendmail(String email) {
-		randomPassword();
+		
+		//임시로 생성된 문자열을 데이터베이스에 저장
+		LogonDBBean bean = LogonDBBean.getInstance();
+		TempPasswd temppw = new TempPasswd();
+		temppw.setEmail(email);
+		temppw.setPasswd(randomPassword());
+		bean.setTempPasswd(temppw);
+		
+		
 		Properties props = new Properties();
 		/*
 		 * props.put("mail.smtp.user",username); props.put("mail.smtp.password",
@@ -83,7 +94,7 @@ public class FindPasswordProAction  implements CommandAction {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress("fksh90@gmail.com"));//
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
-			message.setContent("임시 비밀번호는 "+result+" 입니다.","text/html; charset=UTF-8;");//글내용을 html타입
+			message.setContent("<h1>임시 비밀번호는 "+result+" 입니다.</h1><br>","text/html; charset=UTF-8;");//글내용을 html타입
 			message.setSubject("Testing Subject");
 			//message.setText("<html><body><a href='http://www.naver.com'>naver</a> Dear Mail Crawler," + "\n\n No spam to my email, please!</body></html>");// 내용
 			System.out.println("send!!!");

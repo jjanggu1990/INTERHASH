@@ -82,6 +82,21 @@ private static LogonDBBean instance = new LogonDBBean();
 		return null;
 	}
 	
+	public void setTempPasswd(TempPasswd temp){
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		try{
+			factory = getFactory();
+			session = factory.openSession();
+			session.update("userinfo.tempPasswd", temp);
+			session.commit();
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			if(session != null) try{session.close();}catch(Exception ex){}
+		}
+	}
+	
 	public void deleteMember(LogonDataBean member) throws Exception{
 		SqlSessionFactory factory = null;
 		SqlSession session = null;
