@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +14,18 @@
 		return true;
 		
 	}
-
 </script>
+<c:set var="email" value='${email}' />
+<c:if test='${email == null}'>
+<script>
+	alert("일치하는 이메일이 없습니다.");
+</script>
+</c:if> 
+<c:if test='${email != null}'>
+<script>
+	alert("해당 이메일로 임시비밀번호를 전송했습니다.");
+</script>
+</c:if>
 </head>
 <body>
 비밀번호 찾기 폼

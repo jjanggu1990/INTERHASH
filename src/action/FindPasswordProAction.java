@@ -21,11 +21,14 @@ public class FindPasswordProAction  implements CommandAction {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		String email = request.getParameter("email");
 		
-		request.setAttribute("email", email);
-		
-		sendmail(email);
-		
+		LogonDBBean bean = LogonDBBean.getInstance();
+		if(bean.existEmail(email)==1){
+			sendmail(email);
+		}else{
+			request.setAttribute("email", null);
+		}
 		return "/userpage/FindPasswordForm.jsp";
+		
 	}
 	
 	String result="";

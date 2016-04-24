@@ -15,6 +15,9 @@
 	<select id="checkId" parameterType="board.LogonDataBean" resultType="board.LogonDataBean">
 		select email,nickname from usertable where email=#{email} and passwd=#{passwd}
 	</select>
+	<select id="existEmail" parameterType="String" resultType="Integer">
+		select count(*) from usertable where email=#{email}
+	</select>
 	<update id="tempPasswd" parameterType="board.TempPasswd">
 		update usertable set passwd=#{passwd} where email = #{email}
 	</update>
