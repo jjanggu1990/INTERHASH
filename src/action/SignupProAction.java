@@ -12,7 +12,7 @@ public class SignupProAction implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		
+		request.setCharacterEncoding("UTF-8");
 		String email = request.getParameter("email");
 		String nickname = request.getParameter("nickname");
 		String passwd = request.getParameter("passwd");
