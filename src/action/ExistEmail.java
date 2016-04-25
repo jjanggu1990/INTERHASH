@@ -14,7 +14,7 @@ public class ExistEmail  implements CommandAction {
 		LogonDBBean bean = LogonDBBean.getInstance();
 		int check = bean.existEmail(email);
 		
-		request.setAttribute("check", check);
+		request.getSession().setAttribute("check", check);
 		
 		if(check==1){
 			return "/userpage/FindPasswordForm.jsp";

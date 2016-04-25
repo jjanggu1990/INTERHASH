@@ -145,5 +145,26 @@ public class LogonDBBean {
 				}
 		}
 	}
+	
+	
+	public void sendReport(ReportDataBean report) throws Exception{
+		SqlSessionFactory factory=null;
+		SqlSession session = null;
+		try{
+			factory = getFactory();
+			session = factory.openSession();
+			session.delete("report.sendreport", report);
+			session.commit();
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+		
+	}
 
 }
