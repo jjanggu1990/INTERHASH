@@ -44,12 +44,12 @@ public class ReportDBBean {
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
-			if (session != null)
+			if (session != null){
 				try {
 					session.close();
 				} catch (Exception ex) {
 				}
+			}
 		}
-		
 	}
 }
