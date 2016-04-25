@@ -66,7 +66,7 @@ public class FindPasswordProAction  implements CommandAction {
 		//임시로 생성된 문자열을 데이터베이스에 저장
 		LogonDBBean bean = LogonDBBean.getInstance();
 		TempPasswd temppw = new TempPasswd();
-		temppw.setEmail(email);
+		temppw.setEmail(email);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 		temppw.setPasswd(randomPassword());
 		bean.setTempPasswd(temppw);
 		

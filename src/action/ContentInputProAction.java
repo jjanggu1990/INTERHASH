@@ -7,8 +7,13 @@ public class ContentInputProAction implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		// TODO Auto-generated method stub
-		return "/userpage/ContentInputPro.jsp";
+		String email = request.getParameter("email");
+		String nickname= request.getParameter("nickname");
+		String content=request.getParameter("content");		
+		
+		
+		
+		return "/userpage/Board.jsp";
 	}
 	
 }
