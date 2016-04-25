@@ -67,7 +67,7 @@ public class LogonDBBean {
 			factory = getFactory();
 			session = factory.openSession();
 			check = session.selectOne("userinfo.existEmail", email);
-			System.out.println("이메일 존재여부 1이 출력되야 함 : "+check);
+			System.out.println("이메일 존재여부 1이 출력되야 함 (check): "+check);
 			session.commit();
 		}catch(Exception e){
 			e.printStackTrace();

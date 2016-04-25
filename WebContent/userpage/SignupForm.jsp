@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,6 +46,14 @@ padding:10px;
 		}
 		return true;
 	};
+	function confirmemail(userinput) {
+		if(userinput.email.value=="") {
+			alert("Email을 입력하세요");
+			return;
+		
+		url="/INTERHASH/ConfirmEmail.hash";
+		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+	}
 	
 	function checkPass(){
 		//alert(document.getElementById('e').value);
@@ -98,8 +107,8 @@ color:#7A7A7A;
 <table>
 <tr>
 <td>email</td>
-<td><input type="text" name="email" id="e"/></td>
-<td><input type="button" value="인증하기"/></td>
+<td><input type="text" name="email" id="email"/></td>
+<td><input type="button" value="인증하기" onclick="confirmemail(this.form)"/></td>
 </tr>
 <tr>
 <td>email인증번호</td>
@@ -124,7 +133,7 @@ color:#7A7A7A;
 </tr>
 <tr>
 <td>나이</td>
-<td><input type="text" name="age" /></td>
+<td><input type="text" name="age" id="age" /></td>
 </tr>
 <tr>
 <td>favorite</td>
@@ -159,7 +168,7 @@ color:#7A7A7A;
 				<label for="todghkfdydvna">#생활용품</label></td>
 				<td> <input type="checkbox" name="hash" id="dlsxjspt" value="dlsxjspt" style="display:none">
 				<label for="dlsxjspt">#인터넷</label></td>
-				<td> <input type="checkbox" name="hash" id="dmatlr" value="doq" style="display:doq">
+				<td> <input type="checkbox" name="hash" id="dmatlr" value="doq" style="display:none">
 				<label for="doq">#앱</label></td>
 			</tr>
 			<tr>
