@@ -14,10 +14,8 @@ ReportCount number(3) not null
 
 create table CONTENTS (
 ConNum number(3) primary key,
-ConName varchar2(100) not null,
 Content varchar2(1000) not null,
 ConPhoto varchar2(100),
-ConLike char(1),
 ConHash varchar2(1000) not null,
 ConCreatedDate date not null,
 ConModifiedDate date not null,

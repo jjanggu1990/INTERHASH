@@ -4,6 +4,7 @@
 <html>
 <head>
 <title> NewTab </title>
+<c:set var="email" value='${email}' />
 <script>
 	function checkIt(){
 		var userinfo = eval("document.useremail");
@@ -15,7 +16,6 @@
 		
 	}
 </script>
-<c:set var="email" value='${email}' />
 <c:if test='${email == null}'>
 <script>
 	alert("일치하는 이메일이 없습니다.");
