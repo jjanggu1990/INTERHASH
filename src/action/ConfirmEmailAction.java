@@ -13,11 +13,10 @@ public class ConfirmEmailAction  implements CommandAction {
 		System.out.println(email+"이메일확인");
 		LogonDBBean bean = LogonDBBean.getInstance();
 		int check = bean.existEmail(email);
-
 		System.out.println(check);
 		
 		request.setAttribute("email", email);
-		
+		request.setAttribute("check", check);
 		request.getSession().setAttribute("check", check);
 		
 		return "/userpage/ConfirmEmail.jsp";
