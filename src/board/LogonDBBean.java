@@ -67,7 +67,7 @@ public class LogonDBBean {
 			factory = getFactory();
 			session = factory.openSession();
 			check = session.selectOne("userinfo.existEmail", email);
-			System.out.println("이메일 존재여부 1이 출력되야 함 (check): "+check);
+			System.out.println("이메일 존재여부 1이 출력되야 함 : "+check);
 			session.commit();
 		}catch(Exception e){
 			e.printStackTrace();
@@ -147,24 +147,6 @@ public class LogonDBBean {
 	}
 	
 	
-	public void sendReport(ReportDataBean report) throws Exception{
-		SqlSessionFactory factory=null;
-		SqlSession session = null;
-		try{
-			factory = getFactory();
-			session = factory.openSession();
-			session.delete("report.sendreport", report);
-			session.commit();
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			if (session != null)
-				try {
-					session.close();
-				} catch (Exception ex) {
-				}
-		}
-		
-	}
+
 
 }

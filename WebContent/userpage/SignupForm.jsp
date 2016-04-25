@@ -46,14 +46,16 @@ padding:10px;
 		}
 		return true;
 	};
-	function confirmemail(userinput) {
+	function confirmemail(){
+		var userinput = eval("document.userinput");
 		if(userinput.email.value=="") {
 			alert("Email을 입력하세요");
-			return;
-		
-		url="/INTERHASH/ConfirmEmail.hash";
+			return false;
+		}
+		var email =document.userinput.getElementById('email').value;
+		url="ConfirmEmail.hash?email="+email;
 		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
-	}
+	};
 	
 	function checkPass(){
 		//alert(document.getElementById('e').value);
@@ -103,12 +105,12 @@ color:#7A7A7A;
 <center><img src="logo/logo.jpg"></center></div>
 <hr/>
 <center>
-<form method="post" action="SignupPro.hash" name="userinput" onSubmit="return checkIt()">
+<form method="post" action="SignupPro.hash" name="userinput" id="userinput" onSubmit="return checkIt()">
 <table>
 <tr>
 <td>email</td>
 <td><input type="text" name="email" id="email"/></td>
-<td><input type="button" value="인증하기" onclick="confirmemail(this.form)"/></td>
+<td><input type="button" value="인증하기" onClick="confirmemail()" /> </td>
 </tr>
 <tr>
 <td>email인증번호</td>
