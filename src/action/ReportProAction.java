@@ -3,7 +3,7 @@ package action;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import board.LogonDBBean;
+import board.ReportDBBean;
 import board.ReportDataBean;
 
 public class ReportProAction implements CommandAction {
@@ -17,13 +17,7 @@ public class ReportProAction implements CommandAction {
 		char redistinction = request.getParameter("redistinction").charAt(0);
 		int connum = Integer.parseInt(request.getParameter("connum"));
 		
-		System.out.println("recontent :: "+recontent);
-		System.out.println("recategory :: "+recategory);
 		System.out.println("email :: "+email);
-		System.out.println("redistinction :: "+redistinction);
-		System.out.println("connum :: " +connum);
-		
-		
 		
 		ReportDataBean report = new ReportDataBean();
 		report.setConnum(connum);
@@ -32,7 +26,7 @@ public class ReportProAction implements CommandAction {
 		report.setEmail(email);
 		report.setRecontent(recontent);
 		
-		LogonDBBean bean = LogonDBBean.getInstance();
+		ReportDBBean bean = ReportDBBean.getInstance();
 		bean.sendReport(report);
 		
 		
