@@ -50,8 +50,8 @@ padding:10px;
 		if(userinput.email.value=="") {
 			alert("Email을 입력하세요");
 			return;
-		
-		url="/INTERHASH/ConfirmEmail.hash";
+		}
+		url="/INTERHASH/ConfirmEmail.hash?email=" + userinput.email.value;
 		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
 	}
 	
@@ -133,7 +133,7 @@ color:#7A7A7A;
 </tr>
 <tr>
 <td>나이</td>
-<td><input type="text" name="age" id="age" /></td>
+<td><input type="text" name="age" id="age"/></td>
 </tr>
 <tr>
 <td>favorite</td>

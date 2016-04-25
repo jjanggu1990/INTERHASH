@@ -16,7 +16,7 @@ public class SendEmailAction implements CommandAction {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		sendmail();
-		return "";
+		return "/userpage/SendEmail.jsp";
 	}
 
 	final String username = "fksh90@gmail.com";
@@ -65,10 +65,14 @@ public class SendEmailAction implements CommandAction {
 			System.out.println("send!!!");
 			Transport.send(message);
 			System.out.println("SEND");
+			
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
+	
 
 }

@@ -22,14 +22,16 @@ color:#7A7A7A;
 </table>
 </c:if>
 <c:if test="${check!=1}">
+<form method="post" action="SendEmail.hash">
 <table>
   <tr>
     <td align="center">
-      <p>해당 이메일로 인증번호가 전송되었습니다. </p>
-      <input type="button" value="닫기" onclick="self.close()">
+      <p>사용할수 있는 이메일입니다. </p>
+      <input type="submit" value="인증번호 전송" >
     </td>
   </tr>
 </table>
+</form>
 </c:if>
 </body>
 </html>
