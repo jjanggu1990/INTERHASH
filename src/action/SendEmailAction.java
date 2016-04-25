@@ -1,6 +1,7 @@
 package action;
 
 import java.util.Properties;
+import java.util.Random;
 
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
@@ -15,14 +16,28 @@ public class SendEmailAction implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		sendmail();
-		return "/userpage/SendEmail.jsp";
+		String email = (String)request.getSession().getAttribute("email");
+		String key = makeKey();
+		
+		request.getSession().setAttribute("key",key);
+		
+		sendmail(email,key);
+		return "/userpage/ConfirmSuccess.jsp";
+	}
+	
+	public String makeKey(){
+		Random ran = new Random();
+		String key = "";
+		for(int i=0;i<7;i++){
+			key+=ran.nextInt(10);
+		}
+		return key;
 	}
 
 	final String username = "fksh90@gmail.com";
 	final String password = "q131313!#";
 
-	public void sendmail() {
+	public void sendmail(String email,String key) {
 
 		Properties props = new Properties();
 		/*
@@ -49,17 +64,8 @@ public class SendEmailAction implements CommandAction {
 		try {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress("fksh90@gmail.com"));//
-			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("jjanggu1990@naver.com"));
-			message.setContent(""
-					+ "<p>naver</p><br> "
-					+ "<table border='1'> "
-					+ "<tr> "
-					+ "<td>Dear</td> "
-					+ "<td>Mail</td></tr> "
-					+ "<tr><td>Crawler No spam</td> "
-					+ "<td>to my email, please!</td></tr></table>"
-					+ "<hr><br><br>"
-					+ "----------------------------------절취선----------------------","text/html; charset=UTF-8;");//글내용을 html타입
+			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
+			message.setContent("인증번호는 "+key+" 입니다.<br>","text/html; charset=UTF-8;");//글내용을 html타입
 			message.setSubject("Testing Subject");
 			//message.setText("<html><body><a href='http://www.naver.com'>naver</a> Dear Mail Crawler," + "\n\n No spam to my email, please!</body></html>");// 내용
 			System.out.println("send!!!");

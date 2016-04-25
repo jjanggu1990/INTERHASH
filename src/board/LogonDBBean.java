@@ -126,7 +126,6 @@ public class LogonDBBean {
 				}
 		}
 	}
-
 	public void deleteMember(LogonDataBean member) throws Exception {
 		SqlSessionFactory factory = null;
 		SqlSession session = null;

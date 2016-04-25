@@ -54,7 +54,7 @@ padding:10px;
 		}
 		url="/INTERHASH/ConfirmEmail.hash?email=" + userinput.email.value;
 		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
-		}
+	}
 	function checkPass(){
 		//alert(document.getElementById('e').value);
 		
@@ -87,6 +87,10 @@ padding:10px;
 	  checkflag = "false"; 
 		}
 	};
+	function keyCheck(){
+		url="/INTERHASH/ConfirmEmail.hash?email=" + userinput.email.value;
+		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+	}
 	</script>
 
 <style>

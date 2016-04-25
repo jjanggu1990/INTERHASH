@@ -15,7 +15,7 @@ public class ConfirmEmailAction  implements CommandAction {
 		int check = bean.existEmail(email);
 		System.out.println(check);
 		
-		request.setAttribute("email", email);
+		request.getSession().setAttribute("email", email);
 		request.setAttribute("check", check);
 		request.getSession().setAttribute("check", check);
 		

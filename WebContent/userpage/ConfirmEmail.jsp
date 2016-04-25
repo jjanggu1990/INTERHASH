@@ -21,7 +21,7 @@ color:#7A7A7A;
   </tr>
 </table>
 </c:if>
-<c:if test="${check!=1}">
+<c:if test="${check==-1}">
 <form method="post" action="SendEmail.hash">
 <table>
   <tr>
