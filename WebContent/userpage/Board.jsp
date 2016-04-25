@@ -11,6 +11,7 @@ id : ${email}<br>
 password : ${passwd}<br>
 session.memID : ${sessionScope.memId}<br>
 session.nickName : ${sessionScope.nickName}<br>
+<input type="button" value="글쓰기" onClick="window.location.href='ContentInputForm.hash';"/><br>
 <input type="button" value="로그아웃" onClick="window.location.replace('Logout.hash')"/><br>
 </body>
 </html>
