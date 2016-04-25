@@ -1,5 +1,7 @@
 package action;
 
+import java.util.Arrays;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -13,12 +15,15 @@ public class LoginProAction implements CommandAction {
 		request.setCharacterEncoding("UTF-8");
 		String email = request.getParameter("email");
 		String passwd = request.getParameter("passwd");
+		String[] hash = request.getParameterValues("hash");
 		System.out.println("email ::: " +email+ "  passwd ::: " + passwd);
 		request.setAttribute("email", email);
 		request.setAttribute("passwd", passwd);
+		request.setAttribute("hash", hash);
 		LogonDataBean member = new LogonDataBean();
 		member.setEmail(email);
 		member.setPasswd(passwd);
+		member.setHash(Arrays.toString(hash));
 		
 		LogonDBBean manager = LogonDBBean.getInstance();
 		LogonDataBean check= manager.checkId(member);

@@ -1,6 +1,7 @@
 package action;
 
 import java.sql.Timestamp;
+import java.util.Arrays;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +17,7 @@ public class SignupProAction implements CommandAction {
 		String email = request.getParameter("email");
 		String nickname = request.getParameter("nickname");
 		String passwd = request.getParameter("passwd");
-		String hash = request.getParameter("hash");
+		String[] hash = request.getParameterValues("hash");
 		int age = Integer.parseInt(request.getParameter("age"));
 		Timestamp createddate;
 		Timestamp modifieddate;
@@ -30,7 +31,7 @@ public class SignupProAction implements CommandAction {
 		member.setEmail(email);
 		member.setPasswd(passwd);
 		member.setNickname(nickname);
-		member.setHash(hash);
+		member.setHash(Arrays.toString(hash));
 		member.setAge(age);
 		member.setCreateddate(new Timestamp(System.currentTimeMillis()));
 		member.setModifieddate(new Timestamp(System.currentTimeMillis()));
