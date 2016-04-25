@@ -50,10 +50,16 @@ padding:10px;
 		var userinput = eval("document.userinput");
 		if(userinput.email.value=="") {
 			alert("Email을 입력하세요");
+<<<<<<< HEAD
 			return false;
 		}
 		var email =document.userinput.getElementById('email').value;
 		url="ConfirmEmail.hash?email="+email;
+=======
+			return;
+		}
+		url="/INTERHASH/ConfirmEmail.hash?email=" + userinput.email.value;
+>>>>>>> 699b7884706bad4f7a4d7562afeb298b34e62392
 		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
 	};
 	
@@ -135,7 +141,7 @@ color:#7A7A7A;
 </tr>
 <tr>
 <td>나이</td>
-<td><input type="text" name="age" id="age" /></td>
+<td><input type="text" name="age" id="age"/></td>
 </tr>
 <tr>
 <td>favorite</td>
