@@ -6,7 +6,7 @@
 </head>
 <body>
 로그인 화면
-<form action="LoginPro.hash">
+<form action="LoginPro.hash" method="post">
 id : <input type="text" name="id"/><br>
 password : <input type="password" name="passwd"/><br>
 <input type="submit" name="login" value="로그인"/>

@@ -47,7 +47,7 @@ create table REPORT (
 ReNum number(3) primary key,
 ReContent varchar2(1000) not null,
 ReCategory varchar2(100) not null,
-ReDistinction char(1) not null,
+ReDistinction varchar2(20) not null,
 ConNum number(3) references CONTENTS(ConNum),
 Email varchar2(25) references USERTABLE(Email)
 );
@@ -102,3 +102,10 @@ ConNum number(3) references CONTENTS(ConNum),
 Email varchar2(25) references USERTABLE(Email),
 ReNum number(3) references REPORT(ReNum)
 );
+
+
+
+CREATE SEQUENCE REPORT_NUM INCREMENT BY 1 START WITH 1 MAXVALUE 10000000 MINVALUE 1 NOCACHE;
+
+
+
