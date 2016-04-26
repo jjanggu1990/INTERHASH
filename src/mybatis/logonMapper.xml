@@ -18,6 +18,9 @@
 	<select id="existEmail" parameterType="String" resultType="Integer">
 		select count(*) from usertable where email=#{email}
 	</select>
+	<select id="existNickname" parameterType="String" resultType="Integer">
+		select count(*) from usertable where nickname=#{nickname}
+	</select>
 	<update id="tempPasswd" parameterType="board.TempPasswd">
 		update usertable set passwd=#{passwd} where email = #{email}
 	</update>

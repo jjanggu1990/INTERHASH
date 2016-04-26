@@ -81,6 +81,28 @@ public class LogonDBBean {
 		}
 		return check;
 	}
+	public int existNickname(String nickname) throws Exception{
+		int check = -1;
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			check = session.selectOne("userinfo.existNickname", nickname);
+			System.out.println("닉네임 존재여부 1이 출력되야 함 : "+check);
+			session.commit();
+		}catch(Exception e){
+			e.printStackTrace();
+		} finally {
+			if (session != null) {
+				try {
+					session.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+		return check;
+	}
 	public LogonDataBean checkId(LogonDataBean member) throws Exception {
 		SqlSessionFactory factory = null;
 		SqlSession session = null;

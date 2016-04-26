@@ -44,7 +44,7 @@ padding:10px;
 	function confirmemail(){
 		var userinput = eval("document.userinput");
 		if(userinput.email.value=="") {
-			alert("Email을 입력하세요");
+			alert("Email을 입력해주세요");
 			return false;
 		}
 		url="/INTERHASH/ConfirmEmail.hash?email=" + userinput.email.value;
@@ -52,6 +52,7 @@ padding:10px;
 	}
 	function checkPass(){
 		//alert(document.getElementById('e').value);
+		if(document.getElementById('pass').value && document.getElementById('pass1').value){
 		
 		if(document.getElementById('pass').value != document.getElementById('pass1').value){
 			
@@ -64,8 +65,14 @@ padding:10px;
 			document.getElementById('passwdchform').value = "비밀번호가 일치합니다";
 			//alert("비밀번호를 동일하게 입력하세요");
 			return false;
+			}
 		}
-
+		else {ㄴ
+			if(document.getElementById('pass').value) {
+			document.getElementById('passwdchform').value = "비밀번호가 일치하지 않습니다";
+			}
+		}
+			
 	};
 	var checkflag = "false";
 
@@ -85,6 +92,15 @@ padding:10px;
 	function keyCheck(){
 		url="/INTERHASH/ConfirmKey.hash?inputkey=" + userinput.emailnumber.value;
 		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+	}
+	function confirmnickname() {
+		var userinput = eval("document.userinput");
+		if(userinput.nickname.value=="") {
+			alert("닉네임을 입력해 주세요");
+			return false;
+		}
+		url="/INTERHASH/ConfirmNickname.hash?nickname=" + userinput.nickname.value;
+		open(url, "confirmnik", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
 	}
 	</script>
 
@@ -125,7 +141,7 @@ color:#7A7A7A;
 <tr>
 <td>닉네임</td>
 <td><input type="text" name="nickname" /></td>
-<td><input type="button" value="중복검사"/></td>
+<td><input type="button" value="중복검사" onClick="confirmnickname()"/></td>
 </tr>
 <tr>
 <td>나이</td>
