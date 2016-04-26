@@ -88,7 +88,7 @@ padding:10px;
 		}
 	};
 	function keyCheck(){
-		url="/INTERHASH/ConfirmEmail.hash?email=" + userinput.email.value;
+		url="/INTERHASH/ConfirmKey.hash?inputkey=" + userinput.emailnumber.value;
 		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
 	}
 	</script>
@@ -117,7 +117,7 @@ color:#7A7A7A;
 <tr>
 <td>email인증번호</td>
 <td><input type="text" name="emailnumber"/></td>
-<td><input type="button" value="확인"/><br></td>
+<td><input type="button" value="확인" onClick="keyCheck()"/><br></td>
 </tr>
 <tr>
 <td>password</td>

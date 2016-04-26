@@ -22,7 +22,7 @@ public class SendEmailAction implements CommandAction {
 		request.getSession().setAttribute("key",key);
 		
 		sendmail(email,key);
-		return "/userpage/ConfirmSuccess.jsp";
+		return "/userpage/SendEmail.jsp";
 	}
 	
 	public String makeKey(){

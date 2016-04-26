@@ -1,18 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>Insert title here</title>
 </head>
 <body>
+
+<c:if test="${sessionScope.key=='success'}">
 <table>
   <tr>
-    <p><td align="center">${email}·Î ÀÎÁõ ¸ŞÀÏÀ» ¹ß¼ÛÇß½À´Ï´Ù.</p>
-    <input type="button" value="´İ±â" onclick="self.close()">
+    <td align="center">ì¸ì¦ì´ ì„±ê³µí•˜ì…¨ìŠµë‹ˆë‹¤.${sessionScope.key}
+    <input type="button" value="ë‹«ê¸°" onclick="self.close()">
     </td>
-    
   </tr>
 </table>
+</c:if>
+<c:if test = "${sessionScope.key !='success' }">
+<table>
+  <tr>
+    <td align="center">ì¸ì¦ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤.${sessionScope.key}
+    <input type="button" value="ë‹«ê¸°" onclick="self.close()">
+    </td>
+  </tr>
+</table>
+</c:if>
 </body>
 </html>
