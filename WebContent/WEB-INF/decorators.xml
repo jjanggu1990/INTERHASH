@@ -5,10 +5,13 @@
 		<pattern>/userpage/*</pattern>
 		<pattern>*.hash</pattern>
 	</decorator>
-<!-- 
+ 
 	<excludes>
-		<pattern>/sitemesh/hello/exclude.jsp</pattern>
-		<pattern>/sitemesh/news/exclude.jsp</pattern>
+		<pattern>/userpage/ConfirmEmail.jsp</pattern>
+		<pattern>/userpage/ConfirmSuccess.jsp</pattern>
+		<pattern>/userpage/ReportForm.jsp</pattern>
+		<pattern>/Main.hash</pattern>
+		<pattern>index.jsp</pattern>
 	</excludes>
- -->
+ 
 </decorators>

@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<decorator:head/>
     <meta charset="utf-8">
     <title>CSS Tutorial | Layout</title>
     <style>
