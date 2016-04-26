@@ -145,7 +145,7 @@ color:#7A7A7A;
 </tr>
 <tr>
 <td>나이</td>
-<td><input type="text" name="age" id="age"/></td>
+<td><input type="text" name="age"/></td>
 </tr>
 <tr>
 <td>favorite</td>

@@ -61,9 +61,25 @@ function confirmnickname() {
 	url="/INTERHASH/ConfirmNickname.hash?nickname=" + userinput.nickname.value;
 	open(url, "confirmnik", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
 }
+
 </script>
 </head>
 <body>
+hash :: ${hashtag}<br>
+<br>
+
+<%-- <c:forTokens var="hashtag" items="${hashtag}"  delims=" , ">
+${hashtag}
+<c:forEach var="hash" items="${hash}">
+<script>
+(":checkbox").each(function(){
+	if($(this).val()=="{hash}"){
+		$(this).attr("checked","checked");
+			}
+		});
+</script>
+</c:forEach>
+</c:forTokens> --%>
 <center>
 <form method="post" action="UserInfoModifyPro.hash" name="userinput" id="userinput" onSubmit="return checkIt()">
 <table>
@@ -89,7 +105,7 @@ function confirmnickname() {
 </tr>
 <tr>
 <td>나이</td>
-<td><input type="text" name="age" value="${value.getAge}"/></td>
+<td><input type="text" name="age" value="${c.getAge()}"/></td>
 </tr>
 <tr>
 <td>favorite</td>
