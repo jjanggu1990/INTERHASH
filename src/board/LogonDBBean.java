@@ -148,6 +148,27 @@ public class LogonDBBean {
 				}
 		}
 	}
+	public LogonDataBean getMember(String email) throws Exception {
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		LogonDataBean aritcle = null;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			aritcle = session.selectOne("userinfo.getInfo", email);
+			
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+		return aritcle;
+	}
 	public void deleteMember(LogonDataBean member) throws Exception {
 		SqlSessionFactory factory = null;
 		SqlSession session = null;

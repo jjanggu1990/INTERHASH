@@ -8,8 +8,8 @@
 		values(#{email},#{nickname},#{passwd},#{hash},#{age},#{createddate},#{modifieddate},#{ip},#{distinction},#{reportcount})
 	</insert>
 	
-	<select id="getInfo" parameterType="String" resultType="hashmap">
-		select * from usertable where id=#{id}
+	<select id="getInfo" parameterType="String" resultType="board.LogonDataBean">
+		select * from usertable where email=#{email}
 	</select>
 	
 	<select id="checkId" parameterType="board.LogonDataBean" resultType="board.LogonDataBean">
@@ -21,6 +21,8 @@
 	<select id="existNickname" parameterType="String" resultType="Integer">
 		select count(*) from usertable where nickname=#{nickname}
 	</select>
+
+	
 	<update id="tempPasswd" parameterType="board.TempPasswd">
 		update usertable set passwd=#{passwd} where email = #{email}
 	</update>
