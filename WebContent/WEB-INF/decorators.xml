@@ -7,11 +7,11 @@
 	</decorator>
  
 	<excludes>
-		<pattern>/userpage/ConfirmEmail.jsp</pattern>
-		<pattern>/userpage/ConfirmSuccess.jsp</pattern>
-		<pattern>/userpage/ReportForm.jsp</pattern>
+		<pattern>/ConfirmNickname.hash*</pattern>
+		<pattern>/ConfirmKey.hash*</pattern>
+		<pattern>/ReportForm.hash</pattern>
+		<pattern>/ConfirmEmail.hash*</pattern>
 		<pattern>/Main.hash</pattern>
-		<pattern>index.jsp</pattern>
 	</excludes>
  
 </decorators>
