@@ -15,6 +15,7 @@
       }
       #jb-header {
         padding: 20px;
+        height: 120px;
         margin-bottom: 20px;
         border: 1px solid #bcbcbc;
       }
@@ -37,6 +38,12 @@
         clear: both;
         padding: 20px;
         border: 1px solid #bcbcbc;
+      }
+      #jb-logo{
+      	float:left;
+      }
+      #jb-logon{
+      	float:right;
       }
       ul {
       	list-style-type: none;
@@ -63,17 +70,33 @@
   <body>
     <div id="jb-container">
       <div id="jb-header">
-      	<img alt="로고" src="./userpage/logo/logo.jpg">
+      	<span id="jb-logo">
+	      	<img alt="로고" src="./userpage/logo/logo.jpg" onclick="window.location.href='Board.hash'">
+      	</span>
+      	<div id="jb-logon">
+      		<form>
+      			<input type = "text"><br>
+      			<input type = "password"><br>
+      			<input type = "button" value="회원가입"><input type="submit" value="로그인">
+      		</form>
+      	</div>
       </div>
       <div id="jb-content">
+      	태그 : ${hash}<br>
       <decorator:body/>
       </div>
       <div id="jb-sidebar">
-        <h2>Sidebar</h2>
+        <h2>해시태그</h2>
         <ul>
-          <li><a href="Main.hash">Lorem</a></li>
-          <li><a href="Main.hash">Ipsum</a></li>
-          <li><a href="Main.hash">Dolor</a></li>
+          <li><a href="Board.hash?hash=#사랑">#사랑</a></li>
+          <li><a href="Board.hash?hash=#돈">#돈</a></li>
+          <li><a href="Board.hash?hash=#컴퓨터">#컴퓨터</a></li>
+          <li><a href="Board.hash?hash=#커피">#커피</a></li>
+          <li><a href="Board.hash?hash=#책">#책</a></li>
+          <li><a href="Board.hash?hash=#반려동물">#반려동물</a></li>
+          <li><a href="Board.hash?hash=#독도">#독도</a></li>
+          <li><a href="Board.hash?hash=#맥주">#맥주</a></li>
+          
         </ul>
       </div>
       <div id="jb-footer">
