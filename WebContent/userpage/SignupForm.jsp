@@ -67,7 +67,7 @@ padding:10px;
 			return false;
 			}
 		}
-		else {ㄴ
+		else {
 			if(document.getElementById('pass').value) {
 			document.getElementById('passwdchform').value = "비밀번호가 일치하지 않습니다";
 			}

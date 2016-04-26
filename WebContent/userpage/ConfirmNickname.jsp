@@ -33,7 +33,7 @@ color:#7A7A7A;
 <table>
   <tr>
     <td align="center">
-      <p>입력하신 ${nickname}은<br>사용할수 있는 닉네임입니다.</p>
+      <p>사용할수 있는 닉네임입니다.</p>
       <input type="button" value="닫기" onclick="setNickname()">
     </td>
   </tr>
