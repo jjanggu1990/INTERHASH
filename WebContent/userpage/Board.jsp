@@ -9,7 +9,6 @@
 메인 게시판
 id : ${email}<br>
 password : ${passwd}<br>
-hash : ${hash}<br>
 session.memID : ${sessionScope.memId}<br>
 session.nickName : ${sessionScope.nickName}<br>
 <input type="button" value="글쓰기" onClick="window.location.href='ContentInputForm.hash';"/><br>

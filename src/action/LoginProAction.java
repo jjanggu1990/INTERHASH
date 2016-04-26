@@ -19,7 +19,6 @@ public class LoginProAction implements CommandAction {
 		System.out.println("email ::: " +email+ "  passwd ::: " + passwd);
 		request.setAttribute("email", email);
 		request.setAttribute("passwd", passwd);
-		request.setAttribute("hash", hash);
 		LogonDataBean member = new LogonDataBean();
 		member.setEmail(email);
 		member.setPasswd(passwd);
@@ -28,6 +27,7 @@ public class LoginProAction implements CommandAction {
 		LogonDBBean manager = LogonDBBean.getInstance();
 		LogonDataBean check= manager.checkId(member);
 		request.setAttribute("check", check);
+		
 		if(check!=null){
 			request.getSession().setAttribute("memId", email);
 			request.getSession().setAttribute("nickName", check.getNickname());

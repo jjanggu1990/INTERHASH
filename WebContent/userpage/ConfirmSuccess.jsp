@@ -4,13 +4,17 @@
 <html>
 <head>
 <title>Insert title here</title>
+<style>
+*{
+color:#7A7A7A;
+}
+</style>
 </head>
 <body>
-
 <c:if test="${sessionScope.key=='success'}">
 <table>
   <tr>
-    <td align="center">인증이 성공하셨습니다.${sessionScope.key}
+    <td align="center"><p>인증되었습니다.</p>
     <input type="button" value="닫기" onclick="self.close()">
     </td>
   </tr>
@@ -19,7 +23,7 @@
 <c:if test = "${sessionScope.key !='success' }">
 <table>
   <tr>
-    <td align="center">인증번호가 틀렸습니다.${sessionScope.key}
+    <td align="center"><p>인증번호가 틀렸습니다.</p>
     <input type="button" value="닫기" onclick="self.close()">
     </td>
   </tr>
