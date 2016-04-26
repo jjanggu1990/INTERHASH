@@ -3,13 +3,79 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+	.head{
+		background-color: blue;
+		width: 100%;
+		height: 150px;
+		padding:30px;
+		margin:-10px;
+	}
+	.head_inner1{
+		border:30px;
+		width:100%;
+		height:100%;
+	}
+	.left_head{
+		background-color: green;
+		width: 100px;
+		height: 100px;
+	}
+	.right_head{
+		background-color: yellow;
+		width: 100px;
+		height: 100px;
+	}
+	.main_outer{
+		width:1000px;
+		height:1000px;
+	}
+	.navi{
+		display:inline-block;
+		background-color:yellow;
+		width:15%;
+		height:80%;
+	}
+	.main{
+		display:inline-block;
+		background-color:green;
+		width:60%;
+		height:30%;
+	}
+	.footer{
+		background-color:black;
+		width:100%;
+		height:200px;
+	}
+	
+</style>
 <title>Insert title here<decorator:title/></title>
-데코레이터 헤드<br>
+<!-- 
+<div class = "head">
+<div class = "head_inner1">
+<span class ="left_head">
+</span>
+<span class="right_head">
+</span>
+</div>
+</div> -->
 <decorator:head/>
 </head>
 <body>
-데코레이터 페이지<br>
+
 <decorator:body/>
+<%-- <div class ="main_outer">
+		<div class="navi">
+			<p>메뉴</p>
+		</div>
+		<div class="main">
+			<decorator:body/>	
+		</div>
+</div>
+ --%>
+<div class="footer">
+</div>
+
 </body>
 </html>
 <%-- 

@@ -20,14 +20,6 @@ public class ConfirmEmailAction  implements CommandAction {
 		request.getSession().setAttribute("check", check);
 		
 		return "/userpage/ConfirmEmail.jsp";
-		/*
-		if(check==1){
-			return "/userpage/SignupForm.hash";
-			
-		}else{
-			return "SendEmail.hash";
-			
-		}
-		*/
+
 	}
 }
