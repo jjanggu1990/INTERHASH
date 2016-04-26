@@ -5,11 +5,6 @@
 <head>
 <title>Insert title here</title>
 <style>
-#header{
- padding:50px;
- width:100%;
- height:130px;
-}
 #body{
 padding:10px;
 }
@@ -103,9 +98,6 @@ color:#7A7A7A;
 </style>
 </head>
 <body>
-<div id="header">
-<center><img src="logo/logo.jpg"></center></div>
-<hr/>
 <center>
 <form method="post" action="SignupPro.hash" name="userinput" id="userinput" onSubmit="return checkIt()">
 <table>
