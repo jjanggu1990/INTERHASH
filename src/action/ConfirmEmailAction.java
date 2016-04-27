@@ -16,7 +16,6 @@ public class ConfirmEmailAction  implements CommandAction {
 		System.out.println(check);
 		
 		request.getSession().setAttribute("email", email);
-		request.setAttribute("check", check);
 		request.getSession().setAttribute("check", check);
 		
 		return "/userpage/ConfirmEmail.jsp";
