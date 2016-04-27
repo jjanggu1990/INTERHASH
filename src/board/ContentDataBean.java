@@ -3,74 +3,98 @@ package board;
 import java.sql.Timestamp;
 
 public class ContentDataBean {
-	private String blind;
-	private String content;
-	private String conphoth;
-	private String conhash;
-	private Timestamp concreatedate;
-	private Timestamp conmodifieddate;
-	private String conup;
-	private int conreportcount;
-	private char CONBLIND;
-	private String email;
-	public String getBlind() {
-		return blind;
+	int connum;
+	String content;
+	String conphoto;
+	String conhash;
+	Timestamp concreateddate;
+	Timestamp modifieddate;
+	String conip;
+	int conreportcount;
+	char conblind;
+	String email;
+	
+	public ContentDataBean(){}
+
+	public int getConnum() {
+		return connum;
 	}
-	public void setBlind(String blind) {
-		this.blind = blind;
+
+	public void setConnum(int connum) {
+		this.connum = connum;
 	}
+
 	public String getContent() {
 		return content;
 	}
+
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getConphoth() {
-		return conphoth;
+
+	public String getConphoto() {
+		return conphoto;
 	}
-	public void setConphoth(String conphoth) {
-		this.conphoth = conphoth;
+
+	public void setConphoto(String conphoto) {
+		this.conphoto = conphoto;
 	}
+
 	public String getConhash() {
 		return conhash;
 	}
+
 	public void setConhash(String conhash) {
 		this.conhash = conhash;
 	}
-	public Timestamp getConcreatedate() {
-		return concreatedate;
+
+
+	public Timestamp getConcreateddate() {
+		return concreateddate;
 	}
-	public void setConcreatedate(Timestamp concreatedate) {
-		this.concreatedate = concreatedate;
+
+	public void setConcreateddate(Timestamp concreateddate) {
+		this.concreateddate = concreateddate;
 	}
-	public Timestamp getConmodifieddate() {
-		return conmodifieddate;
+
+	public Timestamp getModifieddate() {
+		return modifieddate;
 	}
-	public void setConmodifieddate(Timestamp conmodifieddate) {
-		this.conmodifieddate = conmodifieddate;
+
+	public void setModifieddate(Timestamp modifieddate) {
+		this.modifieddate = modifieddate;
 	}
-	public String getConup() {
-		return conup;
+
+	public String getConip() {
+		return conip;
 	}
-	public void setConup(String conup) {
-		this.conup = conup;
+
+	public void setConip(String conip) {
+		this.conip = conip;
 	}
+
 	public int getConreportcount() {
 		return conreportcount;
 	}
+
 	public void setConreportcount(int conreportcount) {
 		this.conreportcount = conreportcount;
 	}
-	public char getCONBLIND() {
-		return CONBLIND;
+
+	public char getConblind() {
+		return conblind;
 	}
-	public void setCONBLIND(char cONBLIND) {
-		CONBLIND = cONBLIND;
+
+	public void setConblind(char conblind) {
+		this.conblind = conblind;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 }

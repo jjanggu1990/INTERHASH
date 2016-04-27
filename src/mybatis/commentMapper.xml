@@ -3,12 +3,11 @@
 
 <mapper namespace="comment">
 
-	<insert id="signup" parameterType="board.LogonDataBean">
-		insert into usertable
-		values(#{email},#{nickname},#{passwd},#{hash},#{age},#{createddate},#{modifieddate},#{ip},#{distinction},#{reportcount})
-	</insert>
+	<select id="content" parameterType="integer" resultType="board.ContentDataBean">
+		select * from contents where connum = #{connum}
+	</select>
 	
-	<select id="getInfo" parameterType="String" resultType="hashmap">
-		select * from members where id=#{id}
+	<select id="contentdelete" parameterType="integer">
+		delete from contents where connum = #{connum}
 	</select>
 </mapper>

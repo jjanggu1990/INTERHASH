@@ -18,6 +18,7 @@
 			<param-value>/WEB-INF/commandHandlerURI.properties</param-value>
 		</init-param>
 	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>ControllerUsingURI</servlet-name>
 		<url-pattern>*.hash</url-pattern>
