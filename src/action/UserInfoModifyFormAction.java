@@ -14,9 +14,20 @@ public class UserInfoModifyFormAction implements CommandAction {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		
 		String email = (String) request.getSession().getAttribute("memId");
+			
 		LogonDBBean manager = LogonDBBean.getInstance();
 		LogonDataBean c = manager.getMember(email);
+		
+		String gethash = c.getHash();
+		gethash = gethash.substring(1, gethash.length()-1);
+		
+		c.setHash(gethash);		
+		
 		request.setAttribute("c", c);
+		request.setAttribute("gethash", gethash);
+		
+		System.out.println("c.getHash() :: "+gethash);
+		
 		return "/userpage/UserInfoModifyForm.jsp";
 	}
 	
