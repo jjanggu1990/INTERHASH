@@ -8,6 +8,10 @@
 		values(#{email},#{nickname},#{passwd},#{hash},#{age},#{createddate},#{modifieddate},#{ip},#{distinction},#{reportcount})
 	</insert>
 	
+	<update id="updateMember" parameterType="board.LogonDataBean">
+		update usertable set email=#{email}, nickname=#{nickname}, passwd=#{passwd}, hash=#{hash}, age=#{age} where email=#{email}
+	</update>
+	
 	<select id="getInfo" parameterType="String" resultType="board.LogonDataBean">
 		select * from usertable where email=#{email}
 	</select>

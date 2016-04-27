@@ -78,6 +78,7 @@
       			<input type = "text"><br>
       			<input type = "password"><br>
       			<input type = "button" value="회원가입"><input type="submit" value="로그인">
+      			<input type="button" value="정보수정" onclick="window.location.href='UserInfoModifyForm.hash';">
       		</form>
       	</div>
       </div>

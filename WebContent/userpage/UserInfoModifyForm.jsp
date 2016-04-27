@@ -77,7 +77,7 @@ window.onload=function checkHash(){
 </head>
 <body>
 <center>
-<form method="post" action="UserInfoModifyPro.hash" name="userinput" id="userinput" onSubmit="return checkIt()">
+<form method="post" action="UserInfoModifyPro.hash" name="userinput" id="userinput">
 <table>
 <tr>
 <td>email</td>
