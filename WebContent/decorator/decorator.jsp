@@ -5,7 +5,7 @@
 <head>
 <decorator:head/>
     <meta charset="utf-8">
-    <title>CSS Tutorial | Layout</title>
+    <title>에벌레</title>
     <style>
       #jb-container {
         width: 1100px;
@@ -89,13 +89,13 @@
         <h2>해시태그</h2>
         <ul>
           <li><a href='Board.hash?hash=사랑'>#사랑</a></li>
-          <li><a href="Board.hash?hash=#돈">#돈</a></li>
-          <li><a href="Board.hash?hash=#컴퓨터">#컴퓨터</a></li>
-          <li><a href="Board.hash?hash=#커피">#커피</a></li>
-          <li><a href="Board.hash?hash=#책">#책</a></li>
-          <li><a href="Board.hash?hash=#반려동물">#반려동물</a></li>
-          <li><a href="Board.hash?hash=#독도">#독도</a></li>
-          <li><a href="Board.hash?hash=#맥주">#맥주</a></li>
+          <li><a href="Board.hash?hash=돈">#돈</a></li>
+          <li><a href="Board.hash?hash=컴퓨터">#컴퓨터</a></li>
+          <li><a href="Board.hash?hash=커피">#커피</a></li>
+          <li><a href="Board.hash?hash=책">#책</a></li>
+          <li><a href="Board.hash?hash=반려동물">#반려동물</a></li>
+          <li><a href="Board.hash?hash=독도">#독도</a></li>
+          <li><a href="Board.hash?hash=맥주">#맥주</a></li>
           
         </ul>
       </div>

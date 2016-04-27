@@ -107,6 +107,17 @@
 		margin:5px auto;
 	}
 </style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+$(function(){
+	$(window).scroll(function(){
+		if($(window).scrollTop() == ($(document).height()+100 )- $(window).height()){
+	
+			alert("끝!");
+		}
+	});  
+}); 
+</script>
 </head>
 <body>
 
@@ -118,8 +129,10 @@
 	<div id ="board_main">
 		<div id="board_subject">
 			<div id="subject">
+			<label>'${con.email}'</label>
 			</div>
 			<div id="time">
+			<label>'${con.conmodifieddate}'</label>
 			</div>
 		</div>
 		<div id="board_content">
