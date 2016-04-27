@@ -8,7 +8,7 @@
     <title>CSS Tutorial | Layout</title>
     <style>
       #jb-container {
-        width: 940px;
+        width: 1100px;
         margin: 0px auto;
         padding: 20px;
         border: 1px solid #bcbcbc;
@@ -20,8 +20,8 @@
         border: 1px solid #bcbcbc;
       }
       #jb-content {
-        width: 650px;
-        height:700px;
+        width: 800px;
+        height:auto;
         padding: 10px;
         margin-bottom: 20px;
         float: right;
@@ -88,7 +88,7 @@
       <div id="jb-sidebar">
         <h2>해시태그</h2>
         <ul>
-          <li><a href="Board.hash?hash=#사랑">#사랑</a></li>
+          <li><a href='Board.hash?hash=사랑'>#사랑</a></li>
           <li><a href="Board.hash?hash=#돈">#돈</a></li>
           <li><a href="Board.hash?hash=#컴퓨터">#컴퓨터</a></li>
           <li><a href="Board.hash?hash=#커피">#커피</a></li>

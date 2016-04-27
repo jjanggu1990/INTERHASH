@@ -1,10 +1,12 @@
 package action;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import board.ContentDBBean;
 import board.LogonDBBean;
 import board.LogonDataBean;
 
@@ -33,8 +35,12 @@ public class LoginProAction implements CommandAction {
 		}else{
 			request.getSession().setAttribute("memId", null);
 		}
+		ArrayList array=null;
+		ContentDBBean bean = ContentDBBean.getInstance();
+		array= bean.getContent();
+		request.setAttribute("content", array);
 		
-		return "/userpage/Board.jsp";
+		return "/fixpage/boardDiv.jsp";
 	}
 	  
 }

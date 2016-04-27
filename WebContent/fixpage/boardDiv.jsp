@@ -1,25 +1,27 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <style type="text/css">
 	#board_div{
-		width:900px;
+		width:760px;
 		height:320px;
 		background-color: blue;
 		border:2px solid;
 		padding:5px;
+		margin:10px;
 	}
 	#board_img{
-		width:300px;
-		height:310px;
+		width:270px;
+		height:280px;
 		background-color: green;
 		float:left;
 		border:2px solid;
 		margin:auto;
 	}
 	#board_main{
-		width:550px;
+		width:470px;
 		height:310px;
 		background-color: yellow;
 		float:right;
@@ -27,19 +29,19 @@
 		margin:auto;
 	}
 	#board_subject{
-		width:530px;
+		width:470px;
 		height:50px;
 		border:2px solid;
 		margin:auto;
 	}
 	#board_content{
-		width:530px;
+		width:470px;
 		height:200px;
 		border:2px solid;
 		margin:auto;
 	}
 	#board_like{
-		width:530px;
+		width:470px;
 		height:50px;
 		border:2px solid;
 		margin:auto;
@@ -107,10 +109,11 @@
 </style>
 </head>
 <body>
+
+<c:forEach var="con" items= '${content}' >
+
 <div id="board_div">
 	<div id="board_img">
-	
-		
 	</div>
 	<div id ="board_main">
 		<div id="board_subject">
@@ -120,6 +123,7 @@
 			</div>
 		</div>
 		<div id="board_content">
+			<label> '${con.content}' </label>
 		</div>
 		<div id="board_like">
 			<div id="like">
@@ -131,8 +135,6 @@
 				<div id="like_alpha">
 				</div>
 			</div>
-			<div id="board_subject_click">
-			</div>
 			<div id="commnet">
 				<div id="commnet_img">
 				</div>
@@ -140,11 +142,11 @@
 					<P>123</P>
 				</div>
 			</div>
-			<div id="board_commnet_click">
-			</div>
 		</div>
 		
 	</div>
 </div>
+
+</c:forEach>
 </body>
 </html>
