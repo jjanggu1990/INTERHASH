@@ -13,7 +13,16 @@ public class ContentDataBean {
 	int conreportcount;
 	char conblind;
 	String email;
+	String connickname;
 	
+	public String getConnickname() {
+		return connickname;
+	}
+
+	public void setconNickname(String connickname) {
+		this.connickname = connickname;
+	}
+
 	public ContentDataBean(){}
 
 	public int getConnum() {
@@ -57,7 +66,10 @@ public class ContentDataBean {
 		this.concreateddate = concreateddate;
 	}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 34a8de2544a1c1d4281d3c538c207f84206f4de1
 	public Timestamp getConmodifieddate() {
 		return conmodifieddate;
 	}

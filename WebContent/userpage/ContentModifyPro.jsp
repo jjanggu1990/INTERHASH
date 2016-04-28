@@ -2,9 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert title here</title>
+<title>정보수정완료</title>
+<script>
+alert("정보수정완료!");
+</script>
 </head>
 <body>
-게시물 수정 버튼 클릭시
 </body>
 </html>

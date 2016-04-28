@@ -111,7 +111,7 @@
 <script>
 $(function(){
 	$(window).scroll(function(){
-		if( $(window).scrollTop() == ($(document).height() -  $(window).height())){
+		if( $(window).scrollTop() == ($(document).height() -  ($(window).height() +$(window).height()))){
 			alert("끝!");
 		}
 	});  
@@ -128,15 +128,19 @@ $(function(){
 	<div id ="board_main">
 		<div id="board_subject">
 			<div id="subject">
-			<label>'${con.email}'</label>
+			<label>'${con.connickname }'</label>
 			</div>
 			<div id="time">
 			<label>'${con.conmodifieddate}'</label>
 			</div>
 		</div>
 		<div id="board_content">
+<<<<<<< HEAD
 			<label>'${con.content}'</label>
 
+=======
+			<label> '${con.content}' <br/>${con.conhash } </label>
+>>>>>>> 34a8de2544a1c1d4281d3c538c207f84206f4de1
 		</div>
 		<div id="board_like">
 			<div id="like">
