@@ -84,6 +84,8 @@
       	</div>
       </div>
       <div id="jb-content">
+      <input type="button" value="글쓰기" onclick="window.location.href='ContentInputForm.hash'">
+      
       	태그 : ${hash}<br>
       <decorator:body/>
       </div>

@@ -35,6 +35,24 @@ public class ContentDBBean {
 		return factory;
 	}
 
+	public void insertContent(ContentDataBean bean) throws Exception {
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			session.insert("writecontent.insertContent" , bean);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+	}
 	public ArrayList getContent() throws Exception {
 		SqlSessionFactory factory = null;
 		SqlSession session = null;

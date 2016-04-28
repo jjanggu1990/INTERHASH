@@ -9,4 +9,7 @@
 	<select id="getContentByHash" parameterType="String" resultType="board.ContentDataBean">
 		select * from contents where conhash like '%' || #{hash} || '%' order by conmodifieddate desc
 	</select>
+	<insert id = "insertContent" parameterType="board.ContentDataBean">
+		insert into contents values (connum_seq.nextval, #{content}, #{conphoto}, #{conhash}, #{concreateddate}, #{conmodifieddate},#{conip},0,0,#{email},#{connickname}) 
+	</insert>
 </mapper>

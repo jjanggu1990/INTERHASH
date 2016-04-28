@@ -60,12 +60,11 @@
 		}
 	}
 	
-	function tagCheck(){
-    	
-    	url="/INTERHASH/userpage/TagCheck.jsp?check=y";
-    	
-    	window.open(url,"post","toolbar=no ,width=800 ,height=550 ,directories=no ,status=yes ,scrollbars=no ,menubar=no");
-    }
+	function tagCheck() {
+
+		url = "userpage/TagCheck.jsp?check=y";
+		newwindow=window.open(url,"post","toolbar=no ,width=800 ,height=550 ,directories=no ,status=yes ,scrollbars=no ,menubar=no");
+	}
 	
 </script>
 <!-- <script>
@@ -154,8 +153,7 @@
 </style>
 </head>
 <body>
-	<form action="ContentInputPro.hash" name="writeForm" method="post"
-		enctype="multipart/form-data">
+	<form action="ContentInputPro.hash" name="writeForm" method="post">	<!-- enctype="multipart/form-data"> -->
 		<div id="wrap" style="width: 500px; margin: auto;">
 			<textarea id="textfield" name="content" placeholder="안녕하세요"></textarea>
 			<div class="photoBox">
@@ -175,7 +173,7 @@
   						<label for="tags">Tags: </label>
   						<input id="tags">
 					</div> -->
-					<input type="tag" name="tag" size="7" readonly>
+					<input type="text" name="tag" size="7" readonly>
 					<input type="button" value="Tag" onClick="tagCheck()">
 				</span> 
 				<span id="submit" style="width: 100px; float: left;"> 
