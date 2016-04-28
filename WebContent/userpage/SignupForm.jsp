@@ -109,7 +109,8 @@ padding:10px;
 color:#7A7A7A;
 }
 :checked + label{
-        background-color: #FFC4FF;
+       /*  background-color: #B0B0B0; */
+        color:#5AAEFF;
       }
 </style>
 </head>
@@ -180,7 +181,7 @@ color:#7A7A7A;
 				<label for="todghkfdydvna">#생활용품</label></td>
 				<td> <input type="checkbox" name="hash" id="dlsxjspt" value="#인터넷" style="display:none">
 				<label for="dlsxjspt">#인터넷</label></td>
-				<td> <input type="checkbox" name="hash" id="dmatlr" value="#앱" style="display:none">
+				<td> <input type="checkbox" name="hash" id="doq" value="#앱" style="display:none">
 				<label for="doq">#앱</label></td>
 			</tr>
 			<tr>
