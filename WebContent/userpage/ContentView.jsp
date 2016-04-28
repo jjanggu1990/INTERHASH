@@ -12,6 +12,9 @@ float:left;
 #date{
 float:right;
 }
+#hash{
+color:#5AAEFF;
+}
 </style>
 <script>   
 function report(){
@@ -21,14 +24,7 @@ function report(){
 	window.open(url,"post","toolbar=no ,width=500 ,height=300,directories=no,status=yes,menubar=no");
 }
 </script>
-<!-- <script>     
- function deleteSave(){
-if(document.delForm.passwd.value==''){
-alert("삭제하시겠습니까?");
-return false;
-}
-}   
-</script> -->
+
 </head>
 <body>
 <table bgcolor="blue "width=100% height=100%>
@@ -37,7 +33,7 @@ return false;
 <form name="view">
 <table bgcolor="green" align="center" width=50% height=100% >
 	<tr>
-		<td width=40% ><h3>${sessionScope.nickName}님</h3></td>
+		<td width=40% >${sessionScope.nickName}님</td>
 		<td align="right">${sdf.format(content.concreateddate)}</td>
 	</tr>
 	<tr>
@@ -53,7 +49,7 @@ return false;
 		<td colspan="2">${content.content}</td>
 	</tr>
 	<tr>
-		<td colspan="2">${content.conhash}</td></tr>
+		<td id="hash" colspan="2">${content.conhash}</td></tr>
 	<tr>
 		<td height="420" colspan="2"><img src="${content.conphoto}"></td>
 	</tr>
@@ -65,36 +61,36 @@ return false;
 </td>
 
 <td>
-<form name="view">
+<form method="post" action="ContentView.hash">
 <table bgcolor="green" align="center" width=80% height=100% >
 	<tr>
-		<td width=40% ><h3>${content.nickName}님</h3></td>
-		<td align="right">${sdf.format(content.concreateddate)}</td>
-	</tr>
-	<%-- <tr>
-		<c:if test="${sessionScope.memId==content.email}">
-		<td align="right" colspan="2"><a href="/INTERHASH/ContentDelete.hash">수정하기</a> /
-		<a href="/INTERHASH/ContentDelete.hash">삭제하기</a></td>
-		</c:if>
-		<c:if test="${sessionScope.memId!=content.email}">
-		<td align="right" colspan="2"><a onclick="report()">신고하기</a></td>
-		</c:if>			
-	</tr> --%>
-	<tr>
+		<td width=40% >${sessionScope.nickName}님</td>
 	
-		<td bgcolor="yellow" colspan="2"><textarea width=100%></textarea></td>
-		
+		<input type=hidden name=connum value="${content.connum}">
 	</tr>
 	<tr>
-		<td colspan="2">${content.conhash}</td></tr>
-	<tr>
-		<td height="420" colspan="2"><img src="${content.conphoto}"></td>
+		<td><input type="text" name="comcontent"></td>
 	</tr>
 	<tr>
-		<td colspan="2" align="right" height="70">좋아요 / 댓글수</td>		
-	</tr>
-</table>
+		<td><input type="submit" value="개시"></td>
+	</tr>	
+	
 </form> 
+<!-- --------------------------------------------------
+-댓글보내기 -->
+
+
+ <c:if test="${comment.comnum>0}">
+
+<c:forEach var="comments" items="${comment}">
+<tr>
+<td>
+${comment.comcontent}
+</td>
+</tr>
+</c:forEach>
+</c:if> 
+</table>
 </td>
 
 

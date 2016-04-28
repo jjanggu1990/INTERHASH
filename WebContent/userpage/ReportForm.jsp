@@ -17,7 +17,7 @@
 
 <form>
 <div align="center">
-<h3>닉네임 :</h3></span>
+<h3>닉네임 :</h3></div>
 
 <div align="center">
 <select name="report">
@@ -31,8 +31,8 @@
 	</select>
 	<input type="hidden" name="redistinction" value="b"/>
 	<input type="hidden" name="connum" value="3"/>
-	${content.connum}
 </div>
+
 <br><br>
 <div align="center"><input type="submit" value="신고하기" /></div>
 </form>  

@@ -10,4 +10,8 @@
 	<select id="contentdelete" parameterType="integer">
 		delete from contents where connum = #{connum}
 	</select>
+	
+	<insert id="insertcomment" parameterType="board.CommentDataBean">
+		insert COMMENTTABLE into value(COMMENTTABLE_seq.NEXTVAL,#{comnick},#{comcontent},sysdate,sysdate,#{comip},0,0,#{connum},#{email})
+	</insert>
 </mapper>
