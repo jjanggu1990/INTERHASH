@@ -3,6 +3,14 @@
 <html>
 <head>
 <title>Insert title here</title>
+<style>
+p{
+padding:3px;
+}
+td{
+width:250px; 
+}
+</style>
 </head>
 <body>
 <center>
@@ -11,18 +19,13 @@
 <table border="1">
 <tr>
 <td>email</td>
-<td>nickname</td>
-<td>신고횟수</td>
-<td>회원삭제</td>
+<td>탈퇴날짜</td>
+<td>탈퇴사유</td>
 </tr>
 <tr>
 <td>jk4877@naver.com</td>
-<td>진콩콩</td>
-<td>0번</td>
-<td><input type="checkbox" name="delete"></td>
-</tr>
-<tr>
-<td colspan="4"><div align="right"><input type="button" value="회원삭제"></div></td>
+<td>2016-04-28</td>
+<td>InterHash사용방법을 모르겠음</td>
 </tr>
 </table>
 
