@@ -28,7 +28,8 @@
         border: 1px solid #bcbcbc;
       }
       #jb-sidebar {
-        width: 200px;
+      	position:fixed;
+        width: 230px;
         padding: 10px;
         margin-bottom: 20px;
         float: left;
@@ -49,7 +50,7 @@
       	list-style-type: none;
     	margin: 0;
     	padding: 0;
-    	width: 200px;
+    	width: 230px;
     	background-color: #f1f1f1;
 	}
 

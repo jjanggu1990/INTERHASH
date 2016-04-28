@@ -7,7 +7,7 @@
 	#board_div{
 		width:760px;
 		height:320px;
-		background-color: blue;
+		/* background-color: blue; */
 		border:2px solid;
 		padding:5px;
 		margin:10px;
@@ -15,7 +15,7 @@
 	#board_img{
 		width:270px;
 		height:280px;
-		background-color: green;
+		/* background-color: green; */
 		float:left;
 		border:2px solid;
 		margin:auto;
@@ -23,7 +23,7 @@
 	#board_main{
 		width:470px;
 		height:310px;
-		background-color: yellow;
+		/* background-color: yellow; */
 		float:right;
 		border:2px solid;
 		margin:auto;
@@ -111,8 +111,7 @@
 <script>
 $(function(){
 	$(window).scroll(function(){
-		if($(window).scrollTop() == ($(document).height()+100 )- $(window).height()){
-	
+		if( $(window).scrollTop() == ($(document).height() -  $(window).height())){
 			alert("끝!");
 		}
 	});  

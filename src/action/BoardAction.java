@@ -17,7 +17,16 @@ public class BoardAction implements CommandAction {
 		request.setAttribute("passwd", passwd);
 		String hash = request.getParameter("hash");
 		System.out.println("hash :::: "+hash);
-		
+		ArrayList array=null;
+		if(hash==null){		
+			ContentDBBean bean = ContentDBBean.getInstance();
+			array= bean.getContent();
+			request.setAttribute("content", array);
+		}else{
+			ContentDBBean bean = ContentDBBean.getInstance();
+			array = bean.getContent(hash);
+			request.setAttribute("content", array);
+		}
 		return "/fixpage/boardDiv.jsp";
 	}
 	

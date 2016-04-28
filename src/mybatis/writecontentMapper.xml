@@ -3,7 +3,10 @@
 
 <mapper namespace="writecontent">
 
-	<select id="getContent" parameterType="String" resultType="board.ContentDataBean">
-		select * from contents
+	<select id="getContent" resultType="board.ContentDataBean">
+		select * from contents order by conmodifieddate desc
+	</select>
+	<select id="getContentByHash" parameterType="String" resultType="board.ContentDataBean">
+		select * from contents where conhash like '%' || #{hash} || '%' order by conmodifieddate desc
 	</select>
 </mapper>
