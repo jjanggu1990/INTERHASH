@@ -135,12 +135,9 @@ $(function(){
 			</div>
 		</div>
 		<div id="board_content">
-<<<<<<< HEAD
 			<label>'${con.content}'</label>
 
-=======
 			<label> '${con.content}' <br/>${con.conhash } </label>
->>>>>>> 34a8de2544a1c1d4281d3c538c207f84206f4de1
 		</div>
 		<div id="board_like">
 			<div id="like">
