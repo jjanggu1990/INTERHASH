@@ -11,14 +11,18 @@ document.getElementById('date').valueAsDate = new Date();
 </script>
 <style>
 
-p{
-padding:3px;
+hr{
+padding:1px;
 }
 td{
 width:200px; 
 text-align:center;
 }
+div{
+position:relative;
+right:200px;
 
+}
 </style>
 </head>
 <body>
@@ -28,9 +32,9 @@ text-align:center;
 <p>
 <table border="1">
 <tr height="30">
-<td>HashTag</td>
-<td>좋아요 수</td>
-<td>게시글 수</td>
+<td><b>HashTag</b></td>
+<td><b>좋아요 수</b></td>
+<td><b>게시글 수</b></td>
 </tr>
 <tr>
 <td>#우정</td>
@@ -40,14 +44,14 @@ text-align:center;
 </table>
 </p>
 <hr/>
+
+<div align="right"><input type="date" name="date" id="date"></div>
 <p>
 <table border="1">
-<tr>
-<td colspan="3"><div align="right"><input type="date" name="date" id="date"></div></td>
 <tr height="30">
-<td>방문자 수</td>
-<td>게시물 수</td>
-<td>좋아요 수</td>
+<td><b>방문자 수</b></td>
+<td><b>게시물 수</b></td>
+<td><b>좋아요 수</b></td>
 </tr>
 <tr>
 <td>12832823명</td>
