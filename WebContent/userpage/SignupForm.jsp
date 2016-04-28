@@ -54,9 +54,9 @@ padding:10px;
 		//alert(document.getElementById('e').value);
 		if(document.getElementById('pass').value && document.getElementById('pass1').value){
 		
-		if(document.getElementById('pass').value != document.getElementById('pass1').value){
+			if(document.getElementById('pass').value != document.getElementById('pass1').value){
 			
-			document.getElementById('passwdchform').value = "비밀번호가 일치하지 않습니다";
+				document.getElementById('passwdchform').value = "비밀번호가 일치하지 않습니다";
 			//alert("비밀번호를 동일하게 입력하세요");
 			return false;
 		}
