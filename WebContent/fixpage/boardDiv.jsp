@@ -136,8 +136,9 @@ $(function(){
 		</div>
 		<div id="board_content">
 			<label>'${con.content}'</label>
+			<br/>
+			<label> ${con.conhash } </label>
 
-			<label> '${con.content}' <br/>${con.conhash } </label>
 		</div>
 		<div id="board_like">
 			<div id="like">
