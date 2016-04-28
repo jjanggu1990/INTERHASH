@@ -13,7 +13,16 @@ public class ContentDataBean {
 	int conreportcount;
 	char conblind;
 	String email;
+	String connickname;
 	
+	public String getConnickname() {
+		return connickname;
+	}
+
+	public void setconNickname(String connickname) {
+		this.connickname = connickname;
+	}
+
 	public ContentDataBean(){}
 
 	public int getConnum() {

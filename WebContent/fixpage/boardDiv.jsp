@@ -128,14 +128,14 @@ $(function(){
 	<div id ="board_main">
 		<div id="board_subject">
 			<div id="subject">
-			<label>'${con.email}'</label>
+			<label>'${con.connickname }'</label>
 			</div>
 			<div id="time">
 			<label>'${con.conmodifieddate}'</label>
 			</div>
 		</div>
 		<div id="board_content">
-			<label> '${con.content}' </label>
+			<label> '${con.content}' <br/>${con.conhash } </label>
 		</div>
 		<div id="board_like">
 			<div id="like">
