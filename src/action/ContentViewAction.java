@@ -20,6 +20,7 @@ public class ContentViewAction implements CommandAction {
 		ContentDBBean dbpro = ContentDBBean.getInstance();
 		ContentDataBean content = dbpro.getContent(connum);
 		
+		
 		request.setAttribute("content", content);
 		request.setAttribute("sdf", sdf);
 		

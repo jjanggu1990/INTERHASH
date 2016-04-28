@@ -68,10 +68,10 @@ return false;
 <form name="view">
 <table bgcolor="green" align="center" width=80% height=100% >
 	<tr>
-		<td width=40% ><h3>${sessionScope.nickName}님</h3></td>
+		<td width=40% ><h3>${content.nickName}님</h3></td>
 		<td align="right">${sdf.format(content.concreateddate)}</td>
 	</tr>
-	<tr>
+	<%-- <tr>
 		<c:if test="${sessionScope.memId==content.email}">
 		<td align="right" colspan="2"><a href="/INTERHASH/ContentDelete.hash">수정하기</a> /
 		<a href="/INTERHASH/ContentDelete.hash">삭제하기</a></td>
@@ -79,9 +79,11 @@ return false;
 		<c:if test="${sessionScope.memId!=content.email}">
 		<td align="right" colspan="2"><a onclick="report()">신고하기</a></td>
 		</c:if>			
-	</tr>
+	</tr> --%>
 	<tr>
-		<td colspan="2">${content.content}</td>
+	
+		<td bgcolor="yellow" colspan="2"><textarea width=100%></textarea></td>
+		
 	</tr>
 	<tr>
 		<td colspan="2">${content.conhash}</td></tr>

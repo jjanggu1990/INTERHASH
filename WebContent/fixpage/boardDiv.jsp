@@ -135,7 +135,8 @@ $(function(){
 			</div>
 		</div>
 		<div id="board_content">
-			<label> '${con.content}' </label>
+			<label>'${con.content}'</label>
+
 		</div>
 		<div id="board_like">
 			<div id="like">
@@ -151,6 +152,7 @@ $(function(){
 				<div id="commnet_img">
 				</div>
 				<div id="commnet_text">
+				
 					<P>123</P>
 				</div>
 			</div>
