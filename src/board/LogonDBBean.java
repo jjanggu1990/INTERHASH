@@ -187,6 +187,27 @@ public class LogonDBBean {
 				}
 		}
 	}
+
+	public void updateMember(LogonDataBean article) throws Exception {
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			int x = session.update("userinfo.updateMember", article);
+			session.commit();
+			System.out.println("x::"+x);
+			System.out.println();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally { 
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+	}
 	
 	
 

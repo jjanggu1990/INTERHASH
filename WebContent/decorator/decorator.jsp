@@ -5,10 +5,10 @@
 <head>
 <decorator:head/>
     <meta charset="utf-8">
-    <title>CSS Tutorial | Layout</title>
+    <title>에벌레</title>
     <style>
       #jb-container {
-        width: 940px;
+        width: 1100px;
         margin: 0px auto;
         padding: 20px;
         border: 1px solid #bcbcbc;
@@ -20,15 +20,16 @@
         border: 1px solid #bcbcbc;
       }
       #jb-content {
-        width: 650px;
-        height:700px;
+        width: 800px;
+        height:auto;
         padding: 10px;
         margin-bottom: 20px;
         float: right;
         border: 1px solid #bcbcbc;
       }
       #jb-sidebar {
-        width: 200px;
+      	position:fixed;
+        width: 230px;
         padding: 10px;
         margin-bottom: 20px;
         float: left;
@@ -49,7 +50,7 @@
       	list-style-type: none;
     	margin: 0;
     	padding: 0;
-    	width: 200px;
+    	width: 230px;
     	background-color: #f1f1f1;
 	}
 
@@ -78,6 +79,7 @@
       			<input type = "text"><br>
       			<input type = "password"><br>
       			<input type = "button" value="회원가입"><input type="submit" value="로그인">
+      			<input type="button" value="정보수정" onclick="window.location.href='UserInfoModifyForm.hash';">
       		</form>
       	</div>
       </div>
@@ -88,14 +90,14 @@
       <div id="jb-sidebar">
         <h2>해시태그</h2>
         <ul>
-          <li><a href="Board.hash?hash=#사랑">#사랑</a></li>
-          <li><a href="Board.hash?hash=#돈">#돈</a></li>
-          <li><a href="Board.hash?hash=#컴퓨터">#컴퓨터</a></li>
-          <li><a href="Board.hash?hash=#커피">#커피</a></li>
-          <li><a href="Board.hash?hash=#책">#책</a></li>
-          <li><a href="Board.hash?hash=#반려동물">#반려동물</a></li>
-          <li><a href="Board.hash?hash=#독도">#독도</a></li>
-          <li><a href="Board.hash?hash=#맥주">#맥주</a></li>
+          <li><a href='Board.hash?hash=사랑'>#사랑</a></li>
+          <li><a href="Board.hash?hash=돈">#돈</a></li>
+          <li><a href="Board.hash?hash=컴퓨터">#컴퓨터</a></li>
+          <li><a href="Board.hash?hash=커피">#커피</a></li>
+          <li><a href="Board.hash?hash=책">#책</a></li>
+          <li><a href="Board.hash?hash=반려동물">#반려동물</a></li>
+          <li><a href="Board.hash?hash=독도">#독도</a></li>
+          <li><a href="Board.hash?hash=맥주">#맥주</a></li>
           
         </ul>
       </div>

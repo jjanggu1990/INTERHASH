@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
@@ -21,4 +22,29 @@
 		<mapper resource="mybatis/writecontentMapper.xml" />
 		<mapper resource="mybatis/reportMapper.xml" />
 	</mappers>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="mybatis/db.properties" />
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="mybatis/logonMapper.xml" />
+		<mapper resource="mybatis/commentMapper.xml" />
+		<mapper resource="mybatis/writecontentMapper.xml" />
+		<mapper resource="mybatis/reportMapper.xml" />
+	</mappers>
+>>>>>>> 392a90dd309746a67e6f8e31c47439538e26d0c3
 </configuration>

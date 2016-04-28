@@ -1,10 +1,11 @@
 package action;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import board.ContentDBBean;
 public class BoardAction implements CommandAction {
 
 	@Override
@@ -16,9 +17,17 @@ public class BoardAction implements CommandAction {
 		request.setAttribute("passwd", passwd);
 		String hash = request.getParameter("hash");
 		System.out.println("hash :::: "+hash);
-		request.setAttribute("hash", hash);
-		
-		return "/userpage/Board.jsp";
+		ArrayList array=null;
+		if(hash==null){		
+			ContentDBBean bean = ContentDBBean.getInstance();
+			array= bean.getContent();
+			request.setAttribute("content", array);
+		}else{
+			ContentDBBean bean = ContentDBBean.getInstance();
+			array = bean.getContent(hash);
+			request.setAttribute("content", array);
+		}
+		return "/fixpage/boardDiv.jsp";
 	}
 	
 }

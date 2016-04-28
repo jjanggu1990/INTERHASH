@@ -3,12 +3,10 @@
 
 <mapper namespace="writecontent">
 
-	<insert id="signup" parameterType="board.LogonDataBean">
-		insert into usertable
-		values(#{email},#{nickname},#{passwd},#{hash},#{age},#{createddate},#{modifieddate},#{ip},#{distinction},#{reportcount})
-	</insert>
-	
-	<select id="getInfo" parameterType="String" resultType="hashmap">
-		select * from members where id=#{id}
+	<select id="getContent" resultType="board.ContentDataBean">
+		select * from contents order by conmodifieddate desc
+	</select>
+	<select id="getContentByHash" parameterType="String" resultType="board.ContentDataBean">
+		select * from contents where conhash like '%' || #{hash} || '%' order by conmodifieddate desc
 	</select>
 </mapper>

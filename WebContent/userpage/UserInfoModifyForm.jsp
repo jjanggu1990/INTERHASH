@@ -62,26 +62,22 @@ function confirmnickname() {
 	open(url, "confirmnik", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
 }
 
+window.onload=function checkHash(){
+	var hasharr = "${gethash}"; //hasharr에 저장됨
+	var hash=document.getElementsByName("hash"); //해쉬체크박스 배열 가져옴
+
+	
+ 	for(i=0;i<hash.length;i++){
+		if(hasharr.indexOf(hash[i].value)!=-1){
+			hash[i].checked=true;
+		}
+	} 
+}
 </script>
 </head>
 <body>
-hash :: ${hashtag}<br>
-<br>
-
-<%-- <c:forTokens var="hashtag" items="${hashtag}"  delims=" , ">
-${hashtag}
-<c:forEach var="hash" items="${hash}">
-<script>
-(":checkbox").each(function(){
-	if($(this).val()=="{hash}"){
-		$(this).attr("checked","checked");
-			}
-		});
-</script>
-</c:forEach>
-</c:forTokens> --%>
 <center>
-<form method="post" action="UserInfoModifyPro.hash" name="userinput" id="userinput" onSubmit="return checkIt()">
+<form method="post" action="UserInfoModifyPro.hash" name="userinput" id="userinput">
 <table>
 <tr>
 <td>email</td>
