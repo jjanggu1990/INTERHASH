@@ -10,6 +10,7 @@ document.getElementById('date').valueAsDate = new Date();
 }
 </script>
 <style>
+
 p{
 padding:3px;
 }
@@ -40,8 +41,9 @@ text-align:center;
 </p>
 <hr/>
 <p>
-<input type="date" name="date" id="date">
 <table border="1">
+<tr>
+<td colspan="3"><div align="right"><input type="date" name="date" id="date"></div></td>
 <tr height="30">
 <td>방문자 수</td>
 <td>게시물 수</td>
