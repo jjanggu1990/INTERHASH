@@ -111,7 +111,7 @@
 <script>
 $(function(){
 	$(window).scroll(function(){
-		if( $(window).scrollTop() == ($(document).height() -  $(window).height())){
+		if( $(window).scrollTop() == ($(document).height() -  ($(window).height() +$(window).height()))){
 			alert("끝!");
 		}
 	});  

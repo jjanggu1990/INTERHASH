@@ -8,7 +8,7 @@ public class ContentDataBean {
 	String conphoto;
 	String conhash;
 	Timestamp concreateddate;
-	Timestamp modifieddate;
+	Timestamp conmodifieddate;
 	String conip;
 	int conreportcount;
 	char conblind;
@@ -57,12 +57,12 @@ public class ContentDataBean {
 		this.concreateddate = concreateddate;
 	}
 
-	public Timestamp getModifieddate() {
-		return modifieddate;
+	public Timestamp getConmodifieddate() {
+		return conmodifieddate;
 	}
 
-	public void setModifieddate(Timestamp modifieddate) {
-		this.modifieddate = modifieddate;
+	public void setConmodifieddate(Timestamp conmodifieddate) {
+		this.conmodifieddate = conmodifieddate;
 	}
 
 	public String getConip() {
