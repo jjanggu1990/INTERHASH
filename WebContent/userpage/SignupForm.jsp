@@ -17,6 +17,10 @@ padding:10px;
 			alert("Email을 입력하세요.");
 			return false;
 		}
+		if(!userinput.emailnumber.value){
+			alert("Email을 인증해주세요");
+			return false;
+		}
 		if(!userinput.passwd.value){
 			alert("비밀번호를 입력하세요.");
 			return false;
@@ -126,16 +130,16 @@ color:#7A7A7A;
 <tr>
 <td>email인증번호</td>
 <td><input type="text" name="emailnumber"/></td>
-<td><input type="button" value="확인" onClick="keyCheck()" required/><br></td>
+<td><input type="button" value="확인" onClick="keyCheck()"/><br></td>
 </tr>
 <tr>
 <td>password</td>
-<td><input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()" required/></td>
+<td><input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()"/></td>
 <td rowspan="2"><input type="ladel" style="border: 0px;" id="passwdchform" value="" readonly/></td>
 </tr>
 <tr>
 <td>password check</td>
-<td><input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()' required/></td>
+<td><input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()'/></td>
 
 </tr>
 
