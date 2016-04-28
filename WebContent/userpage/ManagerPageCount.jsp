@@ -15,9 +15,19 @@
 <td>좋아요 수</td>
 <td>게시글 수</td>
 </tr>
-
-
-
+<tr>
+<td>#우정</td>
+<td>45315개</td>
+<td>2983개</td>
+</tr>
+</table>
+<hr/>
+<table border="1">
+<tr>
+<td>방문자 수</td>
+<td>게시물 수</td>
+<td>좋아요 수</td>
+</tr>
 </table>
 </body>
 </html>
