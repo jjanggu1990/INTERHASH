@@ -26,11 +26,11 @@ padding:10px;
 			return false;
 		}
 		if(!userinput.age.value){
-			alert("비밀번호를 입력하세요.");
+			alert("나이를 입력하세요.");
 			return false;
 		}
 		if(!userinput.nickname.value){
-			alert("비밀번호를 입력하세요.");
+			alert("닉네임을 입력하세요.");
 			return false;
 		}
 		
@@ -120,13 +120,13 @@ color:#7A7A7A;
 <table>
 <tr>
 <td>email</td>
-<td><input type="text" name="email" id="email"/></td>
+<td><input type="text" name="email" id="email" autofocus/></td>
 <td><input type="button" value="인증하기" onClick="confirmemail()" /> </td>
 </tr>
 <tr>
 <td>email인증번호</td>
 <td><input type="text" name="emailnumber"/></td>
-<td><input type="button" value="확인" onClick="keyCheck()"/><br></td>
+<td><input type="button" value="확인" onClick="keyCheck()" required/><br></td>
 </tr>
 <tr>
 <td>password</td>
