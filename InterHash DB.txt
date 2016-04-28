@@ -106,11 +106,9 @@ ReNum number(3) references REPORT(ReNum)
 CREATE SEQUENCE REPORT_NUM INCREMENT BY 1 START WITH 1 MAXVALUE 10000000 MINVALUE 1 NOCACHE;
 
 
-create table AdminHash (
+
+create table ADMINHASH (
 HashName varchar2(1000) primary key,
 HashLikeCount number not null,
-HashContentCount number not null
+HashContentCount number not null,
 );
-
-
-
