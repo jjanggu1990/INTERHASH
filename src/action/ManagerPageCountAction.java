@@ -1,7 +1,12 @@
 package action;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import board.AdminHashDBBean;
+import board.AdminHashDataBean;
 
 public class ManagerPageCountAction  implements CommandAction {
 
@@ -9,9 +14,15 @@ public class ManagerPageCountAction  implements CommandAction {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		
 		request.setCharacterEncoding("UTF-8");
-		String HashName = request.getParameter("HashName");
+		/*String HashName = request.getParameter("HashName");*/
 		
-		request.setAttribute("HashName", HashName);
-		return "/userpage/ManagerPageCount.jsp";
+		AdminHashDBBean dbpro = AdminHashDBBean.getInstance();
+/*		AdminHashDataBean admin = new AdminHashDataBean();*/
+		ArrayList array = null;
+		array = dbpro.selectHash();
+		System.out.println("array¿Ã∏ß:::"+array);
+		
+		request.setAttribute("array",array);
+		return "/userpage/ManagerPageCount.jsp";  
 	}
 }

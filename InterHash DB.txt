@@ -109,6 +109,6 @@ CREATE SEQUENCE REPORT_NUM INCREMENT BY 1 START WITH 1 MAXVALUE 10000000 MINVALU
 
 create table ADMINHASH (
 HashName varchar2(1000) primary key,
-HashLikeCount number not null,
-HashContentCount number not null,
+HashLikeCount number default 0 not null,
+HashContentCount number default 0 not null
 );
