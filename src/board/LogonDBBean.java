@@ -110,7 +110,9 @@ public class LogonDBBean {
 			factory = getFactory();
 			session = factory.openSession();
 			LogonDataBean result = session.selectOne("userinfo.checkId", member);
+			
 			System.out.println(result.getEmail() + ", " + result.getNickname());
+			
 			session.commit();
 			if (result.getEmail().equals(member.getEmail())) {
 				return result;
