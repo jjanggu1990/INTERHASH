@@ -63,8 +63,8 @@ public class LoginProAction implements CommandAction {
 			ContentDBBean bean = ContentDBBean.getInstance();
 			array= bean.getContent();
 			request.setAttribute("content", array);
-			
-			return "/userpage/LoginPro.jsp";
+			return "/fixpage/boardDiv.jsp";
+
 		}
 	}
 	  
