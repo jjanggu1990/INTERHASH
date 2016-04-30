@@ -76,10 +76,20 @@
       	</span>
       	<div id="jb-logon">
       		<form>
-      			<input type = "text"><br>
+      			<!-- <input type = "text"><br>
       			<input type = "password"><br>
       			<input type = "button" value="회원가입"><input type="submit" value="로그인">
-      			<input type="button" value="정보수정" onclick="window.location.href='UserInfoModifyForm.hash';">
+      			<input type="button" value="정보수정" onclick="window.location.href='UserInfoModifyForm.hash';"> -->
+      			
+      			<table>
+					<tr>
+						<td align="left"><%=session.getAttribute("nickName")%>님</td>
+						<td align="right"><input type="button" value="로그아웃"
+							onclick="javascript:window.location='index.jsp'"></td>
+						<td align="left"><input type="button" value="정보수정"	onclick="window.location.href='UserInfoModifyForm.hash';"></td>
+					</tr>
+				</table>
+				
       		</form>
       	</div>
       </div>
