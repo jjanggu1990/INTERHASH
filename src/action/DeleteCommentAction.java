@@ -1,5 +1,8 @@
 package action;
 
+import java.sql.Timestamp;
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -20,13 +23,13 @@ public class DeleteCommentAction implements CommandAction{
 		
 		ContentDBBean dbpro = ContentDBBean.getInstance();
 		ContentDataBean content = dbpro.getContent(connum);
-		
 
+		
+		
 		request.setAttribute("content", content);
 		request.setAttribute("check", check);
 		request.setAttribute("connum", connum);
-		System.out.println("리다이렉트 전");
-		//INTERHASH/ContentView.hash?connum=${content.connum}
+
 		return "ContentView.hash?connum="+connum;
 	}
 

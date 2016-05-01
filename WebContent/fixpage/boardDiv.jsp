@@ -129,7 +129,7 @@ $(function(){
 </head>
 <body>
 
-<form method='post' action='/INTERHASH/ContentView.hash'>
+<form method='post' action='ContentView.hash'>
 <c:forEach var="con" items= '${content}' >
 <input type="hidden" name="connum" value="${con.connum}">
 <div id="board_div">

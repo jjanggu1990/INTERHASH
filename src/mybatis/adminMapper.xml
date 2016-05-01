@@ -3,6 +3,6 @@
 
 <mapper namespace="admin">
 <select id="admincount" resultType="board.AdminHashDataBean">
-		select HashName from ADMINHASH
+		select * from ADMINHASH
 </select>
 </mapper>

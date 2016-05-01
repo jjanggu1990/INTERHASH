@@ -130,7 +130,7 @@ color:#5AAEFF;
 <script>   
 function report(){
 	
-	url="/INTERHASH/ReportForm.hash?check=y";
+	url="/INTERHASH/ReportForm.hash?check=y&&connickname=${content.connickname}&&connum=${content.connum}";
 	
 	window.open(url,"post","toolbar=no ,width=500 ,height=300,directories=no,status=yes,menubar=no,scrollbars=no");
 }
@@ -139,7 +139,7 @@ function report(){
 </head>
 <body>
 <div id="view_div">
-<form name="view">
+<!-- <form name="view"> -->
 <div id="view_left">
 	
 	<div id="left_nickndate">
@@ -149,7 +149,7 @@ function report(){
 
 	<c:if test="${sessionScope.memId==content.email}">
 	<div id="left_mod_del_rep">
-		<span id="align_right">/<a href="/INTERHASH/ContentDelete.hash">삭제하기</a></span>
+		<span id="align_right">/<a href="/INTERHASH/ContentDelete.hash?connum=${content.connum}">삭제하기</a></span>
 		<span id="align_right"><a href="/INTERHASH/ContentDelete.hash">수정하기 </a> </span>
 	</div>
 	</c:if>
@@ -161,14 +161,14 @@ function report(){
 	</c:if>		
 	
 	<div id="content_photo" style="height:490px; overflow-x:auto">
-
+	<label>${content.connickname}<br></label>
 		<label>${content.content}<br></label>
 		<label>${content.content}<br></label>
 		<label>${content.content}<br></label>
 		<label id="hash">${content.conhash}</label><label id="hash">${content.conhash}</label><br>
 
 	
-
+	
 	<img src="${content.conphoto}">
 	<img src="${content.conphoto}">
 	<img src="${content.conphoto}">
@@ -183,7 +183,7 @@ function report(){
 
 <div id="view_right">
 
-	<form method="post" action="ContentView.hash">
+	<form method=post action="InsertComment.hash">
 	<input type=hidden name=connum value="${content.connum}">
 	<div id="right_nick">
 		<span id ="align_left">${sessionScope.nickName}님</span>
@@ -197,8 +197,10 @@ function report(){
 	</div>
 	</form>
 	
+	
+	
 	<div id="comment_view" style="height:460px; overflow-x:auto" onchange="reload();">
-	<form>
+
 	<c:forEach var="comment" items="${comment}">
 	<input type=hidden name=comnum value="${comment.comnum}">
 	<span>${comment.comnick}</span>
@@ -206,8 +208,8 @@ function report(){
 	
 	<span id="align_right">
 		<c:if test="${sessionScope.memId==comment.email}">
-		수정/
-		<a href="/INTERHASH/DeleteComment.hash?comnum=${comment.comnum}&connum=${content.connum}">삭제</a>
+		<a href="/INTERHASH/DeleteComment.hash?comnum=${comment.comnum}&&connum=${content.connum}">삭제</a>
+		<a href="/INTERHASH/UpdateComment.hash?comnum=${comment.comnum}&&connum=${content.connum}">수정</a>
 		</c:if>
 		
 		<c:if test="${sessionScope.memId!=comment.email}">
@@ -217,8 +219,10 @@ function report(){
 	
 	<div id="test">${comment.comcontent}</div>
 	</c:forEach>
-	</form>
+
 	</div>
+	
+	
 </div>
 
 </div>

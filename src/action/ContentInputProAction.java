@@ -18,6 +18,36 @@ public class ContentInputProAction implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
+<<<<<<< HEAD
+		request.setCharacterEncoding("UTF-8");
+		MultipartRequest multi = null;
+		int sizeLimit = 10 * 1025 * 1024;
+		String savePath = request.getRealPath("/upload");
+		try {
+			multi = new MultipartRequest(request, savePath, sizeLimit, "utf-8", new DefaultFileRenamePolicy());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		String content = request.getParameter("content");
+		System.out.println("content:::" + content);
+		String conhash = "#"+request.getParameter("tag");
+		System.out.println("tag:::"+conhash);
+		String email = (String)request.getSession().getAttribute("memId");
+		String connickname =(String)request.getSession().getAttribute("nickName");
+		/*String conphoto = multi.getFilesystemName(conphoto);*/
+		Timestamp concreateddate = new Timestamp(System.currentTimeMillis());
+		Timestamp conmodifieddate=new Timestamp(System.currentTimeMillis());
+		String conip = request.getRemoteAddr();
+		
+		ContentDataBean bean = new ContentDataBean();
+		bean.setConip(conip);
+		bean.setEmail(email);
+		bean.setConcreateddate(concreateddate);
+		bean.setConmodifieddate(conmodifieddate);
+	/*	bean.setConphoto(conphoto);*/
+		bean.setconNickname(connickname);
+		bean.setContent(content);
+=======
 		 request.setCharacterEncoding("UTF-8");
 		 
 		    // 10Mbyte มฆวั
@@ -94,6 +124,7 @@ public class ContentInputProAction implements CommandAction {
 		        e.printStackTrace();
 		    }
 		ContentDataBean bean = new ContentDataBean();
+>>>>>>> 6a8846e449a6acfb7020f79d1cf57278c3ea2f52
 		bean.setConhash(conhash);
 		bean.setContent(content);
 		bean.setConphoto(uploadFile);
