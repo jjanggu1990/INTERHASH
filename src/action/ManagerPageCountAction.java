@@ -18,6 +18,7 @@ public class ManagerPageCountAction  implements CommandAction {
 		
 		AdminHashDBBean dbpro = AdminHashDBBean.getInstance();
 /*		AdminHashDataBean admin = new AdminHashDataBean();*/
+		/*AdmunHashDataBean admin = dbpro.selectHash();*/
 		ArrayList array = null;
 		array = dbpro.selectHash();
 		System.out.println("array¿Ã∏ß:::"+array);
