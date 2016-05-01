@@ -14,16 +14,15 @@ public class ManagerPageCountAction  implements CommandAction {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		
 		request.setCharacterEncoding("UTF-8");
-		/*String HashName = request.getParameter("HashName");*/
-		
-		AdminHashDBBean dbpro = AdminHashDBBean.getInstance();
-/*		AdminHashDataBean admin = new AdminHashDataBean();*/
-		/*AdmunHashDataBean admin = dbpro.selectHash();*/
+		String HashName = request.getParameter("HashName");
+		request.setAttribute("hashname", HashName);
 		ArrayList array = null;
+		AdminHashDBBean dbpro = AdminHashDBBean.getInstance();
 		array = dbpro.selectHash();
+		AdminHashDataBean bean = (AdminHashDataBean)array.get(5);
+		request.setAttribute("array", array);
 		System.out.println("array¿Ã∏ß:::"+array);
-		
-		request.setAttribute("array",array);
+	
 		return "/userpage/ManagerPageCount.jsp";  
 	}
 }
