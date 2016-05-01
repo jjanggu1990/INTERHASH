@@ -60,5 +60,11 @@ right:200px;
 </tr>
 </table>
 </p>
+<c:forEach var="hash" items="${array}">
+${hash}
+</c:forEach>
+<p>
+
+</p>
 </body>
 </html>

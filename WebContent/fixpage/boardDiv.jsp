@@ -3,6 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<c:if test ="${memId==null}">
+<script>
+alert("비밀번호가 틀립니다.");
+history.go(-1);
+</script>
+</c:if>
+
 <style type="text/css">
 	#board_div{
 		width:760px;
