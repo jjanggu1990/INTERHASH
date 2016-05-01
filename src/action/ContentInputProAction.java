@@ -52,12 +52,14 @@ public class ContentInputProAction implements CommandAction {
 		         
 		        // 전송받은 parameter의 한글깨짐 방지
 		        content = multi.getParameter("content");
+		        System.out.println("사진 content:: " + content);
 		        content = new String(content.getBytes("8859_1"), "UTF-8");
-		        conhash = multi.getParameter("conhash");
+		        conhash = multi.getParameter("tag");
+		        System.out.println("사진 conhash:: "+conhash);
 		        conhash = new String(conhash.getBytes("8859_1"), "UTF-8");
 		        // 파일업로드
 		        uploadFile = multi.getFilesystemName("conphoto");
-		 
+		        System.out.println("파일업로드 성공? "+uploadFile);
 		        // 실제 저장할 파일명(ex : 20140819151221.zip)
 		        newFileName = simDf.format(new Date(currentTime)) +"."+ uploadFile.substring(uploadFile.lastIndexOf(".")+1);
 		 
