@@ -16,9 +16,10 @@ public class ContentViewAction implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		
-		int connum = Integer.parseInt(request.getParameter("connum"));
-		
+		int connum = 0 ;
+		try{
+		connum = Integer.parseInt(request.getParameter("connum"));
+		}catch(Exception e){}
 		SimpleDateFormat sdf = new SimpleDateFormat("YY-MM-dd HH:mm");
 
 		ContentDBBean dbpro = ContentDBBean.getInstance();
@@ -27,10 +28,10 @@ public class ContentViewAction implements CommandAction {
 
 		request.setAttribute("content", content);
 		request.setAttribute("sdf", sdf);
+		CommentDBBean commentdbpro = CommentDBBean.getInstance();
 		
 		
-		
-		String comnick = (String)request.getSession().getAttribute("nickName");  
+/*		String comnick = (String)request.getSession().getAttribute("nickName");  
 		String comcontent = request.getParameter("comcontent");
 		Timestamp comcreateddate; 
 		Timestamp commodifieddate;
@@ -53,9 +54,9 @@ public class ContentViewAction implements CommandAction {
 		
 
 		commentdbpro.insertComment(comment);
-		
+		*/
 		ArrayList array = commentdbpro.getComment();
-		request.setAttribute("comments", comment);
+		/*request.setAttribute("comments", comment);*/
 		request.setAttribute("comment", array);
 		
 		

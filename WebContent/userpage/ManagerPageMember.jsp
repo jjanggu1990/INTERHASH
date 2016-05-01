@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,21 +19,31 @@ width:150px;
 <hr/>
 <table border="1">
 <tr>
-<td>email</td>
-<td>nickname</td>
-<td>신고횟수</td>
-<td>회원삭제</td>
+<td><b>email</b></td>
+<td><b>nickname</b></td>
+<td><b>신고횟수</b></td>
+<td><b>회원삭제</b></td>
 </tr>
+
+<c:forEach var="member" items="${array}">
 <tr>
-<td>jk4877@naver.com</td>
-<td>진콩콩</td>
-<td>0번</td>
+<td>
+${member.email}
+</td>
+<td>
+${member.nickname}
+</td>
+<td>
+${member.reportcount}
+</td>
 <td><input type="checkbox" name="delete"></td>
 </tr>
+</c:forEach>
 <tr>
 <td colspan="4"><div align="right"><input type="button" value="회원삭제"></div></td>
 </tr>
 </table>
+
 
 </body>
 </html>
