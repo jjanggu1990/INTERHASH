@@ -34,7 +34,7 @@ ComCreatedDate date not null,
 ComModifiedDate date not null,
 ComIp varchar2(15) not null,
 ComReportCount number(3) not null,
-ComBlind char(1) not null,
+ComBlind varchar2(10) not null,
 ConNum number(3) references CONTENTS(ConNum),
 Email varchar2(25) references USERTABLE(Email)
 );

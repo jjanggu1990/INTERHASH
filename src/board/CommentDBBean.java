@@ -59,5 +59,48 @@ public class CommentDBBean {
 				}
 		}
 	}
+	
+	public ArrayList getComment()throws Exception{
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		ArrayList array = null;		
+		
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			array = (ArrayList) session.selectList("comment.getComment");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+		return array;
+	}
+	
+	public int deleteComment(int comnum) throws Exception{
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		int check = -1;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			session.delete("comment.deleteComment", comnum);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+		return check;
+	}
+	
+	}
 
-}
