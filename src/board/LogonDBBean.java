@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Vector;
 
 import org.apache.ibatis.io.Resources;
@@ -209,6 +210,26 @@ public class LogonDBBean {
 				} catch (Exception ex) {
 				}
 		}
+	}
+	public ArrayList selectMember() throws Exception {
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		ArrayList array = null;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			array = (ArrayList)session.selectList("userinfo.getMember");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+		return array;
 	}
 	
 	

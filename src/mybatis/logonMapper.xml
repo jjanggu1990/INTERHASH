@@ -25,7 +25,9 @@
 	<select id="existNickname" parameterType="String" resultType="Integer">
 		select count(*) from usertable where nickname=#{nickname}
 	</select>
-
+	<select id="getMember" resultType="board.LogonDataBean">
+		select * from usertable
+	</select>
 	
 	<update id="tempPasswd" parameterType="board.TempPasswd">
 		update usertable set passwd=#{passwd} where email = #{email}

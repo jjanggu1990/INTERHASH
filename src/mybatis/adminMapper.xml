@@ -5,4 +5,5 @@
 <select id="admincount" resultType="board.AdminHashDataBean">
 		select * from ADMINHASH
 </select>
+
 </mapper>
