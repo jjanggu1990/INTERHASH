@@ -10,12 +10,12 @@ public class ContentDeleteAction implements CommandAction {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		
-		/*int connum = Integer.parseInt(request.getParameter("connum"));*/
-		int connum=1;
+		int connum = Integer.parseInt(request.getParameter("connum"));
+	
 		
 		ContentDBBean dbpro = ContentDBBean.getInstance();
 		int check = dbpro.deleteContent(connum);
-		
+		System.out.println("check °ª :::::"+check);
 		return "/userpage/ContentDelete.jsp";
 	}
 

@@ -89,8 +89,7 @@ public class CommentDBBean {
 			factory = getFactory();
 			session = factory.openSession();
 			check = session.delete("comment.deleteComment", comnum);
-			session.commit();
-			System.out.println("delete ÈÄ check :: " + check);
+			session.commit();	
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -102,6 +101,5 @@ public class CommentDBBean {
 		}
 		return check;
 	}
-	
 	}
 

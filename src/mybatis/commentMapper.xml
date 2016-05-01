@@ -7,9 +7,9 @@
 		select * from contents where connum = #{connum}
 	</select>
 	
-	<select id="contentdelete" parameterType="integer">
+	<delete id="contentdelete" parameterType="integer">
 		delete from contents where connum = #{connum}
-	</select>
+	</delete>
 	
 	<insert id="insertcomment" parameterType="board.CommentDataBean">
 		insert into COMMENTTABLE values(COMMENTTABLE_seq.NEXTVAL,#{comnick},#{comcontent},sysdate,sysdate,#{comip},0,'0',#{connum},#{email})
