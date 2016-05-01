@@ -41,7 +41,7 @@ public class AdminHashDBBean{
 		try {
 			factory = getFactory();
 			session = factory.openSession();
-			array = (ArrayList) session.selectList("admin.admincount");
+			array = (ArrayList)session.selectList("admin.admincount");
 
 		} catch (Exception e) {
 			e.printStackTrace();
