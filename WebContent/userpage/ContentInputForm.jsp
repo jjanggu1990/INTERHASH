@@ -62,7 +62,7 @@
 	
 	function tagCheck() {
 
-		url = "userpage/TagCheck.jsp?check=y";
+		url = "TagCheck.jsp?check=y";
 		newwindow=window.open(url,"post","toolbar=no ,width=800 ,height=550 ,directories=no ,status=yes ,scrollbars=no ,menubar=no");
 	}
 	
@@ -153,12 +153,12 @@
 </style>
 </head>
 <body>
-	<form action="ContentInputPro.hash" name="writeForm" method="post">	<!-- enctype="multipart/form-data"> -->
+	<form action="ContentInputPro.hash" name="writeForm" method="post"> <!-- enctype="multipart/form-data" -->
 		<div id="wrap" style="width: 500px; margin: auto;">
 			<textarea id="textfield" name="content" placeholder="안녕하세요"></textarea>
 			<div class="photoBox">
 				<span class='photo_list'> <input class='fileData'
-					name="fileData" type="file"
+					name="conphoto" type="file"
 					onchange="fileUploadPreview(this, 'preView')" /> <img
 					class="preViewImg" />
 				</span>
