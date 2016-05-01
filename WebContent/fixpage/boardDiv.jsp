@@ -4,7 +4,7 @@
 <html>
 <head>
 
-<c:if test ="${memId==null}">
+<c:if test ="${sessionScope.memId==null}">
 <script>
 alert("비밀번호가 틀립니다.");
 history.go(-1);

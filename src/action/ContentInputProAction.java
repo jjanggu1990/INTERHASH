@@ -30,7 +30,7 @@ public class ContentInputProAction implements CommandAction {
 		System.out.println("tag:::"+conhash);
 		String email = (String)request.getSession().getAttribute("memId");
 		String connickname =(String)request.getSession().getAttribute("nickName");
-		String conphoto = multi.getFilesystemName(conphoto);
+		String conphoto = multi.getFilesystemName(request.getParameter("conphoto"));
 		Timestamp concreateddate = new Timestamp(System.currentTimeMillis());
 		Timestamp conmodifieddate=new Timestamp(System.currentTimeMillis());
 		String conip = request.getRemoteAddr();
