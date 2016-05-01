@@ -20,7 +20,7 @@
         margin-bottom: 20px;
         border: 0px solid #bcbcbc;
       }
-      
+       
     #jb-container {
         width: 350px;
         margin: 0px auto;
