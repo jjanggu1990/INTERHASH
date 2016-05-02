@@ -11,6 +11,8 @@ public class LogoutAction implements CommandAction {
 		request.setAttribute("memId", memId);
 		request.getSession().setAttribute("memId", null);
 		request.getSession().setAttribute("nickName", null);
-		return "main.jsp"; 
+		/*return "main.jsp"; */
+		
+		return "index.jsp";
 	}
 }

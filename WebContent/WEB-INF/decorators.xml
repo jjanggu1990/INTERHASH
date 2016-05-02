@@ -13,6 +13,8 @@
 		<pattern>/ReportForm.hash</pattern>
 		<pattern>/ConfirmEmail.hash*</pattern>
 		<pattern>/Main.hash</pattern>
+		
+		<pattern>/Logout.hash</pattern> 
 	</excludes>
  
 </decorators>
