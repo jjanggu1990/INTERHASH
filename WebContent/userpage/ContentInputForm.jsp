@@ -157,7 +157,8 @@
 		<div id="wrap" style="width: 500px; margin: auto;">
 			<textarea id="textfield" name="content" placeholder="안녕하세요"></textarea>
 			<div class="photoBox">
-				<span class='photo_list'> <input class='fileData' name="conphoto" type="file" onchange="fileUploadPreview(this, 'preView')" /> 
+				<span class='photo_list'> 
+				<input class='fileData' name="conphoto" type="file"/>  <!-- onchange="fileUploadPreview(this, 'preView')" --> 
 					<img class="preViewImg" />
 				</span>
 			</div>
