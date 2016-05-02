@@ -17,6 +17,7 @@ public class BoardAction implements CommandAction {
 		request.setAttribute("passwd", passwd);
 		String hash = request.getParameter("hash");
 		System.out.println("hash :::: "+hash);
+		
 		ArrayList array=null;
 		if(hash==null){		
 			ContentDBBean bean = ContentDBBean.getInstance();
@@ -25,7 +26,7 @@ public class BoardAction implements CommandAction {
 		}else{
 			if (hash.equals("신고")) {
 				ContentDBBean bean = ContentDBBean.getInstance();
-				array = bean.getContent("신고");
+				array = bean.getReport();
 				request.setAttribute("content", array);
 			}
 			else {
