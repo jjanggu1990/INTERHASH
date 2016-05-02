@@ -32,10 +32,19 @@
 function checkIt(){
 		var userinput = eval("document.userinput");
 		
+		var regex=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+		
 		if(!userinput.email.value){
 			alert("ID 를 입력하세요.");
 			userinput.email.focus(); 
 			return false;
+		}
+		
+		if(regex.test(userinput.email.value) === false) 
+		{  
+		    alert("잘못된 Email 형식입니다.");  
+		    userinput.email.focus(); 
+		    return false; 
 		}
 
 		if(!userinput.passwd.value){
