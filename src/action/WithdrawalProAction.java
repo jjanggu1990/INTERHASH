@@ -18,6 +18,7 @@ public class WithdrawalProAction implements CommandAction {
 		member.setPasswd(passwd);
 		
 		LogonDBBean bean= LogonDBBean.getInstance();
+		bean.existPasswd(passwd);
 		bean.deleteMember(member);
 		
 		return "/userpage/WithdrawalPro.jsp";
