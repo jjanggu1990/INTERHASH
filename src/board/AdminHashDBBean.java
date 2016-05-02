@@ -3,8 +3,10 @@ package board;
 import java.io.InputStream;
 
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
 
 public class AdminHashDBBean {
 	private static AdminHashDBBean instance = new AdminHashDBBean();
@@ -15,6 +17,7 @@ public class AdminHashDBBean {
 
 	private AdminHashDBBean() {
 	}
+
 	private static SqlSessionFactory getFactory() throws Exception {
 		String res = "mybatis/config.xml";
 		InputStream is = null;
