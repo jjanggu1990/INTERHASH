@@ -12,7 +12,7 @@
 	</delete>
 	
 	<insert id="insertcomment" parameterType="board.CommentDataBean">
-		insert into COMMENTTABLE values(COMMENTTABLE_seq.NEXTVAL,#{comnick},#{comcontent},sysdate,sysdate,#{comip},0,'0',#{connum},#{email})
+		insert into COMMENTTABLE values(COMMENTTABLE_seq.NEXTVAL,#{comnick},#{comcontent},sysdate,sysdate,0,'0',#{connum},#{email},#{comip})
 	</insert>
 	
 	<select id="getComment" resultType="board.CommentDataBean">
