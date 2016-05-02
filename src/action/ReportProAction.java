@@ -11,20 +11,18 @@ public class ReportProAction implements CommandAction {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		request.setCharacterEncoding("UTF-8");
-		String recontent = request.getParameter("report");
-		String recategory = request.getParameter("category");
 		String email = (String)request.getSession().getAttribute("memId");
 		char redistinction = request.getParameter("redistinction").charAt(0);
 		int connum = Integer.parseInt(request.getParameter("connum"));
+		int renum = Integer.parseInt(request.getParameter("renum"));
 		
 		System.out.println("email :: "+email);
 		
 		ReportDataBean report = new ReportDataBean();
+		report.setRenum(renum);
 		report.setConnum(connum);
-		report.setRecategory(recategory);
 		report.setRedistinction(redistinction);
 		report.setEmail(email);
-		report.setRecontent(recontent);
 		
 		ReportDBBean bean = ReportDBBean.getInstance();
 		bean.sendReport(report);

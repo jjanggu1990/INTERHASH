@@ -5,7 +5,7 @@
 
 	<insert id="signup" parameterType="board.LogonDataBean">
 		insert into usertable
-		values(#{email},#{nickname},#{passwd},#{hash},#{age},#{createddate},#{modifieddate},#{ip},#{distinction},#{reportcount})
+		values(#{email},#{nickname},#{passwd},#{hash},#{age},#{createddate},#{modifieddate},#{distinction},#{reportcount})
 	</insert>
 	
 	<update id="updateMember" parameterType="board.LogonDataBean">
