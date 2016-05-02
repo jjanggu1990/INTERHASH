@@ -20,5 +20,6 @@
 		<mapper resource="mybatis/commentMapper.xml" />
 		<mapper resource="mybatis/writecontentMapper.xml" />
 		<mapper resource="mybatis/reportMapper.xml" />
+		<mapper resource="mybatis/adminMapper.xml" />
 	</mappers>
 </configuration>

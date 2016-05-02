@@ -19,6 +19,13 @@
         margin-bottom: 20px;
         border: 1px solid #bcbcbc;
       }
+      #jb_search{
+      	margin-top:100px;
+      	float: left;
+      	width: 300px;
+      	height:auto;
+      	border:1px solid #bcbcbc;
+      }
       #jb-content {
         width: 800px;
         height:auto;
@@ -42,6 +49,8 @@
       }
       #jb-logo{
       	float:left;
+      	width:401px;
+      	height:auto;
       }
       #jb-logon{
       	float:right;
@@ -71,15 +80,31 @@
   <body>
     <div id="jb-container">
       <div id="jb-header">
-      	<span id="jb-logo">
+      	<div id="jb-logo">
 	      	<img alt="로고" src="./userpage/logo/logo.jpg" onclick="window.location.href='Board.hash'">
-      	</span>
+      	</div>
+      	<div id="jb_search">
+      		<form method="post" action="Board.hash">
+      			<input type="text" name="hash"/>
+      			<input type="submit" value="검색"/>
+      		</form>
+      	</div>
       	<div id="jb-logon">
       		<form>
-      			<input type = "text"><br>
+      			<!-- <input type = "text"><br>
       			<input type = "password"><br>
       			<input type = "button" value="회원가입"><input type="submit" value="로그인">
-      			<input type="button" value="정보수정" onclick="window.location.href='UserInfoModifyForm.hash';">
+      			<input type="button" value="정보수정" onclick="window.location.href='UserInfoModifyForm.hash';"> -->
+      			
+      			<table>
+					<tr>
+						<td align="left"><%=session.getAttribute("nickName")%>님</td>
+						<td align="right"><input type="button" value="로그아웃"
+							onclick="javascript:window.location='index.jsp'"></td>
+						<td align="left"><input type="button" value="정보수정"	onclick="window.location.href='UserInfoModifyForm.hash';"></td>
+					</tr>
+				</table>
+				
       		</form>
       	</div>
       </div>

@@ -3,11 +3,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<c:if test ="${sessionScope.memId==null}">
+<script>
+alert("비밀번호가 틀립니다.");
+history.go(-1);
+</script>
+</c:if>
+
 <style type="text/css">
 	#board_div{
 		width:760px;
 		height:320px;
-		/* background-color: blue; */
+/* 		 background-color: black;  */
 		border:2px solid;
 		padding:5px;
 		margin:10px;
@@ -33,6 +41,7 @@
 		height:50px;
 		border:2px solid;
 		margin:auto;
+		/* background-color: blue; */
 	}
 	#board_content{
 		width:470px;
@@ -120,24 +129,25 @@ $(function(){
 </head>
 <body>
 
+<form method='post' action='ContentView.hash'>
 <c:forEach var="con" items= '${content}' >
-
+<input type="hidden" name="connum" value="${con.connum}">
 <div id="board_div">
 	<div id="board_img">
 	</div>
 	<div id ="board_main">
 		<div id="board_subject">
 			<div id="subject">
-			<label>'${con.connickname }'</label>
+			<label>'${con.connickname}'</label>
 			</div>
 			<div id="time">
 			<label>'${con.conmodifieddate}'</label>
 			</div>
 		</div>
 		<div id="board_content">
-			<label>'${con.content}'</label>
+			<label><a href='/INTERHASH/contentView.hash'>'${con.content}'</a></label>
 			<br/>
-			<label> ${con.conhash } </label>
+			<label> ${con.conhash} </label>
 
 		</div>
 		<div id="board_like">
@@ -155,14 +165,14 @@ $(function(){
 				</div>
 				<div id="commnet_text">
 				
-					<P>123</P>
+					<P><input type="submit" value="글보기"></P>
 				</div>
 			</div>
 		</div>
 		
 	</div>
 </div>
-
 </c:forEach>
+</form>
 </body>
 </html>

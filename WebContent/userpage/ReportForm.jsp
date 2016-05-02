@@ -15,9 +15,9 @@
 <input type="submit" value="신고하기"/><input type="button" value="취소"/>
 </form>-->
 
-<form>
+<form method="post" action="ManagerPageReport.hash">
 <div align="center">
-<h3>닉네임 :</h3></span>
+<h3>닉네임 :${connickname}</h3></div>
 
 <div align="center">
 <select name="report">
@@ -29,10 +29,13 @@
 		<option value="5">이 계정이 해킹당했습니다.</option>
 		<option value="6">스팸성 게시물입니다.</option>
 	</select>
-	<input type="hidden" name="redistinction" value="b"/>
-	<input type="hidden" name="connum" value="3"/>
-	${content.connum}
+	<!-- <input type="hidden" name="redistinction" value="b"/>
+	<input type="hidden" name="connum" value="3"/> -->
+	<input type="hidden" name="connickname" value="${connickname}">
+	<input type="hidden" name="connum" value="${content.connum}">
+	<input type="hidden" name="connickname" value="${content.connickname}">
 </div>
+
 <br><br>
 <div align="center"><input type="submit" value="신고하기" /></div>
 </form>  

@@ -11,9 +11,6 @@ document.getElementById('date').valueAsDate = new Date();
 </script>
 <style>
 
-hr{
-padding:1px;
-}
 td{
 width:200px; 
 text-align:center;
@@ -31,18 +28,27 @@ right:200px;
 <hr/>
 <p>
 <table border="1">
-<tr height="30">
+<tr>
 <td><b>HashTag</b></td>
 <td><b>좋아요 수</b></td>
 <td><b>게시글 수</b></td>
 </tr>
+<c:forEach var="hash" items="${array}">
 <tr>
-<td>#우정</td>
-<td>45315개</td>
-<td>2983개</td>
+<td>
+${hash.hashName}
+</td>
+<td>
+${hash.hashLikeCount}
+</td>
+<td>
+${hash.hashContentCount}
+</td>
+
 </tr>
+</c:forEach>
 </table>
-</p>
+
 <hr/>
 
 <div align="right"><input type="date" name="date" id="date"></div>
@@ -53,12 +59,8 @@ right:200px;
 <td><b>게시물 수</b></td>
 <td><b>좋아요 수</b></td>
 </tr>
-<tr>
-<td>12832823명</td>
-<td>683923개</td>
-<td>283715개</td>
-</tr>
+
 </table>
-</p>
+
 </body>
 </html>

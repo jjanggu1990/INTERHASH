@@ -29,7 +29,7 @@ public class LoginProAction implements CommandAction {
 		LogonDataBean check= manager.checkId(member);
 		request.setAttribute("check", check);
 		
-		if(check!=null){
+		/*if(check!=null){
 			request.getSession().setAttribute("memId", email);
 			request.getSession().setAttribute("nickName", check.getNickname());
 		}else{
@@ -40,7 +40,32 @@ public class LoginProAction implements CommandAction {
 		array= bean.getContent();
 		request.setAttribute("content", array);
 		
-		return "/fixpage/boardDiv.jsp";
+		return "/fixpage/boardDiv.jsp";*/
+		
+		if(check!=null)
+		{
+			request.getSession().setAttribute("memId", email);
+			request.getSession().setAttribute("nickName", check.getNickname());
+			
+			ArrayList array=null;
+			ContentDBBean bean = ContentDBBean.getInstance();
+			array= bean.getContent();
+			request.setAttribute("content", array);
+			
+			return "/fixpage/boardDiv.jsp";
+	
+		}
+		else
+		{
+			request.getSession().setAttribute("memId", null);
+			
+			ArrayList array=null;
+			ContentDBBean bean = ContentDBBean.getInstance();
+			array= bean.getContent();
+			request.setAttribute("content", array);
+			return "/fixpage/boardDiv.jsp";
+
+		}
 	}
 	  
 }

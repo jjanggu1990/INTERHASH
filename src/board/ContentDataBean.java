@@ -11,7 +11,7 @@ public class ContentDataBean {
 	Timestamp conmodifieddate;
 	String conip;
 	int conreportcount;
-	char conblind;
+	String conblind;
 	String email;
 	String connickname;
 	
@@ -90,11 +90,11 @@ public class ContentDataBean {
 		this.conreportcount = conreportcount;
 	}
 
-	public char getConblind() {
+	public String getConblind() {
 		return conblind;
 	}
 
-	public void setConblind(char conblind) {
+	public void setConblind(String conblind) {
 		this.conblind = conblind;
 	}
 

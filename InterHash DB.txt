@@ -14,15 +14,18 @@ ReportCount number(3) not null
 
 create table CONTENTS (
 ConNum number(3) primary key,
+ConName varchar2(100) not null,
 Content varchar2(1000) not null,
 ConPhoto varchar2(100),
+ConLike number(3) default 0,
 ConHash varchar2(1000) not null,
 ConCreatedDate date not null,
 ConModifiedDate date not null,
 ConIp varchar2(15) not null,
 ConReportCount number(3) not null,
-ConBlind char(1) not null,
-Email varchar2(25) references USERTABLE(Email)
+ConBlind varchar2(10) not null,
+Email varchar2(25) references USERTABLE(Email),
+nickname varchar2(50) references usertable(nickname)
 );
 
 
@@ -34,9 +37,10 @@ ComCreatedDate date not null,
 ComModifiedDate date not null,
 ComIp varchar2(15) not null,
 ComReportCount number(3) not null,
-ComBlind char(1) not null,
+ComBlind varchar2(10) not null,
 ConNum number(3) references CONTENTS(ConNum),
-Email varchar2(25) references USERTABLE(Email)
+Email varchar2(25) references USERTABLE(Email),
+nickname varchar2(50) references usertable(nickname)
 );
 
 
@@ -45,7 +49,7 @@ create table REPORT (
 ReNum number(3) primary key,
 ReContent varchar2(1000) not null,
 ReCategory varchar2(100) not null,
-ReDistinction varchar2(20) not null,
+ReDistinction varchar2(10) not null,
 ConNum number(3) references CONTENTS(ConNum),
 Email varchar2(25) references USERTABLE(Email)
 );
@@ -56,7 +60,7 @@ TagName varchar2(1000) primary key,
 TagAllCount number(3) not null,
 TagConCount number(3) not null,
 TagInterCount number(3) not null,
-TagClass char(1) not null,
+TagClass varchar2(10) not null,
 Email varchar2(25) references USERTABLE(Email)
 );
 
@@ -102,13 +106,12 @@ ReNum number(3) references REPORT(ReNum)
 );
 
 
-
 CREATE SEQUENCE REPORT_NUM INCREMENT BY 1 START WITH 1 MAXVALUE 10000000 MINVALUE 1 NOCACHE;
-
+CREATE SEQUENCE COMMENTTABLE_SEQ INCREMENT BY 1 START WITH 1 MAXVALUE 1000000 MINVALUE 1 NOCACHE;
 
 
 create table ADMINHASH (
 HashName varchar2(1000) primary key,
-HashLikeCount number not null,
-HashContentCount number not null,
+HashLikeCount number default 0 not null,
+HashContentCount number default 0 not null
 );
