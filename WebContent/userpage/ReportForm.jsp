@@ -33,7 +33,6 @@
 	<input type="hidden" name="connum" value="3"/> -->
 	<input type="hidden" name="connickname" value="${connickname}">
 	<input type="hidden" name="connum" value="${content.connum}">
-	<input type="hidden" name="connickname" value="${content.connickname}">
 </div>
 
 <br><br>

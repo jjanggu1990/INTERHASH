@@ -9,7 +9,13 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+<<<<<<< HEAD
+
+public class AdminHashDBBean {
+=======
 public class AdminHashDBBean{
+
+>>>>>>> b2f0ead26042f3a3a2fc05c9457cae7a9a906b17
 	private static AdminHashDBBean instance = new AdminHashDBBean();
 
 	public static AdminHashDBBean getInstance() {
@@ -18,6 +24,7 @@ public class AdminHashDBBean{
 
 	private AdminHashDBBean() {
 	}
+
 	private static SqlSessionFactory getFactory() throws Exception {
 		String res = "mybatis/config.xml";
 		InputStream is = null;

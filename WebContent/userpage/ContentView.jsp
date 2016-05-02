@@ -128,11 +128,17 @@ color:#5AAEFF;
 	#test{border-bottom:1px solid;}
 </style>
 <script>   
+function modify(){
+	url="/INTERHASH/ReportForm.hash?check=y&&connickname=${content.connickname}&&connum=${content.connum}";
+	
+	window.open(url,"post","toolbar=no ,width=500 ,height=250,directories=no,status=yes,menubar=no,scrollbars=no");
+}
+
 function report(){
 	
 	url="/INTERHASH/ReportForm.hash?check=y&&connickname=${content.connickname}&&connum=${content.connum}";
 	
-	window.open(url,"post","toolbar=no ,width=500 ,height=300,directories=no,status=yes,menubar=no,scrollbars=no");
+	window.open(url,"post","toolbar=no ,width=500 ,height=250,directories=no,status=yes,menubar=no,scrollbars=no");
 }
 </script>
 
@@ -165,7 +171,7 @@ function report(){
 		<label>${content.content}<br></label>
 		<label>${content.content}<br></label>
 		<label>${content.content}<br></label>
-		<label id="hash">${content.conhash}</label><label id="hash">${content.conhash}</label><br>
+		<label id="hash">${content.conhash}</label>
 
 	
 	
@@ -213,7 +219,7 @@ function report(){
 		</c:if>
 		
 		<c:if test="${sessionScope.memId!=comment.email}">
-		신고
+		<a onclick="report()">신고</a>
 		</c:if>	
 	</span><br>
 	

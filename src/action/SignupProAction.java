@@ -35,7 +35,6 @@ public class SignupProAction implements CommandAction {
 		member.setAge(age);
 		member.setCreateddate(new Timestamp(System.currentTimeMillis()));
 		member.setModifieddate(new Timestamp(System.currentTimeMillis()));
-		member.setIp(ip);
 		member.setDistinction(0);
 		member.setReportcount(0);
 		//request.setAttribute("member", member);

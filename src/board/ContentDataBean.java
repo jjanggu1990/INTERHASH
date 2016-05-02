@@ -5,7 +5,6 @@ import java.sql.Timestamp;
 public class ContentDataBean {
 	int connum;
 	String content;
-	String conphoto;
 	String conhash;
 	Timestamp concreateddate;
 	Timestamp conmodifieddate;
@@ -14,6 +13,7 @@ public class ContentDataBean {
 	String conblind;
 	String email;
 	String connickname;
+	int conlike;
 	
 	public String getConnickname() {
 		return connickname;
@@ -40,15 +40,6 @@ public class ContentDataBean {
 	public void setContent(String content) {
 		this.content = content;
 	}
-
-	public String getConphoto() {
-		return conphoto;
-	}
-
-	public void setConphoto(String conphoto) {
-		this.conphoto = conphoto;
-	}
-
 	public String getConhash() {
 		return conhash;
 	}
@@ -100,6 +91,18 @@ public class ContentDataBean {
 
 	public String getEmail() {
 		return email;
+	}
+
+	public int getConlike() {
+		return conlike;
+	}
+
+	public void setConlike(int conlike) {
+		this.conlike = conlike;
+	}
+
+	public void setConnickname(String connickname) {
+		this.connickname = connickname;
 	}
 
 	public void setEmail(String email) {

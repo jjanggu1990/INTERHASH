@@ -10,7 +10,6 @@ public class LogonDataBean {
 	private int age;
 	private Timestamp createddate;
 	private Timestamp modifieddate;
-	private String ip;
 	private int distinction;
 	private int reportcount;
 	
@@ -53,12 +52,7 @@ public class LogonDataBean {
 	public void setModifieddate(Timestamp modifieddate) {
 		this.modifieddate = modifieddate;
 	}
-	public String getIp() {
-		return ip;
-	}
-	public void setIp(String ip) {
-		this.ip = ip;
-	}
+
 	public int getDistinction() {
 		return distinction;
 	}

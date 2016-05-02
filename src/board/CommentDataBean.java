@@ -13,7 +13,6 @@ public class CommentDataBean {
 	String comblind;
 	int connum;
 	String email;
-	/**(COMMENTTABLE_seq.NEXTVAL,#{comnick},#{comcontent},sysdate,sysdate,#{comip},0,'0',#{connum},#{email})*/
 	
 	public CommentDataBean(){}
 	public int getComnum() {
