@@ -10,7 +10,9 @@ document.getElementById('date').valueAsDate = new Date();
 }
 </script>
 <style>
-
+*{
+color:#7A7A7A;
+}
 td{
 width:200px; 
 text-align:center;
@@ -32,6 +34,7 @@ text-align:center;
 <tr>
 <td>
 ${hash.hashName}
+${hash.HashName }
 </td>
 <td>
 ${hash.hashLikeCount}
