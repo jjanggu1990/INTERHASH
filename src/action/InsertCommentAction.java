@@ -1,6 +1,7 @@
 package action;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,7 @@ public class InsertCommentAction implements CommandAction{
 		
 		request.setCharacterEncoding("UTF-8");
 		int connum = Integer.parseInt(request.getParameter("connum"));
+		SimpleDateFormat sdf1 = new SimpleDateFormat("YY-MM-dd HH:mm");
 		
 		String comnick = (String)request.getSession().getAttribute("nickName");  
 		String comcontent = request.getParameter("comcontent");
@@ -42,9 +44,12 @@ public class InsertCommentAction implements CommandAction{
 
 		commentdbpro.insertComment(comment);
 		
+		String comsdf = sdf1.format(comment.getCommodifieddate());
+	
 		ArrayList array = commentdbpro.getComment();
 		request.setAttribute("comments", comment);
 		request.setAttribute("comment", array);
+		request.setAttribute("comsdf", comsdf);
 		
 		return "ContentView.hash";
 	}

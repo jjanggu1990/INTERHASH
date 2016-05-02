@@ -165,7 +165,7 @@ $(function(){
 				</div>
 				<div id="commnet_text">
 				
-					<P><input type="submit" value="글보기"></P>
+					<P><a href="ContentView.hash?connum=${con.connum}">이동동</a></P>
 				</div>
 			</div>
 		</div>

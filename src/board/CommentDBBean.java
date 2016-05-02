@@ -122,5 +122,26 @@ public class CommentDBBean {
 		return article;
 	}
 	
+	public int updateComment(CommentDataBean article) throws Exception{
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		int check = -1;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			check = session.update("comment.commentupdate", article);	
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+		return check;
+	}
+	
 	}
 

@@ -150,7 +150,7 @@ function report(){
 	
 	<div id="left_nickndate">
 		<span id ="align_left">${sessionScope.nickName}님</span>
-		<span id="align_right">${sdf.format(content.concreateddate)}</span>
+		<span id="align_right">${sdf.format(content.conmodifieddate)}</span>
 	</div>
 
 	<c:if test="${sessionScope.memId==content.email}">
@@ -210,6 +210,7 @@ function report(){
 	<span id="align_right">
 		<c:if test="${sessionScope.memId==comment.email}">
 		<a href="/INTERHASH/DeleteComment.hash?comnum=${comment.comnum}&&connum=${content.connum}">삭제</a>
+		 
 		<a onclick="modify(${comment.comnum})">수정</a>
 		</c:if>
 		
