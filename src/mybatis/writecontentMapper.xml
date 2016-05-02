@@ -10,6 +10,9 @@
 		select * from contents where conhash like '%' || #{hash} || '%' order by conmodifieddate desc
 	</select>
 	<insert id = "insertContent" parameterType="board.ContentDataBean">
-		insert into contents values (connum_seq.nextval, #{content}, #{conphoto}, #{conhash}, #{concreateddate}, #{conmodifieddate},#{conip},0,0,#{email},#{connickname}) 
+		insert into contents values (connum_seq.nextval, #{content},  #{conhash}, #{concreateddate}, #{conmodifieddate},#{conip},0,'0',#{email},#{connickname},0) 
+	</insert>
+	<insert id = "insertPhoto" parameterType="board.PhotoDataBean">
+		insert into photo values(photo_seq.nextval, #{photoname},#{realpath}, #{photosize},connum_seq.currval,#{email},null)
 	</insert>
 </mapper>
