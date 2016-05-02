@@ -5,6 +5,6 @@
 
 	<insert id="sendreport" parameterType="board.ReportDataBean">
 		insert into report
-		values(report_num.nextval,#{recontent},#{recategory},#{redistinction},#{connum},#{email})
+		values(report_num.nextval,#{redistinction},#{connum},#{email})
 	</insert>
 </mapper>

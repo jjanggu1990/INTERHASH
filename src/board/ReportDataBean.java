@@ -1,23 +1,16 @@
 package board;
 
 public class ReportDataBean {
-	String recontent;
-	String recategory;
+	int renum;
 	char redistinction;
 	int connum;
 	String email;
 	
-	public String getRecontent() {
-		return recontent;
+	public int getRenum() {
+		return renum;
 	}
-	public void setRecontent(String recontent) {
-		this.recontent = recontent;
-	}
-	public String getRecategory() {
-		return recategory;
-	}
-	public void setRecategory(String recategory) {
-		this.recategory = recategory;
+	public void setRenum(int renum) {
+		this.renum = renum;
 	}
 	public char getRedistinction() {
 		return redistinction;

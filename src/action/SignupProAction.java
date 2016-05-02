@@ -21,12 +21,10 @@ public class SignupProAction implements CommandAction {
 		int age = Integer.parseInt(request.getParameter("age"));
 		Timestamp createddate;
 		Timestamp modifieddate;
-		String ip = request.getRemoteAddr();
 		
 		//int distinction= Integer.parseInt(request.getParameter("distinction"));
 		//int reportcount = Integer.parseInt(request.getParameter("reportcount"));
 		
-		System.out.println("ip ::: "+ip);
 		LogonDataBean member = new LogonDataBean();
 		member.setEmail(email);
 		member.setPasswd(passwd);
@@ -35,7 +33,6 @@ public class SignupProAction implements CommandAction {
 		member.setAge(age);
 		member.setCreateddate(new Timestamp(System.currentTimeMillis()));
 		member.setModifieddate(new Timestamp(System.currentTimeMillis()));
-		member.setIp(ip);
 		member.setDistinction(0);
 		member.setReportcount(0);
 		//request.setAttribute("member", member);
