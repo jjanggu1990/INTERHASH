@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
+import board.ContentDBBean;
 import board.ContentDataBean;
+import board.PhotoDataBean;
 
 public class ContentInputProAction implements CommandAction {
 
@@ -27,7 +30,7 @@ public class ContentInputProAction implements CommandAction {
 		    String root = request.getSession().getServletContext().getRealPath("/");
 		 
 		    // 파일 저장 경로(ex : /home/tour/web/ROOT/upload)
-		    String savePath = root + "upload"+"//";
+		    String savePath = root + "upload"+"\\";
 		 
 		    // 업로드 파일명
 		    String uploadFile = "";
@@ -45,18 +48,28 @@ public class ContentInputProAction implements CommandAction {
 		    SimpleDateFormat simDf = new SimpleDateFormat("yyyyMMddHHmmss");  
 		    String content="";
 		    String conhash="";
-		    
+		    String nickname="";
+		    String email="";
+		    String ip="";
 		    try{
 		 
 		        MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, "UTF-8", new DefaultFileRenamePolicy());
 		         System.out.println("저장경로 : " + savePath);
 		        // 전송받은 parameter의 한글깨짐 방지
 		        content = multi.getParameter("content");
+		      //  content = new String(content.getBytes("8859_1"), "UTF-8");
 		        System.out.println("사진 content:: " + content);
-		        content = new String(content.getBytes("8859_1"), "UTF-8");
 		        conhash = multi.getParameter("tag");
+		       // conhash = new String(conhash.getBytes("8859_1"), "UTF-8");
 		        System.out.println("사진 conhash:: "+conhash);
-		        conhash = new String(conhash.getBytes("8859_1"), "UTF-8");
+		        
+		        nickname=(String)request.getSession().getAttribute("nickName");
+		        //nickname=new String(nickname.getBytes("8859_1"),"UTF-8");
+		        
+		        email=(String)request.getSession().getAttribute("memId");
+		       // email=new String(email.getBytes("8859_1"),"UTF-8");
+		        
+		        
 		        // 파일업로드
 		       
 		        uploadFile = multi.getFilesystemName("conphoto");
@@ -90,6 +103,27 @@ public class ContentInputProAction implements CommandAction {
 		            fout.close();
 		            oldFile.delete();
 		       // }   
+		            
+		           ContentDataBean content_obj = new ContentDataBean();
+		           content_obj.setContent(content);
+		           content_obj.setConip(request.getRemoteAddr());
+		           content_obj.setConnickname(nickname);
+		           content_obj.setEmail(email);
+		           content_obj.setConhash(conhash);
+		           content_obj.setConcreateddate(new Timestamp(System.currentTimeMillis()));
+		           content_obj.setConmodifieddate(new Timestamp(System.currentTimeMillis()));
+		           
+		           
+		           PhotoDataBean photo_obj = new PhotoDataBean();
+		           
+		           photo_obj.setEmail((String)request.getSession().getAttribute("memId"));
+		           photo_obj.setPhotoname(uploadFile);
+		           photo_obj.setRealpath(savePath + uploadFile);
+		           photo_obj.setPhotosize(oldFile.length()+"KB");
+		           System.out.println("사진 용량 :: "+oldFile.length());
+		           
+		           ContentDBBean bean =  ContentDBBean.getInstance();
+		           bean.insertContent(content_obj, photo_obj);
 		 
 		    }catch(Exception e){
 		        e.printStackTrace();

@@ -6,4 +6,16 @@
 		select * from ADMINHASH
 </select>
 
+<delete id="deleteMember" parameterType="String">
+delete from usertable where email=#{email}
+</delete>
+
+<insert id="admininsert" parameterType="String">
+insert into withdrawal
+values(num_seq.nextval, #{email}, '관리자에 의한 강제탈퇴', sysdate)
+</insert>
+
+<select id="withselect" resultType="board.WithdrawalDataBean">
+select * from WITHDRAWAL
+</select>
 </mapper>
