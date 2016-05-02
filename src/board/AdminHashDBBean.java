@@ -9,13 +9,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-<<<<<<< HEAD
-public class AdminHashDBBean{
-
-=======
 
 public class AdminHashDBBean {
->>>>>>> ed14ac59e7ae83071ad6597bb2f46a6900cdcf09
+
 	private static AdminHashDBBean instance = new AdminHashDBBean();
 
 	public static AdminHashDBBean getInstance() {

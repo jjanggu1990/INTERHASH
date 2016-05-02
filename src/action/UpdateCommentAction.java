@@ -18,7 +18,8 @@ public class UpdateCommentAction implements CommandAction {
 		CommentDataBean article = dbpro.getcommentone(comnum);
 		
 		request.setAttribute("article", article);
-
+		request.setAttribute("comnum", comnum);
+		
 		return "/userpage/UpdateComment.jsp";
 	}
 

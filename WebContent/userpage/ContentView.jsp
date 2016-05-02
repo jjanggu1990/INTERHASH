@@ -128,11 +128,11 @@ color:#5AAEFF;
 	#test{border-bottom:1px solid;}
 </style>
 <script>   
-function modify(){
-	url="/INTERHASH/ReportForm.hash?check=y&&connickname=${content.connickname}&&connum=${content.connum}";
+ function modify(comnum){
+	url="/INTERHASH/UpdateComment.hash?check=y&&comnum="+comnum;
 	
 	window.open(url,"post","toolbar=no ,width=500 ,height=250,directories=no,status=yes,menubar=no,scrollbars=no");
-}
+} 
 
 function report(){
 	
@@ -155,7 +155,7 @@ function report(){
 
 	<c:if test="${sessionScope.memId==content.email}">
 	<div id="left_mod_del_rep">
-		<span id="align_right">/<a href="/INTERHASH/ContentDelete.hash?connum=${content.connum}">삭제하기</a></span>
+		<span id="align_right">/<a href="/INTERHASH/ContentDelete.hash?connum="+${content.connum}>삭제하기</a></span>
 		<span id="align_right"><a href="/INTERHASH/ContentDelete.hash">수정하기 </a> </span>
 	</div>
 	</c:if>
@@ -173,11 +173,6 @@ function report(){
 		<label>${content.content}<br></label>
 		<label id="hash">${content.conhash}</label>
 
-	
-	
-	<img src="${content.conphoto}">
-	<img src="${content.conphoto}">
-	<img src="${content.conphoto}">
 
 	</div>
 	
@@ -215,11 +210,11 @@ function report(){
 	<span id="align_right">
 		<c:if test="${sessionScope.memId==comment.email}">
 		<a href="/INTERHASH/DeleteComment.hash?comnum=${comment.comnum}&&connum=${content.connum}">삭제</a>
-		<a href="/INTERHASH/UpdateComment.hash?comnum=${comment.comnum}">수정</a>
+		<a onclick="modify(${comment.comnum})">수정</a>
 		</c:if>
 		
 		<c:if test="${sessionScope.memId!=comment.email}">
-		<a onclick="report()">신고</a>
+		<a href="/INTERHASH/UpdateComment.hash?comnum=${comment.comnum}">신고</a>
 		</c:if>	
 	</span><br>
 	

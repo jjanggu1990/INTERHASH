@@ -145,7 +145,7 @@ $(function(){
 			</div>
 		</div>
 		<div id="board_content">
-			<label><a href='/INTERHASH/contentView.hash'>'${con.content}'</a></label>
+			<label>'${con.content}'</label>
 			<br/>
 			<label> ${con.conhash} </label>
 
