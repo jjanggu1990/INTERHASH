@@ -446,7 +446,7 @@ color:#7A7A7A;
 			</tr>
 			</table>
 		</div>
-	<input type="submit" value="가입"><input type="button" value="취소">
+	<input type="submit" value="가입"><input type="button" value="취소" onclick="javascript:window.location='Main.hash'">
 </form>
 </center>
 

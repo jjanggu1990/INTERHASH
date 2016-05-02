@@ -399,6 +399,7 @@ window.onload=function checkHash(){
 			</table>
 		</div>
 	<input type="submit" value="정보수정"><input type="button" value="취소" onclick="javascript:window.location='Board.hash'">
+	<input type="button" value="회원탈퇴" onclick="javascript:window.location='WithdrawalForm.hash'">
 </form>
 </center>
 

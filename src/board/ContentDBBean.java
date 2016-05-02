@@ -35,13 +35,14 @@ public class ContentDBBean {
 		return factory;
 	}
 
-	public void insertContent(ContentDataBean bean) throws Exception {
+	public void insertContent(ContentDataBean bean,PhotoDataBean photo) throws Exception {
 		SqlSessionFactory factory = null;
 		SqlSession session = null;
 		try {
 			factory = getFactory();
 			session = factory.openSession();
 			session.insert("writecontent.insertContent" , bean);
+			session.insert("writecontent.insertPhoto" , photo);
 			session.commit();
 		} catch (Exception e) {
 			e.printStackTrace();

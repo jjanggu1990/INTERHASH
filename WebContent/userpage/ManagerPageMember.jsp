@@ -5,6 +5,9 @@
 <head>
 <title>Insert title here</title>
 <style>
+*{
+color:#7A7A7A;
+}
 p{
 padding:3px;
 }
@@ -17,6 +20,7 @@ width:150px;
 <center>
 <h3>회원관리</h3>
 <hr/>
+<form method="post" action="ManagerPageMemberPro.hash">
 <table border="1">
 <tr>
 <td><b>email</b></td>
@@ -36,13 +40,14 @@ ${member.nickname}
 <td>
 ${member.reportcount}
 </td>
-<td><input type="checkbox" name="delete"></td>
+<td><input type="checkbox" name="delete" value="${member.email}"></td>
 </tr>
 </c:forEach>
-<tr>
-<td colspan="4"><div align="right"><input type="button" value="회원삭제"></div></td>
-</tr>
 </table>
+<div align="center"><input type="submit" value="회원삭제"></div>
+
+
+</form>
 
 
 </body>

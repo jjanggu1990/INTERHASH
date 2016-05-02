@@ -9,10 +9,14 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+<<<<<<< HEAD
 
 
 public class AdminHashDBBean {
 
+=======
+public class AdminHashDBBean{
+>>>>>>> 2ab39c023b06ea0f795cfa320eeb339b28e7acd0
 
 	private static AdminHashDBBean instance = new AdminHashDBBean();
 
@@ -58,6 +62,53 @@ public class AdminHashDBBean {
 				}
 		}
 		return array;
+	}
+	public void deleteMember(String value) throws Exception {
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		String [] tmp = value.substring(1, value.length()-1).trim().split(",");
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			for (int i = 0 ; i < tmp.length;i++){
+			
+				session.delete("admin.deleteMember",tmp[i]);
+			}
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+	}
+	
+	public void adminInsert(String value) throws Exception {
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		String [] tmp = value.substring(1, value.length()-1).trim().split(",");
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			for (int i = 0 ; i < tmp.length;i++){
+				
+				session.insert("admin.admininsert",tmp[i]);
+			}
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
 	}
 
 }

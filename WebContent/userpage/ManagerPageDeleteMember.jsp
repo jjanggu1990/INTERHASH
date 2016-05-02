@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,23 +11,34 @@ padding:3px;
 td{
 width:250px; 
 }
+*{
+color:#7A7A7A;
+}
 </style>
 </head>
 <body>
 <center>
-<h3>È¸¿ø°ü¸®</h3>
+<h3>Å»ÅðÈ¸¿ø°ü¸®</h3>
 <hr/>
 <table border="1">
 <tr>
-<td>email</td>
-<td>Å»Åð³¯Â¥</td>
-<td>Å»Åð»çÀ¯</td>
+<td><b>email</b></td>
+<td><b>Å»Åð³¯Â¥</b></td>
+<td><b>Å»Åð»çÀ¯</b></td>
 </tr>
+<c:forEach var="member" items="${array}">
 <tr>
-<td>jk4877@naver.com</td>
-<td>2016-04-28</td>
-<td>InterHash»ç¿ë¹æ¹ýÀ» ¸ð¸£°ÚÀ½</td>
+<td>
+${member.drawalemail}
+</td>
+<td>
+${member.drawaldate}
+</td>
+<td>
+${member.drawalcause}
+</td>
 </tr>
+</c:forEach>
 </table>
 
 </body>
