@@ -23,9 +23,17 @@ public class BoardAction implements CommandAction {
 			array= bean.getContent();
 			request.setAttribute("content", array);
 		}else{
-			ContentDBBean bean = ContentDBBean.getInstance();
-			array = bean.getContent(hash);
-			request.setAttribute("content", array);
+			if (hash.equals("신고")) {
+				ContentDBBean bean = ContentDBBean.getInstance();
+				array = bean.getContent("신고");
+				request.setAttribute("content", array);
+			}
+			else {
+				ContentDBBean bean = ContentDBBean.getInstance();
+				array = bean.getContent(hash);
+				request.setAttribute("content", array);
+				
+			}
 		}
 		return "/fixpage/boardDiv.jsp";
 	}

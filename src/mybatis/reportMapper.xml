@@ -7,4 +7,8 @@
 		insert into report
 		values(report_num.nextval,#{redistinction},#{connum},#{email})
 	</insert>
+	
+	<select id="getreport">
+		select * from contents +where conreportcount >= 1
+	</select>
 </mapper>
