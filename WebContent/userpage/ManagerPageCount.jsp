@@ -15,11 +15,6 @@ td{
 width:200px; 
 text-align:center;
 }
-div{
-position:relative;
-right:200px;
-
-}
 </style>
 </head>
 <body>
