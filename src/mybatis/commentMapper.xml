@@ -22,4 +22,8 @@
 	<delete id="deleteComment" parameterType="integer">
 		delete from commenttable where comnum=#{comnum}
 	</delete>
+	
+	<select id="commentone" parameterType="integer" resultType="board.CommentDataBean">
+		select * from commenttable where comnum = #{comnum}
+	</select>
 </mapper>

@@ -215,7 +215,7 @@ function report(){
 	<span id="align_right">
 		<c:if test="${sessionScope.memId==comment.email}">
 		<a href="/INTERHASH/DeleteComment.hash?comnum=${comment.comnum}&&connum=${content.connum}">삭제</a>
-		<a href="/INTERHASH/UpdateComment.hash?comnum=${comment.comnum}&&connum=${content.connum}">수정</a>
+		<a href="/INTERHASH/UpdateComment.hash?comnum=${comment.comnum}">수정</a>
 		</c:if>
 		
 		<c:if test="${sessionScope.memId!=comment.email}">

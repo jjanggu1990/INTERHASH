@@ -101,5 +101,26 @@ public class CommentDBBean {
 		}
 		return check;
 	}
+	
+	public CommentDataBean getcommentone(int comnum) throws Exception{
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		CommentDataBean article = null;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			article = session.selectOne("comment.commentone", comnum);	
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+		return article;
+	}
+	
 	}
 
