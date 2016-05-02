@@ -74,6 +74,26 @@ public class ContentDBBean {
 		}
 		return array;
 	}
+	public ArrayList getReport() throws Exception {
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		ArrayList array = null;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			array = (ArrayList) session.selectList("report.getreport");
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+		return array;
+	}
 	public ArrayList getContent(String hash) throws Exception {
 		SqlSessionFactory factory = null;
 		SqlSession session = null;

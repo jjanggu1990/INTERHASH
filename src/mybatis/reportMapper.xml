@@ -8,7 +8,7 @@
 		values(report_num.nextval,#{redistinction},#{connum},#{email})
 	</insert>
 	
-	<select id="getreport">
-		select * from contents +where conreportcount >= 1
+	<select id="getreport" resultType="board.ContentDataBean">
+		select * from contents where conreportcount >= 1
 	</select>
 </mapper>
