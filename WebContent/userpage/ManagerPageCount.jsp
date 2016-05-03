@@ -14,7 +14,7 @@ document.getElementById('date').valueAsDate = new Date();
 color:#7A7A7A;
 }
 td{
-width:200px; 
+width:100px; 
 text-align:center;
 }
 </style>

@@ -46,13 +46,15 @@ public class LoginProAction implements CommandAction {
 		if(check!=null)
 		{
 			request.getSession().setAttribute("memId", email);
-			System.out.println("°ü¸®ÀÚ email check :: " + email);
+			request.getSession().setAttribute("nickName", check.getNickname());
+			
 			if(email.equals("admin@admin.com")){
+				ArrayList array=null;
+				ContentDBBean bean = ContentDBBean.getInstance();
+				array= bean.getContent();
+				request.setAttribute("content", array);
 				return "/userpage/ManagerPage.jsp";
 			}
-			else {
-			request.getSession().setAttribute("memId", email);
-			request.getSession().setAttribute("nickName", check.getNickname());
 			
 			ArrayList array=null;
 			ContentDBBean bean = ContentDBBean.getInstance();
@@ -60,7 +62,6 @@ public class LoginProAction implements CommandAction {
 			request.setAttribute("content", array);
 			
 			return "/fixpage/boardDiv.jsp";
-			}
 	
 		}
 		else
