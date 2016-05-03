@@ -40,4 +40,7 @@
 	<select id="existEmailPasswd" parameterType="board.LogonDataBean" resultType="Integer">
 		select count(*) from usertable where email=#{email} and passwd=#{passwd}
 	</select>
+	<select id="memberHash" parameterType="String" resultType="String">
+		select hash from usertable where email=#{email}
+	</select>
 </mapper>
