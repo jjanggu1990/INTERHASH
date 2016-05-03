@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import board.AdminHashDBBean;
 import board.LogonDBBean;
 import board.LogonDataBean;
+import board.WithdrawalDataBean;
 
 public class ManagerPageMemberProAction implements CommandAction {
 
@@ -20,9 +21,15 @@ public class ManagerPageMemberProAction implements CommandAction {
 		System.out.println("delete::" + Arrays.toString(check));
 		String member =  Arrays.toString(check);
 		
+		WithdrawalDataBean members = new WithdrawalDataBean();
 		AdminHashDBBean dbpro = AdminHashDBBean.getInstance();
-		dbpro.adminInsert(member); 
+		members.setDrawalemail(member);
+		dbpro.adminInsert(member);
+		
+		LogonDataBean a = new LogonDataBean();
+		a.setEmail(member);
 		dbpro.deleteMember(member);
+		
 		 
 		
 /*		ArrayList array = null;
