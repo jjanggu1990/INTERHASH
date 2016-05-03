@@ -28,9 +28,9 @@ public class ContentInputProAction implements CommandAction {
 		 
 		    // 웹서버 컨테이너 경로
 		    String root = request.getSession().getServletContext().getRealPath("/");
-		 
+		    String root1 = "F:\\git_test\\INTERHASH\\WebContent\\";
 		    // 파일 저장 경로(ex : /home/tour/web/ROOT/upload)
-		    String savePath = root + "upload"+"\\";
+		    String savePath = "upload"+"\\";
 		 
 		    // 업로드 파일명
 		    String uploadFile = "";
@@ -53,8 +53,8 @@ public class ContentInputProAction implements CommandAction {
 		    String ip="";
 		    try{
 		 
-		        MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, "UTF-8", new DefaultFileRenamePolicy());
-		         System.out.println("저장경로 : " + savePath);
+		        MultipartRequest multi = new MultipartRequest(request, root+savePath, maxSize, "UTF-8", new DefaultFileRenamePolicy());
+		         System.out.println("저장경로 : " +root+ savePath);
 		        // 전송받은 parameter의 한글깨짐 방지
 		        content = multi.getParameter("content");
 		      //  content = new String(content.getBytes("8859_1"), "UTF-8");
@@ -79,11 +79,11 @@ public class ContentInputProAction implements CommandAction {
 		 
 		         
 		        // 업로드된 파일 객체 생성
-		        File oldFile = new File(savePath + uploadFile);
+		        File oldFile = new File(root+savePath + uploadFile);
 		 
 		         
 		        // 실제 저장될 파일 객체 생성
-		       // File newFile = new File(savePath +"//"+ newFileName);
+		        File newFile = new File(root1+savePath + uploadFile);
 		         
 		 
 		        // 파일명 rename
@@ -93,12 +93,11 @@ public class ContentInputProAction implements CommandAction {
 		 
 		            buf = new byte[1024];
 		            fin = new FileInputStream(oldFile);
-		            fout = new FileOutputStream(oldFile);
+		            fout = new FileOutputStream(newFile);
 		            read = 0;
 		            while((read=fin.read(buf,0,buf.length))!=-1){
 		                fout.write(buf, 0, read);
 		            }
-		             
 		            fin.close();
 		            fout.close();
 		            oldFile.delete();
@@ -119,8 +118,9 @@ public class ContentInputProAction implements CommandAction {
 		           photo_obj.setEmail((String)request.getSession().getAttribute("memId"));
 		           photo_obj.setPhotoname(uploadFile);
 		           photo_obj.setRealpath(savePath + uploadFile);
-		           photo_obj.setPhotosize(oldFile.length()+"KB");
-		           System.out.println("사진 용량 :: "+oldFile.length());
+		           System.out.println("Path:::"+newFile.getAbsolutePath());
+		           photo_obj.setPhotosize(newFile.length()+"");
+		           System.out.println("사진 용량 :: "+newFile.length());
 		           
 		           ContentDBBean bean =  ContentDBBean.getInstance();
 		           bean.insertContent(content_obj, photo_obj);
