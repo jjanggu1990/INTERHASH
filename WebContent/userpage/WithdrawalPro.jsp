@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert title here</title>
+<title>회원탈퇴</title>
 </head>
 <body>
 <center>

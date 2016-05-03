@@ -5,6 +5,5 @@
 <title>Insert title here</title>
 </head>
 <body>
-게시물 수정 폼
 </body>
 </html>

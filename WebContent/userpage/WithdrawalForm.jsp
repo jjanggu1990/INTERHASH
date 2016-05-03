@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert title here</title>
+<title>회원탈퇴</title>
 <script>
 function begin() {
 	document.myform.passwd.focus();

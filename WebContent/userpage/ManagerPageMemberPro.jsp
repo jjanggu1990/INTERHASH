@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert title here</title>
+<title>°ü¸®ÀÚ</title>
 <style>
 *{
 color:#7A7A7A;

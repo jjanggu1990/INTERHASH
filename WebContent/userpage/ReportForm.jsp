@@ -2,10 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert title here</title>
+<title>신고</title>
 </head>
 <body>
-신고 화면
 
 <!-- <form action ="ReportPro.hash" method="post">
 <input type="hidden" name="redistinction" value="b"/>

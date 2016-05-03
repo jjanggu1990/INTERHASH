@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert title here</title>
+<title>°ü¸®ÀÚ</title>
 </head>
 <body>
 <center>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert title here</title>
+<title>°ü¸®ÀÚ</title>
 <script>
 window.onload=function() {
 document.getElementById('date').valueAsDate = new Date();

@@ -6,7 +6,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-메인 게시판
 id : ${email}<br>
 password : ${passwd}<br>
 hash : ${hash}<br>

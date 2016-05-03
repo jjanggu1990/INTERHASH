@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> NewTab </title>
+<title> Password </title>
 <c:set var="email" value='${email}' />
 <script>
 	function checkIt(){

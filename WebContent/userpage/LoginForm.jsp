@@ -5,7 +5,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-로그인 화면
 <form action="LoginPro.hash" method="post">
 id : <input type="text" name="id"/><br>
 password : <input type="password" name="passwd"/><br>
