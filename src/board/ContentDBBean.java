@@ -58,10 +58,18 @@ public class ContentDBBean {
 		SqlSessionFactory factory = null;
 		SqlSession session = null;
 		ArrayList array = null;
+		ArrayList photo=null;
 		try {
 			factory = getFactory();
 			session = factory.openSession();
 			array = (ArrayList) session.selectList("writecontent.getContent");
+			for(int i = 0; i<array.size();i++){
+				ContentDataBean bean = (ContentDataBean)array.get(i);
+				int connum = bean.getConnum();
+				photo = (ArrayList)session.selectList("photo.selectPhoto", connum);
+				bean.setPhotolist(photo);
+				array.set(i, bean);
+			}
 			session.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -98,10 +106,24 @@ public class ContentDBBean {
 		SqlSessionFactory factory = null;
 		SqlSession session = null;
 		ArrayList array = null;
+		ArrayList photo =null;
 		try {
 			factory = getFactory();
 			session = factory.openSession();
 			array = (ArrayList) session.selectList("writecontent.getContentByHash",hash);
+			
+			
+			//array = (ArrayList) session.selectList("writecontent.getContent");
+			for(int i = 0; i<array.size();i++){
+				ContentDataBean bean = (ContentDataBean)array.get(i);
+				int connum = bean.getConnum();
+				photo = (ArrayList)session.selectList("photo.selectPhoto",connum+"");
+				bean.setPhotolist(photo);
+				array.set(i, bean);
+			}
+			
+			
+			
 			session.commit();
 		} catch (Exception e) {
 			e.printStackTrace();

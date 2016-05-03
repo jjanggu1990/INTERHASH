@@ -34,7 +34,6 @@ text-align:center;
 <tr>
 <td>
 ${hash.hashName}
-${hash.HashName }
 </td>
 <td>
 ${hash.hashLikeCount}

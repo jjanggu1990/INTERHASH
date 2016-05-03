@@ -11,7 +11,7 @@ color:#7A7A7A;
 </style>
 </head>
 <body>
-<c:if test="${check==1}">
+<c:if test="${check!=-1}">
 <table>
   <tr>
     <p><td align="center">${email}은 이미 사용중인 이메일입니다.</p>
@@ -21,7 +21,7 @@ color:#7A7A7A;
   </tr>
 </table>
 </c:if>
-<c:if test="${check!=1}">
+<c:if test="${check==-1}">
 <form method="post" action="SendEmail.hash">
 <table>
   <tr>

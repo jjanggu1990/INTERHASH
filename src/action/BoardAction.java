@@ -24,7 +24,7 @@ public class BoardAction implements CommandAction {
 			array= bean.getContent();
 			request.setAttribute("content", array);
 		}else{
-			if (hash.equals("ì‹ ê³ ")) {
+			if (hash.equals("½Å°í")) {
 				ContentDBBean bean = ContentDBBean.getInstance();
 				array = bean.getReport();
 				request.setAttribute("content", array);

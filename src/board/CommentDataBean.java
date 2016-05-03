@@ -14,6 +14,7 @@ public class CommentDataBean {
 	int connum;
 	String email;
 	
+	
 	public CommentDataBean(){}
 	public int getComnum() {
 		return comnum;

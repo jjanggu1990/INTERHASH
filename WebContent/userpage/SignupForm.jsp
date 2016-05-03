@@ -124,8 +124,8 @@ color:#7A7A7A;
 <table>
 <tr>
 <td>email</td>
-<td><input type="email" name="email" id="email" autofocus/></td>
-<td><input type="button" value="인증하기" onClick="confirmemail()" /> </td>
+<td><input type="email" name="email" id="email" autofocus required="required"/></td>
+<td><input type="button" value="인증하기" onClick="confirmemail()"/> </td>
 </tr>
 <tr>
 <td>email인증번호</td>

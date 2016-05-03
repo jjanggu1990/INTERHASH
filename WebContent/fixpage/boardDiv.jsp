@@ -28,6 +28,11 @@ history.go(-1);
 		border:2px solid;
 		margin:auto;
 	}
+	#img{
+		width: 260px;
+		height:270px;
+		margin:auto;
+	}
 	#board_main{
 		width:470px;
 		height:310px;
@@ -134,6 +139,7 @@ $(function(){
 <input type="hidden" name="connum" value="${con.connum}">
 <div id="board_div">
 	<div id="board_img">
+		<img id = "img" src='${con.photolist[0].serverpath }'/>
 	</div>
 	<div id ="board_main">
 		<div id="board_subject">

@@ -7,7 +7,13 @@ public class PhotoDataBean {
 	private String photosize;
 	private int connum;
 	private String email;
-	
+	private String serverpath;
+	public String getServerpath() {
+		return serverpath;
+	}
+	public void setServerpath(String serverpath) {
+		this.serverpath = serverpath;
+	}
 	public String getPhotonum() {
 		return photonum;
 	}
