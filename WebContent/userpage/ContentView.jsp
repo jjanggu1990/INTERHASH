@@ -164,7 +164,7 @@ function report(){
 	<div id="left_mod_del_rep">
 		<span id="align_right"><a onclick="report()">신고하기</a></span>
 	</div>
-	</c:if>		
+	</c:if>	
 	
 	<div id="content_photo" style="height:490px; overflow-x:auto">
 	<label>${content.connickname}<br></label>

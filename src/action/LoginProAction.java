@@ -21,6 +21,7 @@ public class LoginProAction implements CommandAction {
 		System.out.println("email ::: " +email+ "  passwd ::: " + passwd);
 		request.setAttribute("email", email);
 		request.setAttribute("passwd", passwd);
+		
 		LogonDataBean member = new LogonDataBean();
 		member.setEmail(email);
 		member.setPasswd(passwd);
@@ -31,7 +32,7 @@ public class LoginProAction implements CommandAction {
 		
 		/*if(check!=null){
 			request.getSession().setAttribute("memId", email);
-			request.getSession().setAttribute("nickName", check.getNickname());
+			request.getSession().setAttribute("nbickName", check.getNickname());
 		}else{
 			request.getSession().setAttribute("memId", null);
 		}
@@ -46,6 +47,7 @@ public class LoginProAction implements CommandAction {
 		{
 			request.getSession().setAttribute("memId", email);
 			request.getSession().setAttribute("nickName", check.getNickname());
+			
 			
 			ArrayList array=null;
 			ContentDBBean bean = ContentDBBean.getInstance();
@@ -64,7 +66,6 @@ public class LoginProAction implements CommandAction {
 			array= bean.getContent();
 			request.setAttribute("content", array);
 			return "/fixpage/boardDiv.jsp";
-
 		}
 	}
 	  
