@@ -117,7 +117,7 @@ public class ContentDBBean {
 			for(int i = 0; i<array.size();i++){
 				ContentDataBean bean = (ContentDataBean)array.get(i);
 				int connum = bean.getConnum();
-				photo = (ArrayList)session.selectList("photo.selectPhoto",connum+"");
+				photo = (ArrayList)session.selectList("photo.selectPhoto", connum);
 				bean.setPhotolist(photo);
 				array.set(i, bean);
 			}
