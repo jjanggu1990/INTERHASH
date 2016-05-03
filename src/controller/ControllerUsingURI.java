@@ -9,6 +9,7 @@ import java.util.Properties;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,12 +23,14 @@ public class ControllerUsingURI extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	static ServletContext application;
 	private Map commandMap = new HashMap();//명령어와 명령어 처리 클래스를 쌍으로 저장
 
     //명령어와 처리클래스가 매핑되어 있는 properties 파일을 읽어서 Map객체인 commandMap에 저장
     //명령어와 처리클래스가 매핑되어 있는 properties 파일은 Command.properties파일
     @Override
     public void init(ServletConfig config) throws ServletException {
+    	application = config.getServletContext() ;
     	System.out.println("init() 실행");
         String props = config.getInitParameter("propertyConfig");//web.xml에서 propertyConfig에 해당하는 init-param 의 값을 읽어옴
         System.out.println("props :: "+props);

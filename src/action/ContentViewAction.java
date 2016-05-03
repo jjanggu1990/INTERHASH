@@ -21,24 +21,27 @@ public class ContentViewAction implements CommandAction {
 		request.setCharacterEncoding("UTF-8");
 
 		int connum = Integer.parseInt(request.getParameter("connum"));
-		
+
 		SimpleDateFormat sdf = new SimpleDateFormat("YY-MM-dd HH:mm");
 
-		
 		ContentDBBean dbpro = ContentDBBean.getInstance();
 		ContentDataBean content = dbpro.getContent(connum);
-		
-	
-		
 
+		
+		String conhash = content.getConhash();
+
+		conhash = conhash.replaceAll(",", "");
+		content.setConhash(conhash);
+		
 		request.setAttribute("content", content);
-		request.setAttribute("sdf", sdf);	
+		request.setAttribute("sdf", sdf);
+
 		CommentDBBean commentdbpro = CommentDBBean.getInstance();
 
 		ArrayList array = commentdbpro.getComment(connum);
-		 
+
 		request.setAttribute("comment", array);
-		
+		request.setAttribute("conhash", conhash);
 		return "/userpage/ContentView.jsp";
 	}
 

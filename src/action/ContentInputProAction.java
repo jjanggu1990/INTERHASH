@@ -100,7 +100,7 @@ public class ContentInputProAction implements CommandAction {
 		            }
 		            fin.close();
 		            fout.close();
-		            oldFile.delete();
+		            //oldFile.delete();
 		       // }   
 		            
 		           ContentDataBean content_obj = new ContentDataBean();
@@ -129,7 +129,6 @@ public class ContentInputProAction implements CommandAction {
 		    }catch(Exception e){
 		        e.printStackTrace();
 		    }
-		ContentDataBean bean = new ContentDataBean();
 		
 		
 		return "Board.hash";
