@@ -50,7 +50,6 @@ public class LoginProAction implements CommandAction {
 				return "/userpage/ManagerPage.jsp";
 			}
 			
-			
 			ArrayList array=null;
 			ContentDBBean bean = ContentDBBean.getInstance();
 			array= bean.getContent();

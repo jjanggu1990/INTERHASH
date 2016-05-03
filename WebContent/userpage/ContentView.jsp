@@ -169,12 +169,18 @@ function report(){
 	<div id="content_photo" style="height:490px; overflow-x:auto">
 		<label>${content.connickname}<br></label>
 		<label>${content.content}<br></label>
+<<<<<<< HEAD
+		<label>${content.content}<br></label>
+		<label>${content.content}<br></label>
+		<label id="hash">${content.conhash}</label>
+=======
 		<label id="hash">${content.conhash}</label><br>
 		
 		<c:forEach var="photo" items="${content.photolist}">
 		<img id = "img" src='${photo.serverpath }'/>
 		</c:forEach>
 
+>>>>>>> af91ce4f207353df5cdb9668c3e6fadc5606ca1a
 	</div>
 	
 	<div id="left_good_re">
