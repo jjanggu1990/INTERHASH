@@ -46,7 +46,7 @@ public class InsertCommentAction implements CommandAction{
 		
 		String comsdf = sdf1.format(comment.getCommodifieddate());
 	
-		ArrayList array = commentdbpro.getComment();
+		ArrayList array = commentdbpro.getComment(connum);
 		request.setAttribute("comments", comment);
 		request.setAttribute("comment", array);
 		request.setAttribute("comsdf", comsdf);

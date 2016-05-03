@@ -19,10 +19,9 @@ public class ContentViewAction implements CommandAction {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		request.setCharacterEncoding("UTF-8");
-/*		int connum = 0 ;
-		try{*/
+
 		int connum = Integer.parseInt(request.getParameter("connum"));
-/*		}catch(Exception e){}*/
+		
 		SimpleDateFormat sdf = new SimpleDateFormat("YY-MM-dd HH:mm");
 
 		
@@ -36,7 +35,7 @@ public class ContentViewAction implements CommandAction {
 		request.setAttribute("sdf", sdf);	
 		CommentDBBean commentdbpro = CommentDBBean.getInstance();
 
-		ArrayList array = commentdbpro.getComment();
+		ArrayList array = commentdbpro.getComment(connum);
 		 
 		request.setAttribute("comment", array);
 		

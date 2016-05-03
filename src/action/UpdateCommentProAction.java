@@ -12,7 +12,7 @@ public class UpdateCommentProAction implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		System.out.println("여기까지오나 확인 1");
+	
 		int comnum = Integer.parseInt(request.getParameter("comnum"));
 		Timestamp commodifieddate;
 
@@ -27,8 +27,8 @@ public class UpdateCommentProAction implements CommandAction {
 		
 		
 		request.setAttribute("check", check);
-		System.out.println("여기까지오나 확인 3-----------------" +  check );
-		return "ContentView.hash";
+
+		return "/userpage/UpdateCommentPro.jsp";
 	}
 
 }
