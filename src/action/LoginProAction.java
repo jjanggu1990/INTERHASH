@@ -48,6 +48,14 @@ public class LoginProAction implements CommandAction {
 			request.getSession().setAttribute("memId", email);
 			request.getSession().setAttribute("nickName", check.getNickname());
 			
+			if(email.equals("admin@admin.com")){
+				ArrayList array=null;
+				ContentDBBean bean = ContentDBBean.getInstance();
+				array= bean.getContent();
+				request.setAttribute("content", array);
+				return "/userpage/ManagerPage.jsp";
+			}
+			
 			
 			ArrayList array=null;
 			ContentDBBean bean = ContentDBBean.getInstance();

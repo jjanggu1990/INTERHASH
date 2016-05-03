@@ -11,9 +11,9 @@ color:#7A7A7A;
 p{
 padding:3px;
 }
-td{
-width:150px; 
-}
+/* td{
+width:100px; 
+} */
 </style>
 </head>
 <body>
