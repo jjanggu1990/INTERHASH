@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -110,21 +111,22 @@
       <div id="jb-content">
       <input type="button" value="글쓰기" onclick="window.location.href='ContentInputForm.hash'">
       
-      	태그 : ${hash}<br>
       <decorator:body/>
       </div>
       <div id="jb-sidebar">
         <h2>해시태그</h2>
         <ul>
-          <li><a href='Board.hash?hash=사랑'>#사랑</a></li>
+        <c:forEach var="tagname" items="${memberHash}">
+        <li><a href="Board.hash?hash=${tagname}">#${tagname}</a></li>
+          <!-- <li><a href='Board.hash?hash=사랑'>#사랑</a></li>
           <li><a href="Board.hash?hash=돈">#돈</a></li>
           <li><a href="Board.hash?hash=컴퓨터">#컴퓨터</a></li>
           <li><a href="Board.hash?hash=커피">#커피</a></li>
           <li><a href="Board.hash?hash=책">#책</a></li>
           <li><a href="Board.hash?hash=반려동물">#반려동물</a></li>
           <li><a href="Board.hash?hash=독도">#독도</a></li>
-          <li><a href="Board.hash?hash=맥주">#맥주</a></li>
-          
+          <li><a href="Board.hash?hash=맥주">#맥주</a></li> -->
+          </c:forEach>
         </ul>
       </div>
       <div id="jb-footer">

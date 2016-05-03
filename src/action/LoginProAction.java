@@ -30,24 +30,18 @@ public class LoginProAction implements CommandAction {
 		LogonDataBean check= manager.checkId(member);
 		request.setAttribute("check", check);
 		
-		/*if(check!=null){
-			request.getSession().setAttribute("memId", email);
-			request.getSession().setAttribute("nbickName", check.getNickname());
-		}else{
-			request.getSession().setAttribute("memId", null);
-		}
-		ArrayList array=null;
-		ContentDBBean bean = ContentDBBean.getInstance();
-		array= bean.getContent();
-		request.setAttribute("content", array);
-		
-		return "/fixpage/boardDiv.jsp";*/
-		
 		if(check!=null)
 		{
 			request.getSession().setAttribute("memId", email);
 			request.getSession().setAttribute("nickName", check.getNickname());
-			
+			String tmp_hash = manager.getMemberHash((String)request.getSession().getAttribute("memId"));
+			String [] hash_array =tmp_hash.substring(1, tmp_hash.length()-1).trim().split(",");
+			ArrayList array_hash = new ArrayList();
+			for(int i = 0;i<hash_array.length;i++){
+				array_hash.add(hash_array[i].replaceAll("#", "").trim());
+				System.out.println(hash_array[i]);
+			}
+			request.getSession().setAttribute("memberHash", array_hash);
 			if(email.equals("admin@admin.com")){
 				ArrayList array=null;
 				ContentDBBean bean = ContentDBBean.getInstance();
