@@ -28,7 +28,9 @@ public class ContentInputProAction implements CommandAction {
 		 
 		    // 웹서버 컨테이너 경로
 		    String root = request.getSession().getServletContext().getRealPath("/");
+		    
 		    String root1 = "F:\\git_test\\INTERHASH\\WebContent\\";
+		    //String root1 = "F:\\jsp_git\\INTERHASH\\WebContent\\";
 		    // 파일 저장 경로(ex : /home/tour/web/ROOT/upload)
 		    String savePath = "upload"+"\\";
 		 

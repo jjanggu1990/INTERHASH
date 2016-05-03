@@ -60,7 +60,7 @@ function checkIt(){
 <body>
  <c:if test='${memId == null}'> 
 
-메인페이지<br>
+
 
 <div id="jb-header" align="center">
 	<img src="./proimg/interHash.png">
