@@ -46,6 +46,12 @@ public class LoginProAction implements CommandAction {
 		if(check!=null)
 		{
 			request.getSession().setAttribute("memId", email);
+			System.out.println("°ü¸®ÀÚ email check :: " + email);
+			if(email.equals("admin@admin.com")){
+				return "/userpage/ManagerPage.jsp";
+			}
+			else {
+			request.getSession().setAttribute("memId", email);
 			request.getSession().setAttribute("nickName", check.getNickname());
 			
 			
@@ -55,6 +61,7 @@ public class LoginProAction implements CommandAction {
 			request.setAttribute("content", array);
 			
 			return "/fixpage/boardDiv.jsp";
+			}
 	
 		}
 		else
