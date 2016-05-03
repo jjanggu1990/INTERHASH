@@ -11,7 +11,12 @@ padding:10px;
 </style>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
+	var checkEmail=true;
+	var checkNickname=true;
+	var checkEmailNum=true;
+	
 	function checkIt(){
+						
 		var userinput = eval("document.userinput");
 		if(!userinput.email.value){
 			alert("Email을 입력하세요.");
@@ -43,8 +48,22 @@ padding:10px;
 			alert("비밀번호를 동일하게 입력하세요");
 			return false;
 		}
+				
 		return true;
 	};
+	
+	function confirmnickname() {
+		var userinput = eval("document.userinput");
+		if(userinput.nickname.value=="") {
+			alert("닉네임을 입력해 주세요");
+			return false;
+		}
+		url="/INTERHASH/ConfirmNickname.hash?nickname=" + userinput.nickname.value;
+		open(url, "confirmnik", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+		checkNickname=false;
+		alert("닉네임"+checkNicname);
+	}
+
 	function confirmemail(){
 		var userinput = eval("document.userinput");
 		if(userinput.email.value=="") {
@@ -53,7 +72,30 @@ padding:10px;
 		}
 		url="/INTERHASH/ConfirmEmail.hash?email=" + userinput.email.value;
 		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+		checkEmail=false;
+		alert("이메일"+checkEmail);
 	}
+	function keyCheck(){
+		url="/INTERHASH/ConfirmKey.hash?inputkey=" + userinput.emailnumber.value;
+		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+		checkEmailNum=false;
+		alert("이메일인증번호"+checkEmailNum);
+	}
+	if(checkEmail){
+		alert("이메일 중복확인을 해주세요");
+		return false;
+	}
+	if(checkNickname){
+		alert("닉네임 중복확인을 해주세요");
+		return false;
+	}
+	if(checkEmailNum){
+		alert("이메일 인증번호를 확인해주세요");
+		return false;
+	}
+	
+	
+
 	function checkPass(){
 		//alert(document.getElementById('e').value);
 		if(document.getElementById('pass').value && document.getElementById('pass1').value){
@@ -76,6 +118,7 @@ padding:10px;
 			document.getElementById('passwdchform').value = "비밀번호가 일치하지 않습니다";
 			}
 		}
+		
 			
 	};
 	var checkflag = "false";
@@ -93,19 +136,8 @@ padding:10px;
 	  checkflag = "false"; 
 		}
 	};
-	function keyCheck(){
-		url="/INTERHASH/ConfirmKey.hash?inputkey=" + userinput.emailnumber.value;
-		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
-	}
-	function confirmnickname() {
-		var userinput = eval("document.userinput");
-		if(userinput.nickname.value=="") {
-			alert("닉네임을 입력해 주세요");
-			return false;
-		}
-		url="/INTERHASH/ConfirmNickname.hash?nickname=" + userinput.nickname.value;
-		open(url, "confirmnik", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
-	}
+	
+	
 	</script>
 
 <style>

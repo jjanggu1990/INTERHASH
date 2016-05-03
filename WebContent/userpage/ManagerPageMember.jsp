@@ -45,10 +45,7 @@ ${member.reportcount}
 </c:forEach>
 </table>
 <div align="center"><input type="submit" value="회원삭제"></div>
-
-
 </form>
-
-
+<input type="button" value="관리자페이지" onclick="javascript:window.location='ManagerPage.hash'">
 </body>
 </html>

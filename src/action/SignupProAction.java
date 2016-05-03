@@ -39,10 +39,15 @@ public class SignupProAction implements CommandAction {
 		LogonDBBean dbbean = LogonDBBean.getInstance();
 		dbbean.insertMember(member);
 		
+		/*int check = dbbean.existEmail(email);
+		System.out.println(check);*/
 		
+		request.getSession().setAttribute("email", email);
+/*		request.getSession().setAttribute("check", check);*/
 		System.out.println("email::" + email);
 		System.out.println("hash ::::" + Arrays.toString(hash));
 		
-		return "main.jsp";
+
+			return "/index.jsp";
 	}
 }

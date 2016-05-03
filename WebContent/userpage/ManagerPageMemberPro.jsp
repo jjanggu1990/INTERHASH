@@ -12,8 +12,8 @@ color:#7A7A7A;
 </head>
 <body>
 회원삭제가 완료되었습니다.
-잠시후 탈퇴회원관리 페이지로 이동합니다.
-<meta http-equiv="Refresh" content="2;url=/INTERHASH/ManagerPageDeleteMember.hash" >
+잠시후 관리자페이지로 이동합니다.
+<meta http-equiv="Refresh" content="2;url=/INTERHASH/ManagerPage.hash" >
 
 </body>
 </html>
