@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import board.ContentDBBean;
+import board.LogonDBBean;
 public class BoardAction implements CommandAction {
 
 	@Override
@@ -36,6 +37,15 @@ public class BoardAction implements CommandAction {
 				
 			}
 		}
+		LogonDBBean manager = LogonDBBean.getInstance();
+		String tmp_hash = manager.getMemberHash((String)request.getSession().getAttribute("memId"));
+		String [] hash_array =tmp_hash.substring(1, tmp_hash.length()-1).trim().split(",");
+		ArrayList array_hash = new ArrayList();
+		for(int i = 0;i<hash_array.length;i++){
+			array_hash.add(hash_array[i].replaceAll("#", "").trim());
+			System.out.println(hash_array[i]);
+		}
+		request.getSession().setAttribute("memberHash", array_hash);
 		return "/fixpage/boardDiv.jsp";
 	}
 	

@@ -82,6 +82,27 @@ public class LogonDBBean {
 		}
 		return check;
 	}
+	public String getMemberHash(String email) throws Exception{
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		String hash="";
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			hash = session.selectOne("userinfo.memberHash",email);
+		}catch(Exception e){
+			e.printStackTrace();
+		} finally {
+			if (session != null) {
+				try {
+					session.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+		
+		return hash;
+	}
 	public int existNickname(String nickname) throws Exception{
 		int check = -1;
 		SqlSessionFactory factory = null;
