@@ -13,6 +13,7 @@ public class UpdateCommentProAction implements CommandAction {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 	
+		request.setCharacterEncoding("UTF-8");
 		int comnum = Integer.parseInt(request.getParameter("comnum"));
 		int connum = Integer.parseInt(request.getParameter("connum"));
 		Timestamp commodifieddate;
