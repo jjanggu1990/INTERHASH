@@ -173,8 +173,6 @@ function report(){
 		<label>${content.content}<br></label>
 		<label>${content.content}<br></label>
 		<label id="hash">${content.conhash}</label>
-
-
 	</div>
 	
 	<div id="left_good_re">

@@ -48,7 +48,6 @@ public class LoginProAction implements CommandAction {
 			request.getSession().setAttribute("memId", email);
 			request.getSession().setAttribute("nickName", check.getNickname());
 			
-			
 			ArrayList array=null;
 			ContentDBBean bean = ContentDBBean.getInstance();
 			array= bean.getContent();
