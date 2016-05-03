@@ -11,8 +11,9 @@ color:#7A7A7A;
 </head>
 <body>
 <center>
-회원정보가 수정되었습니다!
-잠시후 메인으로 이동합니다.<meta http-equiv="Refresh" content="2;url=/INTERHASH/boardDiv.hash" >
+회원정보가 수정되었습니다!<br>
+잠시후 페이지가 이동됩니다.
+<meta http-equiv="Refresh" content="2;url=/INTERHASH/Board.hash" >
 </center>
 </body>
 </html>

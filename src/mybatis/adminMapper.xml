@@ -18,4 +18,10 @@ values(num_seq.nextval, #{email}, '관리자에 의한 강제탈퇴', sysdate)
 <select id="withselect" resultType="board.WithdrawalDataBean">
 select * from WITHDRAWAL
 </select>
+
+<insert id="withinsert" parameterType="board.WithdrawalDataBean">
+insert into withdrawal
+values(num_seq.nextval, #{drawalemail}, #{drawalcause}, sysdate)
+</insert>
+
 </mapper>

@@ -26,7 +26,12 @@ function checkIt() {
 </tr>
 <tr>
 <td>비밀번호</td>
-<td><input type="text" name="passwd"></td>
+<td><input type="password" name="passwd"></td>
+</tr>
+<tr>
+<td>탈퇴사유</td>
+<td><input type="text" name="cause"></td>
+</tr>
 </table>
 <input type="submit" value="탈퇴하기"><input type="button" value="취소" onclick="javascript:window.location='Board.hash'">
 </form>

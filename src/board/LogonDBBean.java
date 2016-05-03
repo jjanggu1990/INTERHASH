@@ -231,15 +231,15 @@ public class LogonDBBean {
 		}
 		return array;
 	}
-	public int existPasswd(String passwd) throws Exception{
+	public int existEmailPasswd(LogonDataBean member) throws Exception{
 		int check = -1;
 		SqlSessionFactory factory = null;
 		SqlSession session = null;
 		try {
 			factory = getFactory();
 			session = factory.openSession();
-			check = session.selectOne("userinfo.existPasswd", passwd);
-			System.out.println("이메일 존재여부 1이 출력되야 함 : "+check);
+			check = session.selectOne("userinfo.existEmailPasswd", member);
+			System.out.println("비밀번호가존재하면 1이 출력되야 함 : "+check);
 			session.commit();
 		}catch(Exception e){
 			e.printStackTrace();
