@@ -144,5 +144,26 @@ public class CommentDBBean {
 		return check;
 	}
 	
+	public int commentcount(int connum) throws Exception{
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		int count = 0;
+		
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			count = session.selectOne("comment.commentcount", connum);
+			System.out.println("count ::::" + count);
+		} catch (Exception e){
+			e.printStackTrace();
+		} finally{
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+		return count;
+	}
 	}
 

@@ -36,12 +36,17 @@ public class ContentViewAction implements CommandAction {
 		request.setAttribute("content", content);
 		request.setAttribute("sdf", sdf);
 
+		
 		CommentDBBean commentdbpro = CommentDBBean.getInstance();
 
 		ArrayList array = commentdbpro.getComment(connum);
 
+		int count = commentdbpro.commentcount(connum);
+		
 		request.setAttribute("comment", array);
 		request.setAttribute("conhash", conhash);
+		request.setAttribute("count", count);
+		
 		return "/userpage/ContentView.jsp";
 	}
 

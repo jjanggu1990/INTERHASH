@@ -30,4 +30,9 @@
 	<update id="commentupdate" parameterType="board.CommentDataBean">
 		update commenttable set comcontent=#{comcontent}, commodifieddate=sysdate where comnum = #{comnum}
 	</update>
+	
+	<select id="commentcount" parameterType="integer" resultType="integer">
+		select count(*) from commenttable where connum = #{connum}
+	</select>
+	
 </mapper>

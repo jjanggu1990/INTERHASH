@@ -12,7 +12,7 @@ color:#5AAEFF;
 #view_div{
 	width:780px;
 	height:640px;
- 	background-color: black;
+ 	/* background-color: black; */
 	border:2px solid;
 	padding:5px;
 	margin:auto;
@@ -21,7 +21,7 @@ color:#5AAEFF;
 	#view_left{
 	width:380px;
 	height:620px;
-	background-color: yellow;
+	/* background-color: yellow; */
 	float:left;	
 	border:2px solid;
 	margin:auto;
@@ -32,7 +32,7 @@ color:#5AAEFF;
 	#view_right{	
 	width:380px;
 	height:620px;
-	background-color: yellow;
+	/* background-color: yellow; */
 	float:right;
 	border:2px solid;
 	margin:auto;
@@ -75,7 +75,6 @@ color:#5AAEFF;
 	heigt:20px;
 	float:left;
 	margin:5px;
-	border:2px solid;
 	background-color:white;	
 	}
 	#right_nick{
@@ -156,7 +155,7 @@ function report(){
 
 	<c:if test="${sessionScope.memId==content.email}">
 	<div id="left_mod_del_rep">
-		<span id="align_right">/<a href="/INTERHASH/ContentDelete.hash?connum="+${content.connum}>삭제하기</a></span>
+		<span id="align_right">/<a href="/INTERHASH/ContentDelete.hash?connum=${content.connum}">삭제하기</a></span>
 		<span id="align_right"><a href="/INTERHASH/ContentUpdate.hash"+${content.connum}>수정하기 </a> </span>
 	</div>
 	</c:if>
@@ -179,8 +178,8 @@ function report(){
 	</div>
 	
 	<div id="left_good_re">
-		<label id="align_right">댓글</label>
-		<label id="align_right">좋아요/</label>
+		<label id="align_right">댓글수:${count}</label>
+		<!-- <label id="align_right">좋아요/</label> --> 
 	</div>
 	</form>
 </div>
@@ -218,7 +217,7 @@ function report(){
 		</c:if>
 		
 		<c:if test="${sessionScope.memId!=comment.email}">
-		<a href="/INTERHASH/UpdateComment.hash?comnum=${comment.comnum}">신고</a>
+		<a href="/INTERHASH/UpdateComment.hash?comnum="+${comment.comnum}>신고</a>
 		</c:if>	
 	</span><br>
 	
@@ -227,7 +226,7 @@ function report(){
 
 	</div>
 	
-	
+
 </div>
 
 </div>
