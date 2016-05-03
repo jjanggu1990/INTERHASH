@@ -1,6 +1,7 @@
 package board;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 
 public class ContentDataBean {
 	int connum;
@@ -15,6 +16,16 @@ public class ContentDataBean {
 	String connickname;
 	int conlike;
 	
+	ArrayList photolist;
+	
+	public ArrayList getPhotolist() {
+		return photolist;
+	}
+
+	public void setPhotolist(ArrayList photolist) {
+		this.photolist = photolist;
+	}
+
 	public String getConnickname() {
 		return connickname;
 	}

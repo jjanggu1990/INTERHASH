@@ -13,6 +13,6 @@
 		insert into contents values (connum_seq.nextval, #{content},  #{conhash}, #{concreateddate}, #{conmodifieddate},#{conip},0,'0',#{email},#{connickname},0) 
 	</insert>
 	<insert id = "insertPhoto" parameterType="board.PhotoDataBean">
-		insert into photo values(photo_seq.nextval, #{photoname},#{realpath}, #{photosize},connum_seq.currval,#{email},null)
+		insert into photo values(photo_seq.nextval, #{photoname},#{realpath}, #{photosize},connum_seq.currval,#{email},#{serverpath})
 	</insert>
 </mapper>

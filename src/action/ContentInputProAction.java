@@ -118,6 +118,7 @@ public class ContentInputProAction implements CommandAction {
 		           photo_obj.setEmail((String)request.getSession().getAttribute("memId"));
 		           photo_obj.setPhotoname(uploadFile);
 		           photo_obj.setRealpath(root1+savePath + uploadFile);
+		           photo_obj.setServerpath(savePath + uploadFile);
 		           System.out.println("Path:::"+newFile.getAbsolutePath());
 		           photo_obj.setPhotosize(newFile.length()+"");
 		           System.out.println("사진 용량 :: "+newFile.length());
