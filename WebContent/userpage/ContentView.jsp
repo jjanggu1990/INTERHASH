@@ -168,12 +168,13 @@ function report(){
 	</c:if>	
 	
 	<div id="content_photo" style="height:490px; overflow-x:auto">
-	<label>${content.connickname}<br></label>
-		<label>${content.content}<br></label>
-		<label>${content.content}<br></label>
+		<label>${content.connickname}<br></label>
 		<label>${content.content}<br></label>
 		<label id="hash">${content.conhash}</label>
-
+		
+		<c:forEach var="photo" items="${content.photolist}">
+		<img id = "img" src='${photo.serverpath }'/>
+		</c:forEach>
 
 	</div>
 	

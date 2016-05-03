@@ -21,6 +21,7 @@ function close(){
 
 
 <div align="center">댓글수정</div>
+
 <form method="post" action="UpdateCommentPro.hash">
 <div align="center">
 

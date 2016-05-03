@@ -5,7 +5,7 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 window.onload=function close(){
-	opener.parent.location.reload(true);
+	opener.parent.location.href="ContentView.hash?connum="+${connum};
 	window.close();
 }
 

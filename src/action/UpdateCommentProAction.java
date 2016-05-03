@@ -14,6 +14,7 @@ public class UpdateCommentProAction implements CommandAction {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 	
 		int comnum = Integer.parseInt(request.getParameter("comnum"));
+		int connum = Integer.parseInt(request.getParameter("connum"));
 		Timestamp commodifieddate;
 
 		CommentDataBean article = new CommentDataBean();
@@ -25,7 +26,7 @@ public class UpdateCommentProAction implements CommandAction {
 		CommentDBBean dbpro = CommentDBBean.getInstance();
 		int check = dbpro.updateComment(article);
 		
-		
+		request.setAttribute("connum", connum);
 		request.setAttribute("check", check);
 
 		return "/userpage/UpdateCommentPro.jsp";

@@ -13,6 +13,7 @@ public class UpdateCommentAction implements CommandAction {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		
+		int connum = Integer.parseInt(request.getParameter("connum"));
 		int comnum = Integer.parseInt(request.getParameter("comnum"));
 		
 		CommentDBBean dbpro = CommentDBBean.getInstance();
@@ -20,7 +21,7 @@ public class UpdateCommentAction implements CommandAction {
 		
 		
 		request.setAttribute("article", article);
-		
+		request.setAttribute("connum", connum);
 		
 		return "/userpage/UpdateComment.jsp";
 	}

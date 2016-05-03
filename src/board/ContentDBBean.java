@@ -63,6 +63,7 @@ public class ContentDBBean {
 			factory = getFactory();
 			session = factory.openSession();
 			array = (ArrayList) session.selectList("writecontent.getContent");
+			
 			for(int i = 0; i<array.size();i++){
 				ContentDataBean bean = (ContentDataBean)array.get(i);
 				int connum = bean.getConnum();
@@ -140,11 +141,13 @@ public class ContentDBBean {
 		SqlSessionFactory factory = null;
 		SqlSession session = null;
 		ContentDataBean content = null;
+		ArrayList photo = null;
 		try {
 			factory = getFactory();
 			session = factory.openSession();
 			content = session.selectOne("comment.content", connum);
-			
+			photo = (ArrayList)session.selectList("photo.selectPhoto", connum);
+			content.setPhotolist(photo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
