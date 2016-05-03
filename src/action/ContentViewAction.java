@@ -49,5 +49,4 @@ public class ContentViewAction implements CommandAction {
 		
 		return "/userpage/ContentView.jsp";
 	}
-
 }

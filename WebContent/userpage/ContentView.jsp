@@ -217,7 +217,8 @@ function report(){
 		</c:if>
 		
 		<c:if test="${sessionScope.memId!=comment.email}">
-		<a href="/INTERHASH/UpdateComment.hash?comnum="+${comment.comnum}>신고</a>
+		<%-- <a href="/INTERHASH/UpdateComment.hash?comnum="+${comment.comnum}>신고</a> --%>
+		<a onclick="report()">신고</a>
 		</c:if>	
 	</span><br>
 	

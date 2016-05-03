@@ -171,8 +171,9 @@ $(function(){
 				</div>
 				<div id="commnet_text">
 				
-					<P><a href="ContentView.hash?connum=${con.connum}">이동동</a></P>
+					
 				</div>
+				<P><a href="ContentView.hash?connum=${con.connum}">이동동</a></P>
 			</div>
 		</div>
 		

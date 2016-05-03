@@ -12,7 +12,7 @@ public class ContentDeleteAction implements CommandAction {
 		
 		int connum = Integer.parseInt(request.getParameter("connum"));
 	
-		
+		System.out.println("connum:::"+connum);
 		ContentDBBean dbpro = ContentDBBean.getInstance();
 		int check = dbpro.deleteContent(connum);
 		System.out.println("check °ª :::::"+check);
