@@ -60,7 +60,7 @@ public class CommentDBBean {
 		}
 	}
 	
-	public ArrayList getComment()throws Exception{
+	public ArrayList getComment(int connum)throws Exception{
 		SqlSessionFactory factory = null;
 		SqlSession session = null;
 		ArrayList array = null;		
@@ -68,7 +68,8 @@ public class CommentDBBean {
 		try {
 			factory = getFactory();
 			session = factory.openSession();
-			array = (ArrayList) session.selectList("comment.getComment");
+			array = (ArrayList) session.selectList("comment.getComment",connum);
+			System.out.println("ªÁ¿Ã¡Ó!!!!!!!"+array.size());
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

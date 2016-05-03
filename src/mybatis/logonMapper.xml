@@ -37,7 +37,7 @@
 		delete from usertable where email=#{email} and passwd=#{passwd}
 	</delete>
 	
-	<select id="existPasswd" parameterType="String" resultType="Integer">
-		select count(*) from usertable where passwd=#{passwd}
+	<select id="existEmailPasswd" parameterType="board.LogonDataBean" resultType="Integer">
+		select count(*) from usertable where email=#{email} and passwd=#{passwd}
 	</select>
 </mapper>

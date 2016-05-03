@@ -8,9 +8,7 @@
 p{
 padding:3px;
 }
-td{
-width:250px; 
-}
+
 *{
 color:#7A7A7A;
 }

@@ -9,8 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-
-public class AdminHashDBBean {
+public class AdminHashDBBean{
 
 	private static AdminHashDBBean instance = new AdminHashDBBean();
 
@@ -104,5 +103,26 @@ public class AdminHashDBBean {
 				}
 		}
 	}
+	
+	public void insertMember(WithdrawalDataBean members) throws Exception {
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			session.insert("admin.withinsert", members);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+	}
+	
+	
 
 }

@@ -146,8 +146,9 @@ function report(){
 <body>
 <div id="view_div">
 <!-- <form name="view"> -->
+
 <div id="view_left">
-	
+	<form>
 	<div id="left_nickndate">
 		<span id ="align_left">${sessionScope.nickName}님</span>
 		<span id="align_right">${sdf.format(content.conmodifieddate)}</span>
@@ -180,6 +181,7 @@ function report(){
 		<label id="align_right">댓글</label>
 		<label id="align_right">좋아요/</label>
 	</div>
+	</form>
 </div>
 
 <div id="view_right">
@@ -209,7 +211,7 @@ function report(){
 	
 	<span id="align_right">
 		<c:if test="${sessionScope.memId==comment.email}">
-		<a href="/INTERHASH/DeleteComment.hash?comnum=${comment.comnum}&&connum=${content.connum}">삭제</a>
+		<a href="/INTERHASH/DeleteComment.hash?comnum=${comment.comnum}&&connum=${comment.connum}">삭제</a>
 		 
 		<a onclick="modify(${comment.comnum})">수정</a>
 		</c:if>

@@ -15,8 +15,8 @@
 		insert into COMMENTTABLE values(COMMENTTABLE_seq.NEXTVAL,#{comnick},#{comcontent},sysdate,sysdate,0,'0',#{connum},#{email},#{comip})
 	</insert>
 	
-	<select id="getComment" resultType="board.CommentDataBean">
-		select * from commenttable order by commodifieddate desc
+	<select id="getComment" parameterType="integer" resultType="board.CommentDataBean">
+		select * from commenttable where connum = #{connum} order by commodifieddate desc
 	</select>
 	
 	<delete id="deleteComment" parameterType="integer">
