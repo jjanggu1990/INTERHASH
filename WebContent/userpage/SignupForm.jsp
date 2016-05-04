@@ -11,9 +11,9 @@ padding:10px;
 </style>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
-	var checkEmail=true;
+/* 	var checkEmail=true;
 	var checkNickname=true;
-	var checkEmailNum=true;
+	var checkEmailNum=true; */
 	
 	function checkIt(){
 						
@@ -48,6 +48,18 @@ padding:10px;
 			alert("비밀번호를 동일하게 입력하세요");
 			return false;
 		}
+/* 		if(checkEmail){
+			alert("이메일 중복확인을 해주세요");
+			return false;
+		}
+		if(checkNickname){
+			alert("닉네임 중복확인을 해주세요");
+			return false;
+		}
+		if(checkEmailNum){
+			alert("이메일 인증번호를 확인해주세요");
+			return false;
+		} */
 				
 		return true;
 	};
@@ -74,6 +86,7 @@ padding:10px;
 		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
 		checkEmail=false;
 		alert("이메일"+checkEmail);
+		
 	}
 	function keyCheck(){
 		url="/INTERHASH/ConfirmKey.hash?inputkey=" + userinput.emailnumber.value;
@@ -81,19 +94,6 @@ padding:10px;
 		checkEmailNum=false;
 		alert("이메일인증번호"+checkEmailNum);
 	}
-	if(checkEmail){
-		alert("이메일 중복확인을 해주세요");
-		return false;
-	}
-	if(checkNickname){
-		alert("닉네임 중복확인을 해주세요");
-		return false;
-	}
-	if(checkEmailNum){
-		alert("이메일 인증번호를 확인해주세요");
-		return false;
-	}
-	
 	
 
 	function checkPass(){
@@ -121,6 +121,9 @@ padding:10px;
 		
 			
 	};
+	
+	
+	
 	var checkflag = "false";
 
 	function check(field) {
@@ -177,7 +180,7 @@ color:#7A7A7A;
 </tr>
 <tr>
 <td>password check</td>
-<td><input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()' required/></td>
+<td><input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()'/></td>
 
 </tr>
 
