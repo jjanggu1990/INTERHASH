@@ -44,13 +44,10 @@ padding:10px;
 			return false;
 		}
 		
-<<<<<<< HEAD
-=======
 	/* 	if(userinput.getElementById('pass').value != userinput.getElementById('pass1').value){
 			alert("비밀번호를 동일하게 입력하세요");
 			return false;
 		} */
->>>>>>> 433b6586ba59e87de9b4becda835b2727ad38460
 		if(!checkEmail){
 			alert("이메일 중복확인을 해주세요");
 			return false;
@@ -85,7 +82,6 @@ padding:10px;
 	}
 
 	function confirmemail(){
-		alert(checkEmail);
 		var userinput = eval("document.userinput");
 		if(userinput.email.value=="") {
 			alert("Email을 입력해주세요");
