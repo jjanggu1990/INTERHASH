@@ -4,6 +4,13 @@
 <head>
 <title>신고</title>
 </head>
+<script>
+function test() {
+	self.close();
+
+	
+}
+</script>
 <body>
 
 <!-- <form action ="ReportPro.hash" method="post">
@@ -13,6 +20,7 @@
 신고내용 : <input type="text" name="report"/><br>
 <input type="submit" value="신고하기"/><input type="button" value="취소"/>
 </form>-->
+
 
 <form method="post" action="ManagerPageReport.hash">
 <div align="center">
@@ -35,7 +43,7 @@
 </div>
 
 <br><br>
-<div align="center"><input type="submit" value="신고하기" /></div>
+<div align="center"><input type="submit" value="신고하기" /><input type="button" value="취소" onclick="test()"></div>
 </form>  
 
 
