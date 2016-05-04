@@ -43,7 +43,13 @@ function test() {
 </div>
 
 <br><br>
+<<<<<<< HEAD
 <div align="center"><input type="submit" value="신고하기" /><input type="button" value="취소" onclick="test()"></div>
+=======
+<div align="center"><input type="submit" value="신고하기" />
+<input type="button" value="취소" onclick="self.close()">
+</div>
+>>>>>>> 74ac1080f205b0c0b57f3e579ac50ae32dc1b2f5
 </form>  
 
 
