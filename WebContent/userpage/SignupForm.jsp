@@ -161,23 +161,23 @@ color:#7A7A7A;
 </tr>
 <tr>
 <td>email인증번호</td>
-<td><input type="text" name="emailnumber"/></td>
+<td><input type="text" name="emailnumber" required="required"/></td>
 <td><input type="button" value="확인" onClick="keyCheck()"/><br></td>
 </tr>
 <tr>
 <td>password</td>
-<td><input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()"/></td>
+<td><input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()" required/></td>
 <td rowspan="2"><input type="ladel" style="border: 0px;" id="passwdchform" value="" readonly/></td>
 </tr>
 <tr>
 <td>password check</td>
-<td><input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()'/></td>
+<td><input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()' required/></td>
 
 </tr>
 
 <tr>
 <td>닉네임</td>
-<td><input type="text" name="nickname" /></td>
+<td><input type="text" name="nickname" required/></td>
 <td><input type="button" value="중복검사" onClick="confirmnickname()"/></td>
 </tr>
 <tr>
