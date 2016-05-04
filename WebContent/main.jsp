@@ -72,18 +72,18 @@ function checkIt(){
 	<tr height="200" />
 	<tr>
 		<td align="left">Email</td>
-		<td align="left"><input type="text" name="email" styl="width:80px;"/></td>
-		<td rowspan="3"><input type="submit" name="login" value="로그인" style="width:60px; height:60px;"/></td>
+		<td align="left"><input type="text" name="email" /></td>
+		<td colspan="2"></td>
 	</tr>
 	<tr>
 		<td>PW</td>
 		<td><input type="password" name="passwd"/></td>
-		<td />
+		<td  colspan="2"><input type="submit" name="login" value="로그인" /></td>
 	</tr>
-	<tr rowspan="3">
+	<!-- <tr rowspan="3">
 		<td colspan="2" />
 	 	<td />
-	</tr>
+	</tr> -->
 </table> 
 </form>
 
