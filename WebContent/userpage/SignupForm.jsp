@@ -148,10 +148,16 @@ color:#7A7A7A;
        /*  background-color: #B0B0B0; */
         color:#5AAEFF;
       }
+      #jb-header{
+      	height:300px;
+      }
 </style>
 </head>
 <body>
 <center>
+<div id="jb-header" align="center">
+	<img src="./proimg/interHash.png">
+</div>
 <form method="post" action="SignupPro.hash" name="userinput" id="userinput" onSubmit="return checkIt()">
 <table>
 <tr>
