@@ -35,4 +35,7 @@
 		select count(*) from commenttable where connum = #{connum}
 	</select>
 	
+	<update id="contentupdate" parameterType="board.ContentDataBean">
+		update contents set content=#{contents}, conhash=#{conhash}, conmodifieddate=sysdate where connum = #{connum}
+	</update>
 </mapper>

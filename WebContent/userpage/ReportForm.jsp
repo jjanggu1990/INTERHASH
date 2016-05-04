@@ -3,6 +3,13 @@
 <html>
 <head>
 <title>신고</title>
+
+<script type="text/javascript">
+function test() {
+	alert("신고되었습니다");
+window.close();
+}
+</script>
 </head>
 <body>
 
@@ -14,9 +21,9 @@
 <input type="submit" value="신고하기"/><input type="button" value="취소"/>
 </form>-->
 
-<form method="post" action="ManagerPageReport.hash">
+<form name="report" method="post" action="ReportPro.hash">
 <div align="center">
-<h3>닉네임 :${connickname}</h3></div>
+<h3>이메일 :${content.email}</h3></div>
 
 <div align="center">
 <select name="report">
@@ -28,14 +35,14 @@
 		<option value="5">이 계정이 해킹당했습니다.</option>
 		<option value="6">스팸성 게시물입니다.</option>
 	</select>
-	<!-- <input type="hidden" name="redistinction" value="b"/>
-	<input type="hidden" name="connum" value="3"/> -->
-	<input type="hidden" name="connickname" value="${connickname}">
+
+	<input type="hidden" name="test" value="${content.email}">
 	<input type="hidden" name="connum" value="${content.connum}">
 </div>
 
 <br><br>
-<div align="center"><input type="submit" value="신고하기" />
+<div align="center">
+<input type="submit" value="전송" onsubmit="return test()">
 <input type="button" value="취소" onclick="self.close()">
 </div>
 </form>  
