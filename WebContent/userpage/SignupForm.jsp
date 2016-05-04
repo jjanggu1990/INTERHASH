@@ -44,11 +44,10 @@ padding:10px;
 			return false;
 		}
 		
-		if(userinput.getElementById('pass').value != userinput.getElementById('pass1').value){
+	/* 	if(userinput.getElementById('pass').value != userinput.getElementById('pass1').value){
 			alert("비밀번호를 동일하게 입력하세요");
 			return false;
-		}
-		alert(checkEmail);
+		} */
 		if(!checkEmail){
 			alert("이메일 중복확인을 해주세요");
 			return false;
