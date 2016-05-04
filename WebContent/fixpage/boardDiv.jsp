@@ -139,9 +139,12 @@ $(function(){
 <input type="hidden" name="connum" value="${con.connum}">
 <div id="board_div">
 	<div id="board_img">
+	<a href="ContentView.hash?connum=${con.connum}">
 		<img id = "img" src='${con.photolist[0].serverpath }'/>
+		</a>
 	</div>
 	<div id ="board_main">
+	<a href="ContentView.hash?connum=${con.connum}">
 		<div id="board_subject">
 			<div id="subject">
 			<label>'${con.connickname}'</label>
@@ -173,10 +176,10 @@ $(function(){
 				
 					
 				</div>
-				<P><a href="ContentView.hash?connum=${con.connum}">이동동</a></P>
+				<P><a href="ContentView.hash?connum=${con.connum}"></a></P>
 			</div>
 		</div>
-		
+		</a>
 	</div>
 </div>
 </c:forEach>

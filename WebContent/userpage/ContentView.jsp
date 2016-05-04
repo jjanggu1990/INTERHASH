@@ -215,7 +215,7 @@ function report(){
 		<a href="/INTERHASH/DeleteComment.hash?comnum=${comment.comnum}&&connum=${comment.connum}">삭제</a>
 		<a onclick="modify(${comment.comnum},${comment.connum})">수정</a>
 
-		</c:if>
+		</c:if	>
 		
 		<c:if test="${sessionScope.memId!=comment.email}">
 		<%-- <a href="/INTERHASH/UpdateComment.hash?comnum="+${comment.comnum}>신고</a> --%>
