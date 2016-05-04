@@ -12,13 +12,14 @@ font-size:15px;
 </style>
 
 <script type="text/javascript">
+
+
 function close(){
 	opener.location.reload(true);
 	window.close();
-}</script>
+} </script>
 </head>
 <body>
-
 
 <div align="center">댓글수정</div>
 

@@ -3,6 +3,18 @@
 <html>
 <head>
 <title>신고</title>
+
+<script>
+function close(){	
+	window.close();
+	}
+
+</script>
+<script type="text/javascript">
+function test(){
+	self.close();
+}
+</script>
 </head>
 <body>
 
@@ -35,9 +47,10 @@
 </div>
 
 <br><br>
-<div align="center"><input type="submit" value="신고하기" /></div>
+<div align="center"><input type="submit" value="신고하기" onsubmit="close();"/>
+<input type="button" value="취소" onClick="test()">  
+</div>
 </form>  
-
 
 
 </body>

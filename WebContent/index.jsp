@@ -7,4 +7,4 @@
 <body>
 <% response.sendRedirect("Main.hash"); %>
 </body>	
-</html>
+</html>	
