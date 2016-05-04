@@ -13,8 +13,8 @@
 	
 	#jb-header {
 		width: 500px;
-        margin: 0px auto;
-        height: 120px;
+        margin: 100px auto;
+        height: 20px;
         margin-bottom: 20px;
         border: 0px solid #bcbcbc;
       }

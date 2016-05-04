@@ -193,7 +193,7 @@ function fileUploadPreview(thisObj, preViewer) {
 	
 	
 	
-		#writeform{
+	#writeform{
 		width:700px;
 		height:240px;
 		margin: 10px auto;
@@ -235,9 +235,9 @@ function fileUploadPreview(thisObj, preViewer) {
 	font: 14px/100% Arial, Helvetica, sans-serif;
 	padding: .4em 2em .50em;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-	-webkit-border-radius: .4em;
+	-webkit-border-radius: .4em; 
 	-moz-border-radius: .4em;
-	border-radius: .4em;
+	border-radius: .4em; 
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
@@ -251,7 +251,7 @@ function fileUploadPreview(thisObj, preViewer) {
 	width: 80px;
 	height: 80px;
 	text-align: center;
-	border: 1px solid silver;
+	border: 1px solid silver; 
 }
 
 .custom_checkbox {

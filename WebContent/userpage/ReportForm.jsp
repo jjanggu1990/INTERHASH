@@ -35,7 +35,9 @@
 </div>
 
 <br><br>
-<div align="center"><input type="submit" value="신고하기" /></div>
+<div align="center"><input type="submit" value="신고하기" />
+<input type="button" value="취소" onclick="self.close()">
+</div>
 </form>  
 
 
