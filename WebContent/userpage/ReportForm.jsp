@@ -11,6 +11,13 @@ window.close();
 }
 </script>
 </head>
+<script>
+function test() {
+	self.close();
+
+	
+}
+</script>
 <body>
 
 <!-- <form action ="ReportPro.hash" method="post">
@@ -21,7 +28,12 @@ window.close();
 <input type="submit" value="신고하기"/><input type="button" value="취소"/>
 </form>-->
 
+<<<<<<< HEAD
 <form name="report" method="post" action="ReportPro.hash">
+=======
+
+<form method="post" action="ManagerPageReport.hash">
+>>>>>>> af12e1ab9f61db25271afe47ff4a4e3c534ce4e0
 <div align="center">
 <h3>이메일 :${content.email}</h3></div>
 
@@ -41,10 +53,18 @@ window.close();
 </div>
 
 <br><br>
+<<<<<<< HEAD
 <div align="center">
 <input type="submit" value="전송" onsubmit="return test()">
+=======
+<<<<<<< HEAD
+<div align="center"><input type="submit" value="신고하기" /><input type="button" value="취소" onclick="test()"></div>
+=======
+<div align="center"><input type="submit" value="신고하기" />
+>>>>>>> af12e1ab9f61db25271afe47ff4a4e3c534ce4e0
 <input type="button" value="취소" onclick="self.close()">
 </div>
+>>>>>>> 74ac1080f205b0c0b57f3e579ac50ae32dc1b2f5
 </form>  
 
 

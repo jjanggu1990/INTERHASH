@@ -15,6 +15,7 @@ color:#7A7A7A;
 <table>
   <tr>
     <p><td align="center">${email}은 이미 사용중인 이메일입니다.</p>
+    <p>다른 이메일을 사용해주세요.</p>
     <input type="button" value="닫기" onclick="self.close()">
     </td>
     

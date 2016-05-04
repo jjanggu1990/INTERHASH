@@ -22,6 +22,7 @@ color:#7A7A7A;
 <table>
   <tr>
     <p><td align="center">${nickname}은<br>이미 사용중인 닉네임입니다.</p>
+    <p>다른 닉네임을 사용해주세요.</p>
     <input type="button" value="닫기" onclick="self.close()">
     </td>
     
