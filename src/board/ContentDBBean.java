@@ -181,4 +181,27 @@ public class ContentDBBean {
 		}
 		return check;
 	}
+	
+/*	public ContentDataBean updatecontent(int connum)throws Exception{
+		SqlSessionFactory factory = null;
+		SqlSession session = null;
+		ContentDataBean article = null;
+		try {
+			factory = getFactory();
+			session = factory.openSession();
+			
+			check = session.delete("comment.contentdelete", connum);
+			
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+		}
+		return check;
+	}*/
 }

@@ -52,4 +52,28 @@ public class ReportDBBean {
 			}
 		}
 	}
+	
+	public int reportcount(String email) throws Exception{
+		SqlSessionFactory factory=null;
+		SqlSession session = null;
+		int check = -1;
+		try{
+			factory = getFactory();
+			session = factory.openSession();
+			check = session.update("report.update", email);
+			session.commit();
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			if (session != null){
+				try {
+					session.close();
+				} catch (Exception ex) {
+				}
+			}
+		}
+		return check;
+	}
+	
+	
 }

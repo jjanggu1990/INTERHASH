@@ -11,4 +11,8 @@
 	<select id="getreport" resultType="board.ContentDataBean">
 		select * from contents where conreportcount >= 1
 	</select>
+	
+	<update id="update" parameterType="String">
+	 	update usertable set reportcount=reportcount+1 where email = #{email}
+	</update>
 </mapper>

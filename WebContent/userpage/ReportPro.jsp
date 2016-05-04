@@ -3,8 +3,14 @@
 <html>
 <head>
 <title>Insert title here</title>
+
 </head>
 <body>
-신고 확인 버튼 클릭시
+alert("신고되었습니다.");
+
+<script type="text/javascript">
+window.close();
+</script>
 </body>
 </html>
+
