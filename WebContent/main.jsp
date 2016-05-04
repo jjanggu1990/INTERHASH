@@ -58,7 +58,6 @@ function checkIt(){
 </script>
 </head>
 <body>
- <c:if test='${memId == null}'> 
 
 
 
@@ -101,5 +100,4 @@ function checkIt(){
 
 </div>
 </body>
-  </c:if>
 </html>
