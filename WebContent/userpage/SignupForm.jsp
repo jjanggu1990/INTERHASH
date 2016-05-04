@@ -44,11 +44,6 @@ padding:10px;
 			return false;
 		}
 		
-		if(userinput.getElementById('pass').value != userinput.getElementById('pass1').value){
-			alert("비밀번호를 동일하게 입력하세요");
-			return false;
-		}
-		alert(checkEmail);
 		if(!checkEmail){
 			alert("이메일 중복확인을 해주세요");
 			return false;
@@ -59,6 +54,11 @@ padding:10px;
 		}
 		if(!checkEmailNum){
 			alert("이메일 인증번호를 확인해주세요");
+			return false;
+		}
+
+		if(!userinput.passwd.value!=!userinput.passwd1.value){
+			alert("비밀번호를 동일하게 입력하세요");
 			return false;
 		}
 				
@@ -173,12 +173,12 @@ color:#7A7A7A;
 </tr>
 <tr>
 <td>password</td>
-<td><input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()" /></td>
+<td><input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()" required="required"/></td>
 <td rowspan="2"><input type="ladel" style="border: 0px;" id="passwdchform" value="" readonly/></td>
 </tr>
 <tr>
 <td>password check</td>
-<td><input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()'/></td>
+<td><input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()' required/></td>
 
 </tr>
 
