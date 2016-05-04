@@ -4,7 +4,6 @@
 <head>
 <title>신고</title>
 
-<<<<<<< HEAD
 <script>
 function close(){	
 	window.close();
@@ -14,12 +13,6 @@ function close(){
 <script type="text/javascript">
 function test(){
 	self.close();
-=======
-<script type="text/javascript">
-function test() {
-	alert("신고되었습니다");
-window.close();
->>>>>>> 923368e4f7d3ee997d2c60f691afa77aa4c5d426
 }
 </script>
 </head>
