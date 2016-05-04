@@ -13,7 +13,7 @@ color:#5AAEFF;
 	width:780px;
 	height:640px;
  	/* background-color: black; */
-	border:2px solid;
+	/* border:1px solid; */
 	padding:5px;
 	margin:auto;
 	}
@@ -23,7 +23,7 @@ color:#5AAEFF;
 	height:620px;
 	/* background-color: yellow; */
 	float:left;	
-	border:2px solid;
+	border:1px solid;
 	margin:auto;
 	}
 	
@@ -34,25 +34,25 @@ color:#5AAEFF;
 	height:620px;
 	/* background-color: yellow; */
 	float:right;
-	border:2px solid;
+	border:1px solid;
 	margin:auto;
 	}
 	
 	#left_nickndate{
 	width:360px;
 	height:20px;
-	float:left;
+	float:auto;
 	margin:5px;
-	border:2px solid;
+	border:1px solid;
 	background-color:white;
 	}
 	
 	#left_mod_del_rep{
 	width:360px;
 	height:20px;
-	float:left;
+	float:auto;
 	margin:5px;
-	border:2px solid;
+	/* border:1px solid; */
 	background-color:white;
 	}
 	
@@ -64,16 +64,16 @@ color:#5AAEFF;
 	#left_nickndate{
 	width:360px;
 	height:20px;
-	float:left;
+	float:auto;
 	margin:5px;
-	border:2px solid;
+	border:1px solid;
 	background-color:white;
 	}
 
 	#left_good_re{
 	width:360px;
 	heigt:20px;
-	float:left;
+	float:auto;
 	margin:5px;
 	background-color:white;	
 	}
@@ -82,7 +82,7 @@ color:#5AAEFF;
 	height:20px;
 	float:left;
 	margin:5px;
-	border:2px solid;
+	border:1px solid;
 	background-color:white;
 	}
 	#comment_content{
@@ -111,7 +111,7 @@ color:#5AAEFF;
 	height:460px;
 	float:left;
 	margin:5px;
-	border:2px solid;
+	border:1px solid;
 	background-color:white;
 	}
 	
@@ -120,13 +120,18 @@ color:#5AAEFF;
 	height:490px;
 	float:left;
 	margin:5px;
-	border:2px solid;
+	border:1px solid;
 	background-color:white;
 	}
 	
 	#test{border-bottom:1px solid;}
 </style>
 <script>   
+
+function modifycon(connum){
+	url="/INTERHASH/UpdateContent.hash?check=y&&connum="+connum
+}
+
  function modify(comnum,connum){
 	url="/INTERHASH/UpdateComment.hash?check=y&&comnum="+comnum+"&&connum="+connum;
 	
@@ -156,7 +161,8 @@ function report(){
 	<c:if test="${sessionScope.memId==content.email}">
 	<div id="left_mod_del_rep">
 		<span id="align_right">/<a href="/INTERHASH/ContentDelete.hash?connum=${content.connum}">삭제하기</a></span>
-		<span id="align_right"><a href="/INTERHASH/ContentUpdate.hash"+${content.connum}>수정하기 </a> </span>
+		<<span id="align_right"><a href="/INTERHASH/ContentUpdate.hash?connum=${content.connum}">수정하기 </a></span>
+		
 	</div>
 	</c:if>
 		
@@ -179,7 +185,7 @@ function report(){
 	</div>
 	
 	<div id="left_good_re">
-		<label id="align_right">댓글수:${count}</label>
+		<label id="align_right">댓글 수: ${count}</label>
 		<!-- <label id="align_right">좋아요/</label> --> 
 	</div>
 	</form>
@@ -214,7 +220,7 @@ function report(){
 		<c:if test="${sessionScope.memId==comment.email}">
 		<a href="/INTERHASH/DeleteComment.hash?comnum=${comment.comnum}&&connum=${comment.connum}">삭제</a>
 		<a onclick="modify(${comment.comnum},${comment.connum})">수정</a>
-
+ 
 		</c:if	>
 		
 		<c:if test="${sessionScope.memId!=comment.email}">

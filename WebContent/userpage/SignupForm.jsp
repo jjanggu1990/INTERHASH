@@ -11,10 +11,11 @@ padding:10px;
 </style>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
-	var checkEmail=true;
-	var checkNickname=true;
-	var checkEmailNum=true;
-	
+
+	var checkEmail=false;
+	var checkNickname=false;
+	var checkEmailNum=false;
+		
 	function checkIt(){
 						
 		var userinput = eval("document.userinput");
@@ -43,8 +44,24 @@ padding:10px;
 			return false;
 		}
 		
-		alert(userinput.getElementById('pass').value);
-		if(userinput.getElementById('pass').value != userinput.getElementById('pass1').value){
+	/* 	if(userinput.getElementById('pass').value != userinput.getElementById('pass1').value){
+			alert("비밀번호를 동일하게 입력하세요");
+			return false;
+		} */
+		if(!checkEmail){
+			alert("이메일 중복확인을 해주세요");
+			return false;
+		}
+		if(!checkNickname){
+			alert("닉네임 중복확인을 해주세요");
+			return false;
+		}
+		if(!checkEmailNum){
+			alert("이메일 인증번호를 확인해주세요");
+			return false;
+		}
+
+		if(!userinput.passwd.value!=!userinput.passwd1.value){
 			alert("비밀번호를 동일하게 입력하세요");
 			return false;
 		}
@@ -52,6 +69,7 @@ padding:10px;
 		return true;
 	};
 	
+		
 	function confirmnickname() {
 		var userinput = eval("document.userinput");
 		if(userinput.nickname.value=="") {
@@ -60,8 +78,7 @@ padding:10px;
 		}
 		url="/INTERHASH/ConfirmNickname.hash?nickname=" + userinput.nickname.value;
 		open(url, "confirmnik", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
-		checkNickname=false;
-		alert("닉네임"+checkNicname);
+		checkNickname=true;
 	}
 
 	function confirmemail(){
@@ -72,29 +89,13 @@ padding:10px;
 		}
 		url="/INTERHASH/ConfirmEmail.hash?email=" + userinput.email.value;
 		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
-		checkEmail=false;
-		alert("이메일"+checkEmail);
+		checkEmail=true;
 	}
 	function keyCheck(){
 		url="/INTERHASH/ConfirmKey.hash?inputkey=" + userinput.emailnumber.value;
 		open(url, "confirm", "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
-		checkEmailNum=false;
-		alert("이메일인증번호"+checkEmailNum);
+		checkEmailNum=true;
 	}
-	if(checkEmail){
-		alert("이메일 중복확인을 해주세요");
-		return false;
-	}
-	if(checkNickname){
-		alert("닉네임 중복확인을 해주세요");
-		return false;
-	}
-	if(checkEmailNum){
-		alert("이메일 인증번호를 확인해주세요");
-		return false;
-	}
-	
-	
 
 	function checkPass(){
 		//alert(document.getElementById('e').value);
@@ -121,6 +122,9 @@ padding:10px;
 		
 			
 	};
+	
+	
+	
 	var checkflag = "false";
 
 	function check(field) {
@@ -162,7 +166,7 @@ color:#7A7A7A;
 <table>
 <tr>
 <td>email</td>
-<td><input type="email" name="email" id="email" autofocus required="required"/></td>
+<td><input type="email" name="email" id="email" autofocus/></td>
 <td><input type="button" value="인증하기" onClick="confirmemail()"/> </td>
 </tr>
 <tr>
@@ -172,18 +176,18 @@ color:#7A7A7A;
 </tr>
 <tr>
 <td>password</td>
-<td><input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()"/></td>
+<td><input type="password" id="pass" name="passwd" onkeyup="checkPass()" onchange="checkPass()" required="required"/></td>
 <td rowspan="2"><input type="ladel" style="border: 0px;" id="passwdchform" value="" readonly/></td>
 </tr>
 <tr>
 <td>password check</td>
-<td><input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()'/></td>
+<td><input type="password" id = "pass1" name="passwd1" onkeyup="checkPass()" onchange='checkPass()' required/></td>
 
 </tr>
 
 <tr>
 <td>닉네임</td>
-<td><input type="text" name="nickname" /></td>
+<td><input type="text" name="nickname"/></td>
 <td><input type="button" value="중복검사" onClick="confirmnickname()"/></td>
 </tr>
 <tr>
@@ -487,8 +491,6 @@ color:#7A7A7A;
 	<input type="submit" value="가입"><input type="button" value="취소" onclick="javascript:window.location='Main.hash'">
 </form>
 </center>
-
-
 
 </body>
 </html>
