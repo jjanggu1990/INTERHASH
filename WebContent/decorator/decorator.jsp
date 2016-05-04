@@ -12,20 +12,20 @@
         width: 1100px;
         margin: 0px auto;
         padding: 20px;
-        border: 1px solid #bcbcbc;
+        /* border: 1px solid #bcbcbc; */
       }
       #jb-header {
         padding: 20px;
         height: 120px;
         margin-bottom: 20px;
-        border: 1px solid #bcbcbc;
+       /*  border: 1px solid #bcbcbc; */
       }
       #jb_search{
       	margin-top:100px;
       	float: left;
       	width: 300px;
       	height:auto;
-      	border:1px solid #bcbcbc;
+      /* 	border:1px solid #bcbcbc; */
       }
       #jb-content {
         width: 800px;
@@ -33,7 +33,7 @@
         padding: 10px;
         margin-bottom: 20px;
         float: right;
-        border: 1px solid #bcbcbc;
+        /* border: 1px solid #bcbcbc; */
       }
       #jb-sidebar {
       	position:fixed;
@@ -41,12 +41,12 @@
         padding: 10px;
         margin-bottom: 20px;
         float: left;
-        border: 1px solid #bcbcbc;
+   /*      border: 1px solid #bcbcbc; */
       }
       #jb-footer {
         clear: both;
         padding: 20px;
-        border: 1px solid #bcbcbc;
+        /* border: 1px solid #bcbcbc; */
       }
       #jb-logo{
       	float:left;
@@ -242,6 +242,7 @@
 		newwindow=window.open(url,"post","toolbar=no ,width=650 ,height=700 ,directories=no ,status=yes ,scrollbars=no ,menubar=no");
 	}
     </script>
+ 
   </head>
   <body>
     <div id="jb-container">
@@ -273,6 +274,7 @@
       		</form>
       	</div>
       </div>
+      <hr>
       <div id="jb-content">
       <!-- <input type="button" value="글쓰기" onclick="window.location.href='ContentInputForm.hash'"> -->
      <!--  <div id="writeform">

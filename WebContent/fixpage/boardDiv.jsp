@@ -86,7 +86,7 @@ function fileUploadPreview(thisObj, preViewer) {
 		width:760px;
 		height:320px;
 /* 		 background-color: black;  */
-		border:2px solid;
+		border:1px solid; 
 		padding:5px;
 		margin:10px;
 	}
@@ -95,7 +95,7 @@ function fileUploadPreview(thisObj, preViewer) {
 		height:280px;
 		/* background-color: green; */
 		float:left;
-		border:2px solid;
+		/* border:2px solid; */
 		margin:auto;
 	}
 	#img{
@@ -108,26 +108,26 @@ function fileUploadPreview(thisObj, preViewer) {
 		height:310px;
 		/* background-color: yellow; */
 		float:right;
-		border:2px solid;
+		/*  border:1px solid;  */
 		margin:auto;
 	}
 	#board_subject{
 		width:470px;
 		height:50px;
-		border:2px solid;
+		 border:1px solid #bcbcbc; 
 		margin:auto;
 		/* background-color: blue; */
 	}
 	#board_content{
 		width:470px;
 		height:200px;
-		border:2px solid;
+		border:1px solid #bcbcbc; 
 		margin:auto;
 	}
 	#board_like{
 		width:470px;
 		height:50px;
-		border:2px solid;
+		/* border:2px solid; */
 		margin:auto;
 	}
 	
@@ -139,14 +139,14 @@ function fileUploadPreview(thisObj, preViewer) {
 	#like_img{
 		height:35px;
 		width:43px;
-		border:1px solid;
+		/* border:1px solid; */
 		margin:5px;
 		float:left;
 	}
 	#like_text{
 		height:35px;
 		width:70px;
-		border:1px solid;
+		/* border:1px solid; */
 		margin:5px;
 		float:left;
 		text-align: center;
@@ -154,14 +154,14 @@ function fileUploadPreview(thisObj, preViewer) {
 	#commnet_img{
 		height:35px;
 		width:43px;
-		border:1px solid;
+	/* 	border:1px solid; */
 		margin:5px;
 		float:left;
 	}
 	#commnet_text{
 		height:35px;
 		width:70px;
-		border:1px solid;
+		/* border:1px solid; */
 		margin:5px;
 		float:left;
 		text-align: center;
@@ -197,7 +197,7 @@ function fileUploadPreview(thisObj, preViewer) {
 		width:700px;
 		height:240px;
 		margin: 10px auto;
-		border:1px solid;
+		/* border:1px solid; */
 	}
 	
 	#textfield {

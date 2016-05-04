@@ -13,7 +13,7 @@ color:#5AAEFF;
 	width:780px;
 	height:640px;
  	/* background-color: black; */
-	border:2px solid;
+	/* border:1px solid; */
 	padding:5px;
 	margin:auto;
 	}
@@ -23,7 +23,7 @@ color:#5AAEFF;
 	height:620px;
 	/* background-color: yellow; */
 	float:left;	
-	border:2px solid;
+	border:1px solid;
 	margin:auto;
 	}
 	
@@ -34,7 +34,7 @@ color:#5AAEFF;
 	height:620px;
 	/* background-color: yellow; */
 	float:right;
-	border:2px solid;
+	border:1px solid;
 	margin:auto;
 	}
 	
@@ -43,7 +43,7 @@ color:#5AAEFF;
 	height:20px;
 	float:left;
 	margin:5px;
-	border:2px solid;
+	border:1px solid;
 	background-color:white;
 	}
 	
@@ -52,7 +52,7 @@ color:#5AAEFF;
 	height:20px;
 	float:left;
 	margin:5px;
-	border:2px solid;
+	/* border:1px solid; */
 	background-color:white;
 	}
 	
@@ -66,7 +66,7 @@ color:#5AAEFF;
 	height:20px;
 	float:left;
 	margin:5px;
-	border:2px solid;
+	border:1px solid;
 	background-color:white;
 	}
 
@@ -82,7 +82,7 @@ color:#5AAEFF;
 	height:20px;
 	float:left;
 	margin:5px;
-	border:2px solid;
+	border:1px solid;
 	background-color:white;
 	}
 	#comment_content{
@@ -111,7 +111,7 @@ color:#5AAEFF;
 	height:460px;
 	float:left;
 	margin:5px;
-	border:2px solid;
+	border:1px solid;
 	background-color:white;
 	}
 	
@@ -120,7 +120,7 @@ color:#5AAEFF;
 	height:490px;
 	float:left;
 	margin:5px;
-	border:2px solid;
+	border:1px solid;
 	background-color:white;
 	}
 	
