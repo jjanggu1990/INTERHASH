@@ -20,7 +20,7 @@ public class FindPasswordProAction  implements CommandAction {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		String email = request.getParameter("email");
-		
+		System.out.println("비밀번호찾기 폼 : "+email);
 		LogonDBBean bean = LogonDBBean.getInstance();
 		if(bean.existEmail(email)==1){
 			sendmail(email);
@@ -62,7 +62,7 @@ public class FindPasswordProAction  implements CommandAction {
 	private final String password = "q131313!#";
 
 	private void sendmail(String email) {
-		
+		System.out.println("이메일 보내나?");
 		//임시로 생성된 문자열을 데이터베이스에 저장
 		LogonDBBean bean = LogonDBBean.getInstance();
 		TempPasswd temppw = new TempPasswd();
@@ -106,6 +106,8 @@ public class FindPasswordProAction  implements CommandAction {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally{
+			result ="";
 		}
 	}
 }

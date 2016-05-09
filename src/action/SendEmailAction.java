@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class SendEmailAction implements CommandAction {
-
+	String key="";
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		String email = (String)request.getSession().getAttribute("email");
-		String key = makeKey();
+		key = makeKey();
 		
 		request.getSession().setAttribute("key",key);
 		
@@ -77,7 +77,9 @@ public class SendEmailAction implements CommandAction {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		finally{
+			key="";
+		}
 	}
 	
 
