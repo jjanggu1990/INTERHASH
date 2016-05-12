@@ -289,16 +289,14 @@ $(function(){
 </head>
 <body>
  <div id="writeform">
-      <form action="ContentInputPro.hash" name="writeForm" method="post" enctype="multipart/form-data"> <!-- enctype="multipart/form-data" -->
+      <form action="ContentInputPro.hash" name="writeForm" method="post" enctype="multipart/form-data"> 
 		<div id="wrap" style="width: 500px; margin: auto;">
 			<textarea id="textfield" name="content" placeholder="내용을 입력하세요."></textarea>
 			<div class="photoBox" style="height: 100px; width: 100px;">
-				<!-- <span class='photo_list'>  -->
-				<input class='fileData' id = "conphoto" name="conphoto" type="file"/>  <!-- onchange="fileUploadPreview(this, 'preView')" --> 
+				<input class='fileData' id = "conphoto" name="conphoto" type="file"/> 
 					<div id="blah_img">
 						<img id="blah" src="" alt="no image"/>
 					</div>
-				<!-- </span> -->
 			</div>
 			<div style="clear: both;"></div>
 			<div id="sub">
@@ -307,10 +305,6 @@ $(function(){
 				
 				</span> 
 				<span id="taglist" style="width: 300px; float: left;">
-					<!-- <div class="ui-widget">
-  						<label for="tags">Tags: </label>
-  						<input id="tags">
-					</div> -->
 					<input type="text" name="tag" size="7" readonly>
 					<input type="button" value="Tag" onClick="tagCheck()">
 				</span> 

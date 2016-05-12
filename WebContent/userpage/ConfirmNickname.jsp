@@ -18,7 +18,7 @@ color:#7A7A7A;
 </script>
 </head>
 <body>
-<c:if test="${check!=-1}">
+<c:if test="${check!=0}">
 <table>
   <tr>
     <p><td align="center">${nickname}은<br>이미 사용중인 닉네임입니다.</p>
@@ -29,8 +29,8 @@ color:#7A7A7A;
   </tr>
 </table>
 </c:if>
-<c:if test="${check==-1}">
-<form method="post" action="SendEmail.hash">
+<c:if test="${check==0}">
+<form >
 <table>
   <tr>
     <td align="center">
