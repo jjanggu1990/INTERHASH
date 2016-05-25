@@ -39,7 +39,10 @@ public class BoardAction implements CommandAction {
 		}
 		LogonDBBean manager = LogonDBBean.getInstance();
 		String tmp_hash = manager.getMemberHash((String)request.getSession().getAttribute("memId"));
-		String [] hash_array =tmp_hash.substring(1, tmp_hash.length()-1).trim().split(",");
+		System.out.println("유저의 해시정보 : "+tmp_hash);
+		String [] hash_array =null;
+		hash_array=tmp_hash.substring(1, tmp_hash.length()-1).trim().split(",");
+	
 		ArrayList array_hash = new ArrayList();
 		for(int i = 0;i<hash_array.length;i++){
 			array_hash.add(hash_array[i].replaceAll("#", "").trim());

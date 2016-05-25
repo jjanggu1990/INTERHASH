@@ -153,7 +153,7 @@ color:#7A7A7A;
         color:#5AAEFF;
       }
       #jb-header{
-      	height:300px;
+      	height:150px;
       }
 </style>
 </head>

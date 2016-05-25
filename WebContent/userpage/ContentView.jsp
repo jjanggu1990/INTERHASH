@@ -179,7 +179,7 @@ function report(){
 		<label id="hash">${content.conhash}</label><br>
 		
 		<c:forEach var="photo" items="${content.photolist}">
-		<img id = "img" src='${photo.serverpath }'/>
+		<img id = "img" src='${photo.serverpath }' width="320px" height="240"/>
 		</c:forEach>
 
 	</div>
