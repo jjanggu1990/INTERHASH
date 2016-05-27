@@ -6,5 +6,5 @@
 </head>
 <body>
 <% response.sendRedirect("Main.hash"); %>
-</body>	
-</html>	
+</body>
+</html>
